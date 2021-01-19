@@ -1,0 +1,101 @@
+{
+    "id": 5707,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 4, Zadatak 2",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ AT1 (javni): Test maina, nema podudarnih pravougaonika\n\/\/ NAPOMENA 1: ovo je zvanicni izgled dijaloga s korisnikom\n\/\/ NAPOMENA 2: Ostali AT su dodani na Zamger, te se nece dodavati na C9\n\/\/ radi velikog broja zadatka i opterecenja servera\n_main();",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 2, obratite se na mail: hcapelj1@etf.unsa.ba",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "2\n0 0\n1 1\n51 23\n31 17"
+            },
+            "expected": [
+                "Unesite n: Unesite 1. tjeme pravougaonika 1: Unesite 2. tjeme pravougaonika 1: Unesite 1. tjeme pravougaonika 2: Unesite 2. tjeme pravougaonika 2: Ispis pravougaonika nakon sortiranja: \\n{{0,1},{1,0}}\\n{{31,23},{51,17}}\\nPodudarni pravougaonici: \\nNema podudarnih pravougaonika."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2 (javni): test maina, ima preklapanja i podudarnih pravougaonika\n\/\/NAPOMENA: ovo je zvanicni izgled dijaloga s korisnikom!\n\/\/podudarni pravougaonici se ispisuju kao \"X i Y\", svaki par u novom redu\n\/\/NOTE: ima uzvicnik u mainu nakon teksta izuzetka, dok izuzetak.what() NE SADRZI uzvicnik!\n\n_main();",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 2, obratite se na mail: hcapelj1@etf.unsa.ba",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4\n0 0\n1 1\n2 2\n4 4\n5 5\n3 3\n5 5\n7 7\n34 11\n23 17"
+            },
+            "expected": [
+                "Unesite n: Unesite 1. tjeme pravougaonika 1: Unesite 2. tjeme pravougaonika 1: Unesite 1. tjeme pravougaonika 2: Unesite 2. tjeme pravougaonika 2: Unesite 1. tjeme pravougaonika 3: Unesite 2. tjeme pravougaonika 3: GRESKA: Nedozvoljeno preklapanje! Ponovite unos: \\nUnesite 1. tjeme pravougaonika 3: Unesite 2. tjeme pravougaonika 3: Unesite 1. tjeme pravougaonika 4: Unesite 2. tjeme pravougaonika 4: Ispis pravougaonika nakon sortiranja: \\n{{0,1},{1,0}}\\n{{2,4},{4,2}}\\n{{5,7},{7,5}}\\n{{23,17},{34,11}}\\nPodudarni pravougaonici: \\n{{2,4},{4,2}} i {{5,7},{7,5}}\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT19 (javni): Nema preklapanja ako je TACKA unutar pravougaonika (Povrsina presjeka je 0)\n        \/\/iz postavke (samo uklonjenji afrikati)\n\/\/ NAPOMENA: AT dodan na C9 radi lakseg testiranja na preklapanje i smanjenje komplikacija\n        \/*\n            Za dva pravougaonika smatramo da se preklapaju ukoliko im presjek nije prazan skup i ukoliko\n            im se presjek ne degenerira u duz ili u tacku (tj. ukoliko im presjek ima nenultu povrsinu).\n        *\/\n\n        NepreklapajuciPravougaonik P {{0, 0}, {10, 10}};\n        std::cout << \"OK 1\" << std::endl;\n        NepreklapajuciPravougaonik A {{7, 7}, {7, 7}};\n        std::cout << \"OK 2\" << std::endl;\n        NepreklapajuciPravougaonik B {{9, 9}, {9, 9}};\n        std::cout << \"OK 3\" << std::endl;\n        NepreklapajuciPravougaonik C {{0, 0}, {0, 0}}; \/\/na tjemenu\n        std::cout << \"OK 4\" << std::endl;\n        NepreklapajuciPravougaonik D {{10, 10}, {10, 10}}; \/\/na tjemenu\n        std::cout << \"OK 5\" << std::endl;\n\n        \/\/jedan trivijalni test na preklapanje\n        try {NepreklapajuciPravougaonik K {{2, 2}, {1, 1}}; std::cout << \"NIJE OK!\" << std::endl;}\n        catch (const std::logic_error &e) {std::cout << e.what() << std::endl;}\n        catch (...) {std::cout << (\"Ne smije se ispisati (catch ...)\");}\n\n        NepreklapajuciPravougaonik E {{5, 5}, {5, 5}}; \/\/u centru\n        std::cout << \"OK 6\";\n    }\/\/OK 1\\nOK 2\\nOK 3\\nOK 4\\nOK 5\\nNedozvoljeno preklapanje\\nOK 6",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 2, obratite se na mail: hcapelj1@etf.unsa.ba",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK 1\\nOK 2\\nOK 3\\nOK 4\\nOK 5\\nNedozvoljeno preklapanje\\nOK 6"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT25 (javni): test destruktora, 4, da provjerite da li vam je dtor OK\n     \/\/NAPOMENA: ovo ipak nije dovoljan test destruktora... ovaj AT ce vam pomoci\n     \/\/da otkrijete vecinu gresaka sa destruktorom, ali ipak nece sve :)\n        NepreklapajuciPravougaonik A ({-1, -1}, {-5, -5});\n        std::cout << \"OK 1\" << std::endl;\n        NepreklapajuciPravougaonik B ({-6, 6}, {7, 7});\n        std::cout << \"OK 2\" << std::endl;\n        {\n            NepreklapajuciPravougaonik C ({16, 11}, {8, 9});\n            std::cout << \"OK 3\" << std::endl;\n        }\/\/C ovdje umire, D se NE PREKLAPA sa njim\n        NepreklapajuciPravougaonik D ({8, 8}, {15, 15});\n        std::cout << \"OK 4\" << std::endl;\n\n        \/\/jedan trivijalni test na preklapanje\n        try {NepreklapajuciPravougaonik K {{-1, -2}, {1, 8}}; std::cout << \"NIJE OK!\" << std::endl;}\n        catch (...) {std::cout << \"OK 5\";}\n    }\/\/",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 2, obratite se na mail: hcapelj1@etf.unsa.ba",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK 1\\nOK 2\\nOK 3\\nOK 4\\nOK 5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

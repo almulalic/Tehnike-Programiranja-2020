@@ -1,0 +1,237 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_1.cpp: In function ‘int main()’:\nbs_test_1.cpp:18:4: error: ‘Liga’ was not declared in this scope\n    Liga l (10);\n    ^~~~\nbs_test_1.cpp:19:3: error: ‘l’ was not declared in this scope\n   l.DodajNoviTim(\"Tim1\"); l.DodajNoviTim(\"Tim2\"); l.DodajNoviTim(\"Tim3\"); l.DodajNoviTim(\"Tim4\");\n   ^\nbs_test_1.cpp:34:28: error: invalid use of incomplete type ‘std::ofstream {aka class std::basic_ofstream<char>}’\n   std::ofstream (\"liga.txt\") << c;\n                            ^\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/ios:38:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from bs_test_1.cpp:1:\n/opt/gcc-6.2.0/include/c++/6.2.0/iosfwd:119:11: note: declaration of ‘std::ofstream {aka class std::basic_ofstream<char>}’\n     class basic_ofstream;\n           ^~~~~~~~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE_GLOBAL_ABOVE",
+                        "line": 5,
+                        "col": "4",
+                        "message": "'Liga' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_909/bs_test_1.cpp:18:4: error: ‘Liga’ was not declared in this scope    Liga l (10);    ^~~~",
+                        "code": "Liga l (10);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE_GLOBAL_ABOVE",
+                        "line": 6,
+                        "col": "3",
+                        "message": "'l' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_909/bs_test_1.cpp:19:3: error: ‘l’ was not declared in this scope   l.DodajNoviTim(\"Tim1\"); l.DodajNoviTim(\"Tim2\"); l.DodajNoviTim(\"Tim3\"); l.DodajNoviTim(\"Tim4\");   ^",
+                        "code": "l.DodajNoviTim(\"Tim1\"); l.DodajNoviTim(\"Tim2\"); l.DodajNoviTim(\"Tim3\"); l.DodajNoviTim(\"Tim4\");"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 14,
+                        "col": "28",
+                        "message": "invalid use of incomplete type 'std::ofstream {aka class std::basic_ofstream<char>}'",
+                        "output": "/tmp/buildservice/bs_909/bs_test_1.cpp:34:28: error: invalid use of incomplete type ‘std::ofstream {aka class std::basic_ofstream<char>}’   std::ofstream (\"liga.txt\") << c;                            ^In file included from /opt/gcc-6.2.0/include/c++/6.2.0/ios:38:0,                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,                 from /tmp/buildservice/bs_909/bs_test_1.cpp:1:",
+                        "code": "std::ofstream (\"liga.txt\") << c;"
+                    }
+                ]
+            }
+        },
+        "2": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_2.cpp: In function ‘int main()’:\nbs_test_2.cpp:18:10: error: ‘Liga’ was not declared in this scope\n          Liga l (7);\n          ^~~~\nbs_test_2.cpp:19:2: error: ‘l’ was not declared in this scope\n  l.DodajNoviTim(\"A\"); l.DodajNoviTim(\"B\"); l.DodajNoviTim(\"C\");\n  ^\nbs_test_2.cpp:33:7: error: expected ‘;’ before ‘nova’\n  Liga nova (\"premier.bin\"); //kreiramo novu iz datoteke\n       ^~~~\nbs_test_2.cpp:34:2: error: ‘nova’ was not declared in this scope\n  nova.IspisiTabelu();\n  ^~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE_GLOBAL_ABOVE",
+                        "line": 5,
+                        "col": "10",
+                        "message": "'Liga' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_909/bs_test_2.cpp:18:10: error: ‘Liga’ was not declared in this scope          Liga l (7);          ^~~~",
+                        "code": "Liga l (7);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE_GLOBAL_ABOVE",
+                        "line": 6,
+                        "col": "2",
+                        "message": "'l' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_909/bs_test_2.cpp:19:2: error: ‘l’ was not declared in this scope  l.DodajNoviTim(\"A\"); l.DodajNoviTim(\"B\"); l.DodajNoviTim(\"C\");  ^",
+                        "code": "l.DodajNoviTim(\"A\"); l.DodajNoviTim(\"B\"); l.DodajNoviTim(\"C\");"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 13,
+                        "col": "7",
+                        "message": "expected ';' before 'nova'",
+                        "output": "/tmp/buildservice/bs_909/bs_test_2.cpp:33:7: error: expected ‘;’ before ‘nova’  Liga nova (\"premier.bin\"); //kreiramo novu iz datoteke       ^~~~",
+                        "code": "Liga nova (\"premier.bin\"); //kreiramo novu iz datoteke"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 14,
+                        "col": "2",
+                        "message": "'nova' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_909/bs_test_2.cpp:34:2: error: ‘nova’ was not declared in this scope  nova.IspisiTabelu();  ^~~~",
+                        "code": "nova.IspisiTabelu();"
+                    }
+                ]
+            }
+        },
+        "3": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3.cpp: In function ‘int main()’:\nbs_test_3.cpp:18:4: error: ‘Liga’ was not declared in this scope\n    Liga ll (1);\n    ^~~~\nbs_test_3.cpp:19:8: error: ‘ll’ was not declared in this scope\n   try {ll.AzurirajIzDatoteke(\"nepostoji.txt\"); std::cout << \"Nije bacen izuzetak!\";}\n        ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE_GLOBAL_ABOVE",
+                        "line": 5,
+                        "col": "4",
+                        "message": "'Liga' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_909/bs_test_3.cpp:18:4: error: ‘Liga’ was not declared in this scope    Liga ll (1);    ^~~~",
+                        "code": "Liga ll (1);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE_GLOBAL_ABOVE",
+                        "line": 6,
+                        "col": "8",
+                        "message": "'ll' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_909/bs_test_3.cpp:19:8: error: ‘ll’ was not declared in this scope   try {ll.AzurirajIzDatoteke(\"nepostoji.txt\"); std::cout << \"Nije bacen izuzetak!\";}        ^~",
+                        "code": "try {ll.AzurirajIzDatoteke(\"nepostoji.txt\"); std::cout << \"Nije bacen izuzetak!\";}"
+                    }
+                ]
+            }
+        },
+        "4": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_4.cpp: In function ‘int main()’:\nbs_test_4.cpp:20:28: error: invalid use of incomplete type ‘std::ofstream {aka class std::basic_ofstream<char>}’\n   std::ofstream (\"liga.txt\") << c;\n                            ^\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/ios:38:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from bs_test_4.cpp:1:\n/opt/gcc-6.2.0/include/c++/6.2.0/iosfwd:119:11: note: declaration of ‘std::ofstream {aka class std::basic_ofstream<char>}’\n     class basic_ofstream;\n           ^~~~~~~~~~~~~~\nbs_test_4.cpp:21:5: error: ‘Liga’ was not declared in this scope\n     Liga ll (1);\n     ^~~~\nbs_test_4.cpp:22:10: error: ‘ll’ was not declared in this scope\n     try {ll.AzurirajIzDatoteke(\"liga.txt\"); std::cout << \"Nije bacen izuzetak!\";}\n          ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "28",
+                        "message": "invalid use of incomplete type 'std::ofstream {aka class std::basic_ofstream<char>}'",
+                        "output": "/tmp/buildservice/bs_909/bs_test_4.cpp:20:28: error: invalid use of incomplete type ‘std::ofstream {aka class std::basic_ofstream<char>}’   std::ofstream (\"liga.txt\") << c;                            ^In file included from /opt/gcc-6.2.0/include/c++/6.2.0/ios:38:0,                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,                 from /tmp/buildservice/bs_909/bs_test_4.cpp:1:",
+                        "code": "std::ofstream (\"liga.txt\") << c;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "5",
+                        "message": "'Liga' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_909/bs_test_4.cpp:21:5: error: ‘Liga’ was not declared in this scope     Liga ll (1);     ^~~~",
+                        "code": "Liga ll (1);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "10",
+                        "message": "'ll' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_909/bs_test_4.cpp:22:10: error: ‘ll’ was not declared in this scope     try {ll.AzurirajIzDatoteke(\"liga.txt\"); std::cout << \"Nije bacen izuzetak!\";}          ^~",
+                        "code": "try {ll.AzurirajIzDatoteke(\"liga.txt\"); std::cout << \"Nije bacen izuzetak!\";}"
+                    }
+                ]
+            }
+        },
+        "5": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_5.cpp: In function ‘int main()’:\nbs_test_5.cpp:20:28: error: invalid use of incomplete type ‘std::ofstream {aka class std::basic_ofstream<char>}’\n   std::ofstream (\"liga.txt\") << c;\n                            ^\nIn file included from /opt/gcc-6.2.0/include/c++/6.2.0/ios:38:0,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,\n                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,\n                 from bs_test_5.cpp:1:\n/opt/gcc-6.2.0/include/c++/6.2.0/iosfwd:119:11: note: declaration of ‘std::ofstream {aka class std::basic_ofstream<char>}’\n     class basic_ofstream;\n           ^~~~~~~~~~~~~~\nbs_test_5.cpp:21:5: error: ‘Liga’ was not declared in this scope\n     Liga ll (1);\n     ^~~~\nbs_test_5.cpp:22:10: error: ‘ll’ was not declared in this scope\n     try {ll.AzurirajIzDatoteke(\"liga.txt\"); std::cout << \"Nije bacen izuzetak!\";}\n          ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "28",
+                        "message": "invalid use of incomplete type 'std::ofstream {aka class std::basic_ofstream<char>}'",
+                        "output": "/tmp/buildservice/bs_909/bs_test_5.cpp:20:28: error: invalid use of incomplete type ‘std::ofstream {aka class std::basic_ofstream<char>}’   std::ofstream (\"liga.txt\") << c;                            ^In file included from /opt/gcc-6.2.0/include/c++/6.2.0/ios:38:0,                 from /opt/gcc-6.2.0/include/c++/6.2.0/ostream:38,                 from /opt/gcc-6.2.0/include/c++/6.2.0/iostream:39,                 from /tmp/buildservice/bs_909/bs_test_5.cpp:1:",
+                        "code": "std::ofstream (\"liga.txt\") << c;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "5",
+                        "message": "'Liga' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_909/bs_test_5.cpp:21:5: error: ‘Liga’ was not declared in this scope     Liga ll (1);     ^~~~",
+                        "code": "Liga ll (1);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "10",
+                        "message": "'ll' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_909/bs_test_5.cpp:22:10: error: ‘ll’ was not declared in this scope     try {ll.AzurirajIzDatoteke(\"liga.txt\"); std::cout << \"Nije bacen izuzetak!\";}          ^~",
+                        "code": "try {ll.AzurirajIzDatoteke(\"liga.txt\"); std::cout << \"Nije bacen izuzetak!\";}"
+                    }
+                ]
+            }
+        },
+        "6": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_6.cpp: In function ‘int main()’:\nbs_test_6.cpp:19:10: error: ‘Liga’ was not declared in this scope\n     try {Liga l(\"liga.txt.nema\"); std::cout << \"Nije bacen izuzetak!\";}\n          ^~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE_GLOBAL_ABOVE",
+                        "line": 6,
+                        "col": "10",
+                        "message": "'Liga' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_909/bs_test_6.cpp:19:10: error: ‘Liga’ was not declared in this scope     try {Liga l(\"liga.txt.nema\"); std::cout << \"Nije bacen izuzetak!\";}          ^~~~",
+                        "code": "try {Liga l(\"liga.txt.nema\"); std::cout << \"Nije bacen izuzetak!\";}"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1592139807
+}

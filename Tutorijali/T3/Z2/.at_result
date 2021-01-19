@@ -1,0 +1,77 @@
+{
+    "buildhost_description": {
+        "id": "c9.etf.unsa.ba",
+        "os": "Linux 4.15.0-62-generic x86_64\nUbuntu 18.04.4 LTS\n",
+        "compiler_version": "g++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0",
+        "debugger_version": "GNU gdb (Ubuntu 8.1-0ubuntu3.2) 8.1.0.20180409-git",
+        "profiler_version": "valgrind-3.13.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "cc1plus: warning: ‘-Werror=’ argument ‘-Werror=implicit-function-declaration’ is not valid for C++"
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3177": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite unijeti elemenata: Unesite elemente: 15,-26,0,73,-312\n23,18,142,-333,11111,9,5555555",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3180": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite unijeti elemenata: Unesite elemente: 0,-6,4,-6,555555\n_",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3181": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko zelite unijeti elemenata: Unesite elemente: \n3,-3,3,-3,3,-3,3,-3,3,-3",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3241": {
+            "status": 1,
+            "run_result": {
+                "output": "1 -2147483648 5 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1584789193
+}

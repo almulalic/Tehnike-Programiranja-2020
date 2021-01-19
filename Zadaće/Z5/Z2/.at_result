@@ -1,0 +1,79 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 1,
+            "run_result": {
+                "output": "Range error: Ilegalna kolicina padavina",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 6,
+            "run_result": {
+                "output": "1 1 1",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3.cpp: In function ‘int main()’:\nbs_test_3.cpp:140:2: error: no match for ‘operator-=’ (operand types are ‘Padavine’ and ‘Padavine’)\n t-=t1;\n ~^~~~\nbs_test_3.cpp:142:7: error: no match for ‘operator-’ (operand types are ‘Padavine’ and ‘Padavine’)\n t2 = t-t;\n      ~^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 13,
+                        "col": "2",
+                        "message": "no match for 'operator-=' (operand types are 'Padavine' and 'Padavine')",
+                        "output": "/tmp/buildservice/bs_1602/bs_test_3.cpp:140:2: error: no match for ‘operator-=’ (operand types are ‘Padavine’ and ‘Padavine’) t-=t1; ~^~~~",
+                        "code": "t-=t1;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 15,
+                        "col": "7",
+                        "message": "no match for 'operator-' (operand types are 'Padavine' and 'Padavine')",
+                        "output": "/tmp/buildservice/bs_1602/bs_test_3.cpp:142:7: error: no match for ‘operator-’ (operand types are ‘Padavine’ and ‘Padavine’) t2 = t-t;      ~^~",
+                        "code": "t2 = t-t;"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1592515146
+}

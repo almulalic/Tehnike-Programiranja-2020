@@ -1,0 +1,24 @@
+==22931== Memcheck, a memory error detector
+==22931== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==22931== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==22931== Command: /rhome/a/amulalic1/workspace/TP/Z4/Z6/.runme
+==22931== Parent PID: 22924
+==22931== 
+==22931== 
+==22931== Process terminating with default action of signal 1 (SIGHUP)
+==22931==    at 0x56EF081: read (read.c:27)
+==22931==    by 0x566C147: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:531)
+==22931==    by 0x566D3F1: _IO_default_uflow (genops.c:380)
+==22931==    by 0x512B7EC: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==22931==    by 0x51395D9: std::istream::sentry::sentry(std::istream&, bool) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==22931==    by 0x513980D: std::istream::operator>>(int&) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.25)
+==22931==    by 0x109A2F: main (main.cpp:232)
+==22931== 
+==22931== HEAP SUMMARY:
+==22931==     in use at exit: 0 bytes in 0 blocks
+==22931==   total heap usage: 2 allocs, 2 frees, 73,728 bytes allocated
+==22931== 
+==22931== All heap blocks were freed -- no leaks are possible
+==22931== 
+==22931== For counts of detected and suppressed errors, rerun with: -v
+==22931== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

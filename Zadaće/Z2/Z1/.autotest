@@ -1,0 +1,122 @@
+{
+    "id": 570201,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 2, zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ NAPOMENA: Prilikom prekucavanja zadatka je doslo do greske\n\/\/ funkcija PogadjanjeRobota treba izgledati ovako:\n\/\/ bool PogadjanjeRobota(std::vector<std::vector<std::vector<char>>>&mat,int p);\n\n\/\/ Test koji specificira main()\n\/\/ Koordinate prilikom pozicioniranja robota se unose sa jednim razmakom, npr za prvog robota 0 0 0 0\n\/\/ U slucaju da je neka koordinata pogresna, potrebno je opet unijeti sva 4 broja\n\/\/ Dijalog za unos pozicije robota i pogadjanje se treba ispisivati u funkcijama za unos i pogadjanje\n\/\/ Nakon svake poruke je potrebno ispisati novi red, ovo vazi i za izuzetke.\n\/\/ Funkcija Unos se poziva samo jednom i u njoj oba igraca postavljaju svoje robote\n\n\/\/ Za sve nejasnoce se obratite Arminu Teskered\u017ei\u0107u \n\/\/ putem facebook-a ili na email ateskeredz1@etf.unsa.ba\n_main();\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 5 2 0 0 0 0 2 0 2 1 1 1 1 1 0 2 1 2 1 1 2 0 1 2 3 3 0 2\n"
+            },
+            "expected": [
+                "Igra je pocela, unesite dimenzije matrica (dva broja):\\nUnesite broj robota:\\nNaida unesi pocetne i krajnje koordinate 1. robota:\\nNaida unesi pocetne i krajnje koordinate 2. robota:\\nAlina unesi pocetne i krajnje koordinate 1. robota:\\nAlina unesi pocetne i krajnje koordinate 2. robota:\\nUspjesno ste unijeli pozicije robota. Sada moze poceti pogadjanje.\\nNaida unesi koordinate koje zelis gadjati:\\nUnisteno\\nAlina unesi koordinate koje zelis gadjati:\\nPogodak\\nNaida unesi koordinate koje zelis gadjati:\\nPogodak\\nAlina unesi koordinate koje zelis gadjati:\\nPromasaj\\nNaida unesi koordinate koje zelis gadjati:\\nUnisteno\\nNaida je pobijedila. Naida ima 0 unistenih, 1 ostecenih i 1 citavih robota.\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Ukoliko neki od igraca postavlja svoje robote tako da je nemoguce postaviti\n\/\/ k-tog robota, potrebno je baciti izuzetak kako je opisano u postavci,\n\/\/ te nakon toga oba igraca trebaju opet unositi pozicije svojih robota,\n\/\/ bez obzira koji od dva igraca nije mogao postaviti k-tog robota\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4 4 -2 4 0 0 0 0 0 1 1 1 0 2 2 2 -2 -2 -2 -2 0 3 3 3 0 0 0 0 1 1 2 1 -2 -2 -2 -2 3 1 3 3 0 0 0 0 0 1 1 1 0 2 2 2 0 3 3 3 0 0 0 0 0 1 1 1 0 2 2 2 0 3 3 3 -1 -1"
+            },
+            "expected": [
+                "Igra je pocela, unesite dimenzije matrica (dva broja):\\nUnesite broj robota:\\nNe mozete igrati bez robota\\nUnesite broj robota:\\nNaida unesi pocetne i krajnje koordinate 1. robota:\\nNaida unesi pocetne i krajnje koordinate 2. robota:\\nNaida unesi pocetne i krajnje koordinate 3. robota:\\nNaida unesi pocetne i krajnje koordinate 4. robota:\\nR - - - \\nR R - - \\nR R R - \\n- - - -\\nNaida unesi pocetne i krajnje koordinate 4. robota:\\nAlina unesi pocetne i krajnje koordinate 1. robota:\\nAlina unesi pocetne i krajnje koordinate 2. robota:\\nAlina unesi pocetne i krajnje koordinate 3. robota:\\nR - - - \\n- R R - \\n- - - -\\n- - - - \\nAlina unesi pocetne i krajnje koordinate 3. robota:\\nNemoguce dovrsiti postavljanje robota\\nNaida unesi pocetne i krajnje koordinate 1. robota:\\nNaida unesi pocetne i krajnje koordinate 2. robota:\\nNaida unesi pocetne i krajnje koordinate 3. robota:\\nNaida unesi pocetne i krajnje koordinate 4. robota:\\nAlina unesi pocetne i krajnje koordinate 1. robota:\\nAlina unesi pocetne i krajnje koordinate 2. robota:\\nAlina unesi pocetne i krajnje koordinate 3. robota:\\nAlina unesi pocetne i krajnje koordinate 4. robota:\\nUspjesno ste unijeli pozicije robota. Sada moze poceti pogadjanje.\\nNaida unesi koordinate koje zelis gadjati:\\nNaida ima 0 unistenih, 0 ostecenih i 4 citavih robota.\\nAlina ima 0 unistenih, 0 ostecenih i 4 citavih robota.\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Test unosa dimenzija, broja robota i ispravnih koordinata.\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-6 -7 9 8 120 120 5 5 -1 7 2 a a 0 0\n0 0 0 1 b c d f\n-4 -3 0 0 0 0 0 0 1 1 2 1 3 3 3 3 8 9 12 11 2 3 3 3 1 1 1 2 c c\n-4 -4 5 5 -1 -1\n"
+            },
+            "expected": [
+                "Igra je pocela, unesite dimenzije matrica (dva broja):\\nDimenzije matrica moraju biti pozitivne\\nIgra je pocela, unesite dimenzije matrica (dva broja):\\nMatrice moraju biti kvadratne\\nIgra je pocela, unesite dimenzije matrica (dva broja):\\nPrevelike dimenzije\\nIgra je pocela, unesite dimenzije matrica (dva broja):\\nUnesite broj robota:\\nNe mozete igrati bez robota\\nUnesite broj robota:\\nZelite igrati sa previse robota\\nUnesite broj robota:\\nNaida unesi pocetne i krajnje koordinate 1. robota:\\nPogresne koordinate gdje zelite smjestiti robota\\nNaida unesi pocetne i krajnje koordinate 1. robota:\\nPogresne koordinate gdje zelite smjestiti robota\\nNaida unesi pocetne i krajnje koordinate 1. robota:\\nPogresne koordinate gdje zelite smjestiti robota\\nNaida unesi pocetne i krajnje koordinate 1. robota:\\nPogresne koordinate gdje zelite smjestiti robota\\nNaida unesi pocetne i krajnje koordinate 1. robota:\\nNaida unesi pocetne i krajnje koordinate 2. robota:\\nAlina unesi pocetne i krajnje koordinate 1. robota:\\nAlina unesi pocetne i krajnje koordinate 2. robota:\\nPogresne koordinate gdje zelite smjestiti robota\\nAlina unesi pocetne i krajnje koordinate 2. robota:\\nPogresne koordinate gdje zelite smjestiti robota\\nAlina unesi pocetne i krajnje koordinate 2. robota:\\nUspjesno ste unijeli pozicije robota. Sada moze poceti pogadjanje.\\nNaida unesi koordinate koje zelis gadjati:\\nPogresne koordinate gdje zelite gadjati\\nAlina unesi koordinate koje zelis gadjati:\\nPogresne koordinate gdje zelite gadjati\\nNaida unesi koordinate koje zelis gadjati:\\nPogresne koordinate gdje zelite gadjati\\nAlina unesi koordinate koje zelis gadjati:\\nNaida ima 0 unistenih, 0 ostecenih i 2 citavih robota.\\nAlina ima 0 unistenih, 0 ostecenih i 2 citavih robota.\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 8,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 5 4 -2 -2 -2 -2 0 0 0 0 3 2 3 3 -2 -2 -2 -2 2 1 4 1 -2 -2 -2 -2 0 4 3 4 1 1 1 1 1 0 0 0 2 2 2 0 -2 -2 -2 -2 0 4 0 1 -1 -1\n"
+            },
+            "expected": [
+                "Igra je pocela, unesite dimenzije matrica (dva broja):\\nUnesite broj robota:\\nNaida unesi pocetne i krajnje koordinate 1. robota:\\n- - - - - \\n- - - - - \\n- - - - - \\n- - - - - \\n- - - - - \\nNaida unesi pocetne i krajnje koordinate 1. robota:\\nNaida unesi pocetne i krajnje koordinate 2. robota:\\nNaida unesi pocetne i krajnje koordinate 3. robota:\\nR - - - - \\n- - - - - \\n- - - R - \\n- - - R - \\n- - - - - \\nNaida unesi pocetne i krajnje koordinate 3. robota:\\nNaida unesi pocetne i krajnje koordinate 4. robota:\\nR - - - - \\n- - R R R \\n- - - R - \\n- - - R - \\n- - - - - \\nNaida unesi pocetne i krajnje koordinate 4. robota:\\nAlina unesi pocetne i krajnje koordinate 1. robota:\\nAlina unesi pocetne i krajnje koordinate 2. robota:\\nAlina unesi pocetne i krajnje koordinate 3. robota:\\nAlina unesi pocetne i krajnje koordinate 4. robota:\\nR R R - - \\n- R R - - \\n- - R - - \\n- - - - - \\n- - - - - \\nAlina unesi pocetne i krajnje koordinate 4. robota:\\nUspjesno ste unijeli pozicije robota. Sada moze poceti pogadjanje.\\nNaida unesi koordinate koje zelis gadjati:\\nNaida ima 0 unistenih, 0 ostecenih i 4 citavih robota.\\nAlina ima 0 unistenih, 0 ostecenih i 4 citavih robota.\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 9,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 5 3 1 1 1 1 3 4 3 3 2 2 0 2 0 0 0 0 4 4 4 3 2 4 2 2 -2 -2 1 1 -2 -2 2 2 0 0 6 6 1 1 0 2 4 4 -2 -2 0 0 4 3 3 3 -2 -2 0 4 0 2 4 4 1 1 3 2 1 2 -2 -2 1 4 -2 -2 3 4\n"
+            },
+            "expected": [
+                "Igra je pocela, unesite dimenzije matrica (dva broja):\\nUnesite broj robota:\\nNaida unesi pocetne i krajnje koordinate 1. robota:\\nNaida unesi pocetne i krajnje koordinate 2. robota:\\nNaida unesi pocetne i krajnje koordinate 3. robota:\\nAlina unesi pocetne i krajnje koordinate 1. robota:\\nAlina unesi pocetne i krajnje koordinate 2. robota:\\nAlina unesi pocetne i krajnje koordinate 3. robota:\\nUspjesno ste unijeli pozicije robota. Sada moze poceti pogadjanje.\\nNaida unesi koordinate koje zelis gadjati:\\n- - - - - \\n- R - - - \\nR R R - - \\n- - - R - \\n- - - R - \\nNaida unesi koordinate koje zelis gadjati:\\nPromasaj\\nAlina unesi koordinate koje zelis gadjati:\\nR - - - - \\n- O - - - \\n- - R - - \\n- - R - R \\n- - R - R \\nAlina unesi koordinate koje zelis gadjati:\\nPogodak\\nNaida unesi koordinate koje zelis gadjati:\\nUnisteno\\nAlina unesi koordinate koje zelis gadjati:\\nPogresne koordinate gdje zelite gadjati\\nNaida unesi koordinate koje zelis gadjati:\\nVec ste gadjali ovo polje\\nAlina unesi koordinate koje zelis gadjati:\\nPogodak\\nNaida unesi koordinate koje zelis gadjati:\\nPogodak\\nAlina unesi koordinate koje zelis gadjati:\\nX - - - - \\n- O - - - \\n- - R - - \\n- - R - R \\n- - R - X \\nAlina unesi koordinate koje zelis gadjati:\\nPromasaj\\nNaida unesi koordinate koje zelis gadjati:\\nUnisteno\\nAlina unesi koordinate koje zelis gadjati:\\nPogodak\\nNaida unesi koordinate koje zelis gadjati:\\nO - - - - \\n- R - - - \\nX R X - - \\n- - - X - \\n- - - R - \\nNaida unesi koordinate koje zelis gadjati:\\nPromasaj\\nAlina unesi koordinate koje zelis gadjati:\\nVec ste gadjali ovo polje\\nNaida unesi koordinate koje zelis gadjati:\\nVec ste gadjali ovo polje\\nAlina unesi koordinate koje zelis gadjati:\\nUnisteno\\nNaida unesi koordinate koje zelis gadjati:\\nPromasaj\\nAlina unesi koordinate koje zelis gadjati:\\nUnisteno\\nNaida unesi koordinate koje zelis gadjati:\\nO - - - - \\n- X - - - \\nX X X - - \\n- - - X - \\n- - - R - \\nNaida unesi koordinate koje zelis gadjati:\\nPromasaj\\nAlina unesi koordinate koje zelis gadjati:\\nX - - - - \\n- O - - - \\n- - R O - \\n- - R - X \\nO O R - X \\nAlina unesi koordinate koje zelis gadjati:\\nUnisteno\\nAlina je pobijedila. Alina ima 2 unistenih, 0 ostecenih i 1 citavih robota.\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

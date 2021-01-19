@@ -1,0 +1,81 @@
+{
+    "id": 5711,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 4, Zadatak 3",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ NAPOMENA: Ostali AT su postavljeni na Zamger-u, te se nece postavljati na C9 radi opterecenja servera.\n\n\/\/ AT1: Testiranje metoda DajOcekivanoVrijemePolijetanja()\n\/\/ i DajOcekivanoVrijemeSlijetanja()\n\nLet let(\"Odrediste\", \"Oznaka\", 1, 1, 15, 400);\n    int h, m;\n    auto pomocna = let.DajOcekivanoVrijemePolijetanja();\n    h = pomocna.first;\n    m = pomocna.second;\n    std::cout << h << \", \" << m << \", \";\n    pomocna = let.DajOcekivanoVrijemeSlijetanja();\n    h = pomocna.first;\n    m = pomocna.second;\n    std::cout << h << \", \" << m << std::endl;",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 3, obratite se na mail: hcapelj1@etf.unsa.ba",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1, 15, 7, 55"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Autotest dodan na C9 radi efektivnije i brze provjere formatiranja ispisa\n\n\/\/ AT 12: Provjera formata ispisa\n    \/\/ Provjera formata ispisa\n    Let let(\"Odrediste\", \"Oznaka\", 1, 1, 15, 400);\n    let.Ispisi();\n\n\/\/ Odsjecanje odredista, kasnjenje\n    Let let2(\"Odrediste Odrediste Odrediste\", \"Oznaka\", 1, 1, 15, 400);\n    let2.PostaviKasnjenje(10);\n    let2.Ispisi();",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 3, obratite se na mail: hcapelj1@etf.unsa.ba",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Oznaka    Odrediste              01:15   07:55     1\\nOznaka    Odrediste Odrediste    01:25 (Planirano 01:15, Kasni 10 min)",
+                "Oznaka    Odrediste              01:15   07:55     1Oznaka    Odrediste Odrediste    01:25 (Planirano 01:15, Kasni 10 min)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Autotest dodan na C9 radi efektivnije i brze provjere formatiranja ispisa\n\n\/\/ AT 14: Test metode Letovi::Ispisi()\n    Letovi letovi(5);\n    letovi.RegistrirajLet(\"A\", \"B\", 1, 0, 0, 100);\n    letovi.IsprazniKolekciju();\n\n    letovi.RegistrirajLet(\"Odrediste2\", \"Oznaka2\", 20, 12, 12, 250);\n    Let* let = new Let(\"Odrediste\", \"Oznaka\", 10, 10, 10, 300);\n    let->PostaviKasnjenje(100);\n    letovi.RegistrirajLet(let);\n    letovi.RegistrirajLet(\"A\", \"B\", 1, 0, 55, 100);\n    letovi.Ispisi(5,5);",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 3, obratite se na mail: hcapelj1@etf.unsa.ba",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Oznaka    Odrediste              11:50 (Planirano 10:10, Kasni 100 min)\\nOznaka2   Odrediste2             12:12   16:22    20"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

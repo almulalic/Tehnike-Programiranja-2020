@@ -1,0 +1,80 @@
+{
+    "id": 5746,
+    "name": "Tehnike programiranja (2019\/2020), Ispit 6, Zadatak 2",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 10,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  {\n    std::cout << \"AT1 - test konstruktora sa jednim parametrom\" << std::endl;\n    const char niz[] = \"Neki niz\";\n    String s1, s2 = \"Dobar dan\", s3(niz);\n    std::cout << \"OK\" << std::endl;\n  }\n  \n  {\n    std::cout << \"AT2 - test konstruktora sa dva parametra\" << std::endl;\n    String s1(10, 'x'), s2(12, 'f'), s3(3, 'c');\n    std::cout << \"OK\" << std::endl;\n  }\n  \n  {\n    std::cout << \"AT3 - test sekvencijskog konstruktora\" << std::endl;\n    String s5{'D', 'a', 'n', 'a', 's', ' ', 'j', 'e', ' ', 'i', 's', 'p', 'i', 't', '.'};\n    std::cout << \"OK\" << std::endl;\n  }\n  \n  {\n    std::cout << \"AT4 - testiranje metode DajDuzinu\" << std::endl;\n    const char niz[] = \"Neki niz\";\n    String s1, s2 = \"Dobar dan\", s3(niz), s4{'D', 'a', 'n', 'a', 's', ' ', 'j', 'e', ' ', 'i', 's', 'p', 'i', 't', '.'};\n    String s5(10, 'x'), s6(12, 'f'), s7(3, 'c');\n    std::cout << s1.DajDuzinu() << \" \" << s2.DajDuzinu() << \" \" << s3.DajDuzinu() << \" \" << s4.DajDuzinu() << \" \";\n    std::cout << s5.DajDuzinu() << \" \" << s6.DajDuzinu() << \" \" << s7.DajDuzinu() << std::endl;\n  }\n  \n  {\n    std::cout << \"AT5 - testiranje operatora dodjele (string = string) + ispis na izlazni tok\" << std::endl;\n    String s2 = \"Dobar dan\", s4{'D', 'a', 'n', 'a', 's', ' ', 'j', 'e', ' ', 'i', 's', 'p', 'i', 't', '.'};\n    std::cout << \"S2: \" << s2 << \" S4: \" << s4 << std::endl;\n    s2 = s4;\n    std::cout << \"S2: \" << s2 << \" S4: \" << s4 << std::endl;\n  }\n  \n  {\n    std::cout << \"AT6 - testiranje operatora dodjele (string = const char) + ispis na izlazni tok\" << std::endl;\n    String s2 = \"Dobar dan\", s4{'D', 'a', 'n', 'a', 's', ' ', 'j', 'e', ' ', 'i', 's', 'p', 'i', 't', '.'};\n    std::cout << \"S2: \" << s2 << \" S4: \" << s4 << std::endl;\n    s2 = \"Pada kisa.\";\n    std::cout << \"S2: \" << s2 << \" S4: \" << s4 << std::endl;\n    s4 = \"Pojavila se duga.\";\n    std::cout << \"S2: \" << s2 << \" S4: \" << s4 << std::endl;\n  }\n  \n  {\n    std::cout << \"AT7 - testiranje kopirajuceg konstruktora\" << std::endl;\n    String s2 = \"Dobar dan\", s4{'D', 'a', 'n', 'a', 's', ' ', 'j', 'e', ' ', 'i', 's', 'p', 'i', 't', '.'};\n    std::cout << \"S2: \" << s2 << \" S4: \" << s4 << std::endl;\n    String s1(s2);\n    std::cout << \"S1: \" << s1 << \" S2: \" << s2 << \" S4: \" << s4 << std::endl;\n    String s5(s1);\n    std::cout << \"S1: \" << s1 << \" S2: \" << s2 << \" S4: \" << s4 << \" S5: \" << s5 << std::endl;\n    String s6(s4);\n    std::cout << \"S1: \" << s1 << \" S2: \" << s2 << \" S4: \" << s4 << \" S5: \" << s5 << \" S6: \" << s6 << std::endl;\n  }\n ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "AT1 - test konstruktora sa jednim parametrom\\nOK\\nAT2 - test konstruktora sa dva parametra\\nOK\\nAT3 - test sekvencijskog konstruktora\\nOK\\nAT4 - testiranje metode DajDuzinu\\n0 9 8 15 10 12 3\\nAT5 - testiranje operatora dodjele (string = string) + ispis na izlazni tok\\nS2: Dobar dan S4: Danas je ispit.\\nS2: Danas je ispit. S4: Danas je ispit.\\nAT6 - testiranje operatora dodjele (string = const char) + ispis na izlazni tok\\nS2: Dobar dan S4: Danas je ispit.\\nS2: Pada kisa. S4: Danas je ispit.\\nS2: Pada kisa. S4: Pojavila se duga.\\nAT7 - testiranje kopirajuceg konstruktora\\nS2: Dobar dan S4: Danas je ispit.\\nS1: Dobar dan S2: Dobar dan S4: Danas je ispit.\\nS1: Dobar dan S2: Dobar dan S4: Danas je ispit. S5: Dobar dan\\nS1: Dobar dan S2: Dobar dan S4: Danas je ispit. S5: Dobar dan S6: Danas je ispit."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 11,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  {\n    std::cout << \"AT8 - testiranje kopirajuceg konstruktora i operatora dodjele\" << std::endl;\n    String s2 = \"Dobar dan\", s4{'D', 'a', 'n', 'a', 's', ' ', 'j', 'e', ' ', 'i', 's', 'p', 'i', 't', '.'};\n    std::cout << \"S2: \" << s2 << \" S4: \" << s4 << std::endl;\n    String s1(s2);\n    std::cout << \"S1: \" << s1 << \" S2: \" << s2 << \" S4: \" << s4 << std::endl;\n    String s5(s1);\n    std::cout << \"S1: \" << s1 << \" S2: \" << s2 << \" S4: \" << s4 << \" S5: \" << s5 << std::endl;\n    String s6(s4);\n    std::cout << \"S1: \" << s1 << \" S2: \" << s2 << \" S4: \" << s4 << \" S5: \" << s5 << \" S6: \" << s6 << std::endl;\n    s4 = s5;\n    s2 = s6;\n    s5 = s1;\n    std::cout << \"S1: \" << s1 << \" S2: \" << s2 << \" S4: \" << s4 << \" S5: \" << s5 << \" S6: \" << s6 << std::endl;\n  }\n  \n  {\n    std::cout << \"AT9 - testiranje pomjerajuceg konstruktora i pomjerajuceg operatora dodjele\" << std::endl;\n    String s2 = \"Dobar dan\", s4{'D', 'a', 'n', 'a', 's', ' ', 'j', 'e', ' ', 'i', 's', 'p', 'i', 't', '.'};\n    std::cout << \"S2: \" << s2 << \" S4: \" << s4 << std::endl;\n    String s1(std::move(s2));\n    std::cout << \"S1: \" << s1 << \" S4: \" << s4 << std::endl;\n    String s5(std::move(s1));\n    String s6(std::move(s4));\n    std::cout << \"S5: \" << s5 << \" S6: \" << s6 << std::endl;\n    s6 = std::move(s5);\n    std::cout << \"S6: \" << s6 << std::endl;\n    String s7 = \"Dobar dan\", s8{'D', 'a', 'n', 'a', 's', ' ', 'j', 'e', ' ', 'i', 's', 'p', 'i', 't', '.'};\n    std::cout << \"S7: \" << s7 << \" S8: \" << s8 << std::endl;\n    String s9, s10, s11;\n    s9 = std::move(s7);\n    std::cout << \"S9: \" << s9 << std::endl;\n    s10 = std::move(s8);\n    std::cout << \"S9: \" << s9 << \" S10: \" << s10 << \" S11: \" << s11 << std::endl;\n    \n  }\n  \n  {\n    std::cout << \"AT10 - testiranje pomjerajuceg konstruktora i pomjerajuceg operatora dodjele\" << std::endl;\n    String s2 = \"Cuperak kose obi\u010dno nose\", s4{\"neko na oku, neko do nosa,\"};\n    std::cout << \"S2: \" << s2 << \" S4: \" << s4 << std::endl;\n    String s1(std::move(s2));\n    std::cout << \"S1: \" << s1 << \" S4: \" << s4 << std::endl;\n    String s5(std::move(s1));\n    String s6(std::move(s4));\n    std::cout << \"S5: \" << s5 << \" S6: \" << s6 << std::endl;\n    s6 = std::move(s5);\n    std::cout << \"S6: \" << s6 << std::endl;\n    String s7 = \"al ima jedan cuperak plavi\", s8{\"zamisli gde? U mojoj glavi.\"};\n    std::cout << \"S7: \" << s7 << \" S8: \" << s8 << std::endl;\n    String s9, s10;\n    s9 = std::move(s7);\n    std::cout << \"S9: \" << s9 << std::endl;\n    s10 = std::move(s8);\n    std::cout << \"S9: \" << s9 << \" S10: \" << s10 << std::endl;\n  }\n  \n  {\n    std::cout << \"AT11 - test metoda begin() i end()\" << std::endl;\n    String s1(\"Vodopad ima bradu kao grof Lav Nikolajevic Tolstoj. To se zapravo jutro po sebi peni i razapinje dugu.\");\n    for(char c : s1) \n      std::cout << c;\n    std::cout << std::endl;\n    String s2(\"Mika Antic\");\n    for(char c : s2) \n      std::cout << c << \"*\";\n    std::cout << std::endl;\n    \n      \n  }\n  \n  {\n    std::cout << \"AT12 - operatora []\" << std::endl;\n    String s1(\"Vodopad ima bradu kao grof Lav Nikolajevic Tolstoj. To se zapravo jutro po sebi peni i razapinje dugu.\");\n    for (int i{0}; i < 102; i++)\n      std::cout << s1[i];\n    std::cout << std::endl;\n  }\n  ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "AT8 - testiranje kopirajuceg konstruktora i operatora dodjele\\nS2: Dobar dan S4: Danas je ispit.\\nS1: Dobar dan S2: Dobar dan S4: Danas je ispit.\\nS1: Dobar dan S2: Dobar dan S4: Danas je ispit. S5: Dobar dan\\nS1: Dobar dan S2: Dobar dan S4: Danas je ispit. S5: Dobar dan S6: Danas je ispit.\\nS1: Dobar dan S2: Danas je ispit. S4: Dobar dan S5: Dobar dan S6: Danas je ispit.\\nAT9 - testiranje pomjerajuceg konstruktora i pomjerajuceg operatora dodjele\\nS2: Dobar dan S4: Danas je ispit.\\nS1: Dobar dan S4: Danas je ispit.\\nS5: Dobar dan S6: Danas je ispit.\\nS6: Dobar dan\\nS7: Dobar dan S8: Danas je ispit.\\nS9: Dobar dan\\nS9: Dobar dan S10: Danas je ispit. S11: \\nAT10 - testiranje pomjerajuceg konstruktora i pomjerajuceg operatora dodjele\\nS2: Cuperak kose obi\u010dno nose S4: neko na oku, neko do nosa,\\nS1: Cuperak kose obi\u010dno nose S4: neko na oku, neko do nosa,\\nS5: Cuperak kose obi\u010dno nose S6: neko na oku, neko do nosa,\\nS6: Cuperak kose obi\u010dno nose\\nS7: al ima jedan cuperak plavi S8: zamisli gde? U mojoj glavi.\\nS9: al ima jedan cuperak plavi\\nS9: al ima jedan cuperak plavi S10: zamisli gde? U mojoj glavi.\\nAT11 - test metoda begin() i end()\\nVodopad ima bradu kao grof Lav Nikolajevic Tolstoj. To se zapravo jutro po sebi peni i razapinje dugu.\\nM*i*k*a* *A*n*t*i*c*\\nAT12 - operatora []\\nVodopad ima bradu kao grof Lav Nikolajevic Tolstoj. To se zapravo jutro po sebi peni i razapinje dugu."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 12,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  {\n    std::cout << \"AT13 - operatora [] sa izuzetkom\" << std::endl;\n    String s(\"Vodopad ima bradu kao grof Lav Nikolajevic Tolstoj. To se zapravo jutro po sebi peni i razapinje dugu.\");\n    try\n    {\n      std::cout << s[103300];\n      std::cout << \"Ovo se ne smije ispisati.\";\n    }\n    catch(std::range_error e)\n    {\n      std::cout << e.what() << std::endl;\n    }\n    catch(...)\n    {\n      std::cout << \"Neispravan izuzetak!\";\n    }\n  }\n    \n    \n  {\n    std::cout << \"AT14 - test za nullterminator\" << std::endl;\n    String s1(\"Vodopad ima bradu kao grof Lav Nikolajevic Tolstoj. To se zapravo jutro po sebi peni i razapinje dugu.\");\n    try\n    {\n      std::cout << s1[102];\n      std::cout << \"Ovo se ne smije ispisati.\";\n    }\n    catch(std::range_error e)\n    {\n      std::cout << e.what() << std::endl;\n    }\n    catch(...)\n    {\n      std::cout << \"Neispravan izuzetak!\";\n    }\n    if ((&s1[0])[102] == '\\0') \n     std::cout << \"OK\" << std::endl;\n  }\n  \n  {\n    std::cout << \"AT15 - test operatora +\" << std::endl;\n    String s1(\"AAA\"), s2(\"BBB\");\n    String s3 = s1 + s2;\n    std::cout << \"S1: \"<< s1 << \" S2: \"<< s2 << \" S3: \"<< s3 << std::endl;\n    char niz1[] = \"CCC\";\n    const char niz2[] = \"DDD\";\n    String s4 = s1 + niz1;\n    String s5 = s3 + niz2;\n    String s6 = niz1 + s1;\n    String s7 = niz2 + s2;\n    std::cout << \"S1: \"<< s1 << \" S2: \"<< s2 << \" S3: \"<< s3 << \" S4: \"<< s4 << \" S5: \"<< s5 << \" S6: \"<< s6 << \" S7: \"<< s7 <<std::endl;\n    std::cout << s1 + s2 + s3 << \" \"  << \"yyy\" + s1 << \" \" << s1 + \"zzz\" << std::endl;\n  }\n  {\n    std::cout << \"AT16 - test operatora +\" << std::endl;\n    String s1(\"AAA\"), s2(\"BBB\");\n    String s3 = s1 + s2;\n    std::cout << \"S1: \"<< s1 << \" S2: \"<< s2 << \" S3: \"<< s3 << std::endl;\n    char niz1[] = \"CCC\";\n    const char niz2[] = \"DDD\";\n    String s4 = s1 + niz1;\n    String s5 = s3 + niz2;\n    String s6 = niz1 + s1;\n    String s7 = niz2 + s2;\n    std::cout << \"S1: \"<< s1 << \" S2: \"<< s2 << \" S3: \"<< s3 << \" S4: \"<< s4 << \" S5: \"<< s5 << \" S6: \"<< s6 << \" S7: \"<< s7 <<std::endl;\n    std::cout << s1 + s2 + s3 << \" \"  << \"yyy\" + s1 << \" \" << s1 + \"zzz\" << std::endl;\n  }\n  \n  {\n    std::cout << \"AT17 - test operatora +=\" << std::endl;\n    \n    String s1(\"AAA\");\n    s1 += 'p'; \n    std::cout << s1 << std::endl;\n    s1 += 'q';\n    std::cout << s1 << std::endl;\n    String s2(\"FFF\");\n    s2 += s1;\n    std::cout << s2 << std::endl;\n  }\n  \n  {\n    std::cout << \"AT18 - test operatora +=\" << std::endl;\n    \n    String s1(\"AAA\");\n    s1 += 'p'; \n    std::cout << s1 << std::endl;\n    s1 += 'q';\n    std::cout << s1 << std::endl;\n    String s2(\"FFF\");\n    s2 += s1;\n    std::cout << s2 << std::endl;\n    s2 += \"ABC\";\n    std::cout << s2 << std::endl;\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "AT13 - operatora [] sa izuzetkom\\nNeispravan indeks\\nAT14 - test za nullterminator\\nNeispravan indeks\\nOK\\nAT15 - test operatora +\\nS1: AAA S2: BBB S3: AAABBB\\nS1: AAA S2: BBB S3: AAABBB S4: AAACCC S5: AAABBBDDD S6: CCCAAA S7: DDDBBB\\nAAABBBAAABBB yyyAAA AAAzzz\\nAT16 - test operatora +\\nS1: AAA S2: BBB S3: AAABBB\\nS1: AAA S2: BBB S3: AAABBB S4: AAACCC S5: AAABBBDDD S6: CCCAAA S7: DDDBBB\\nAAABBBAAABBB yyyAAA AAAzzz\\nAT17 - test operatora +=\\nAAAp\\nAAApq\\nFFFAAApq\\nAT18 - test operatora +=\\nAAAp\\nAAApq\\nFFFAAApq\\nFFFAAApqABC"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

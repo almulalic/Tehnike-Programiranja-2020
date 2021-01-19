@@ -1,0 +1,28 @@
+==6861== Memcheck, a memory error detector
+==6861== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==6861== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==6861== Command: /rhome/a/amulalic1/workspace/TP/Z2/Z2/.runme
+==6861== Parent PID: 6852
+==6861== 
+==6861== Invalid write of size 4
+==6861==    at 0x109072: main (main.cpp:139)
+==6861==  Address 0x1fff001000 is not stack'd, malloc'd or (recently) free'd
+==6861== 
+==6861== 
+==6861== Process terminating with default action of signal 11 (SIGSEGV): dumping core
+==6861==  Access not within mapped region at address 0x1FFF001000
+==6861==    at 0x109072: main (main.cpp:139)
+==6861==  If you believe this happened as a result of a stack
+==6861==  overflow in your program's main thread (unlikely but
+==6861==  possible), you can try to increase the size of the
+==6861==  main thread stack using the --main-stacksize= flag.
+==6861==  The main thread stack size used in this run was 8388608.
+==6861== 
+==6861== HEAP SUMMARY:
+==6861==     in use at exit: 0 bytes in 0 blocks
+==6861==   total heap usage: 2 allocs, 2 frees, 73,728 bytes allocated
+==6861== 
+==6861== All heap blocks were freed -- no leaks are possible
+==6861== 
+==6861== For counts of detected and suppressed errors, rerun with: -v
+==6861== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)

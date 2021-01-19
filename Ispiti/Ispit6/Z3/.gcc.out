@@ -1,0 +1,4 @@
+/rhome/a/amulalic1/workspace/TP/Ispit6/Z3/main.cpp: In member function ‘Skladiste& Skladiste::operator=(Skladiste&&)’:
+/rhome/a/amulalic1/workspace/TP/Ispit6/Z3/main.cpp:102:5: warning: no return statement in function returning non-void [-Wreturn-type]
+     }
+     ^

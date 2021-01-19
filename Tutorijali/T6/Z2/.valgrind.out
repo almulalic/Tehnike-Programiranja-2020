@@ -1,0 +1,34 @@
+==10836== Memcheck, a memory error detector
+==10836== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==10836== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==10836== Command: /rhome/a/amulalic1/workspace/TP/T6/Z2/.runme
+==10836== Parent PID: 10816
+==10836== 
+==10836== Invalid write of size 8
+==10836==    at 0x109110: double* KreirajIzvrnutiNiz<double>(double*, double*) (main.cpp:26)
+==10836==    by 0x108F28: main (main.cpp:50)
+==10836==  Address 0x5d80360 is 0 bytes after a block of size 32 alloc'd
+==10836==    at 0x4C3089F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10836==    by 0x109098: double* KreirajIzvrnutiNiz<double>(double*, double*) (main.cpp:19)
+==10836==    by 0x108F28: main (main.cpp:50)
+==10836== 
+==10836== Invalid read of size 8
+==10836==    at 0x108F62: main (main.cpp:53)
+==10836==  Address 0x5d80340 is 0 bytes inside a block of size 32 free'd
+==10836==    at 0x4C3173B: operator delete[](void*) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10836==    by 0x109126: double* KreirajIzvrnutiNiz<double>(double*, double*) (main.cpp:32)
+==10836==    by 0x108F28: main (main.cpp:50)
+==10836==  Block was alloc'd at
+==10836==    at 0x4C3089F: operator new[](unsigned long) (in /usr/lib/valgrind/vgpreload_memcheck-amd64-linux.so)
+==10836==    by 0x109098: double* KreirajIzvrnutiNiz<double>(double*, double*) (main.cpp:19)
+==10836==    by 0x108F28: main (main.cpp:50)
+==10836== 
+==10836== 
+==10836== HEAP SUMMARY:
+==10836==     in use at exit: 0 bytes in 0 blocks
+==10836==   total heap usage: 8 allocs, 8 frees, 74,045 bytes allocated
+==10836== 
+==10836== All heap blocks were freed -- no leaks are possible
+==10836== 
+==10836== For counts of detected and suppressed errors, rerun with: -v
+==10836== ERROR SUMMARY: 6 errors from 2 contexts (suppressed: 0 from 0)

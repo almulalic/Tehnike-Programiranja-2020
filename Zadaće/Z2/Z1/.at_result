@@ -1,0 +1,40 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 3,
+    "compile_result": {
+        "status": 2,
+        "output": "main.cpp: In function ‘void Unos(Polja&, int)’:\nmain.cpp:236:52: error: no match for ‘operator*’ (operand types are ‘__gnu_cxx::__alloc_traits<std::allocator<std::vector<char> > >::value_type {aka std::vector<char>}’ and ‘int’)\n     int preostaloPolja = trenutnaPolja.at(0).at(0) * 2;\n                          ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~\nmain.cpp:263:52: error: no match for ‘operator*’ (operand types are ‘__gnu_cxx::__alloc_traits<std::allocator<std::vector<char> > >::value_type {aka std::vector<char>}’ and ‘int’)\n         preostaloPolja = trenutnaPolja.at(0).at(0) * 2;\n                          ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~",
+        "parsed_output": [
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "236",
+                "col": "52",
+                "message": "no match for 'operator*' (operand types are '__gnu_cxx::__alloc_traits<std::allocator<std::vector<char> > >::value_type {aka std::vector<char>}' and 'int')",
+                "output": "/tmp/buildservice/bs_8994/main.cpp:236:52: error: no match for ‘operator*’ (operand types are ‘__gnu_cxx::__alloc_traits<std::allocator<std::vector<char> > >::value_type {aka std::vector<char>}’ and ‘int’)     int preostaloPolja = trenutnaPolja.at(0).at(0) * 2;                          ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~",
+                "code": "int preostaloPolja = trenutnaPolja.at(0).at(0) * 2;"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "263",
+                "col": "52",
+                "message": "no match for 'operator*' (operand types are '__gnu_cxx::__alloc_traits<std::allocator<std::vector<char> > >::value_type {aka std::vector<char>}' and 'int')",
+                "output": "/tmp/buildservice/bs_8994/main.cpp:263:52: error: no match for ‘operator*’ (operand types are ‘__gnu_cxx::__alloc_traits<std::allocator<std::vector<char> > >::value_type {aka std::vector<char>}’ and ‘int’)         preostaloPolja = trenutnaPolja.at(0).at(0) * 2;                          ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~",
+                "code": "preostaloPolja = trenutnaPolja.at(0).at(0) * 2;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": [],
+    "queue_items": 0,
+    "time": 1587405824
+}

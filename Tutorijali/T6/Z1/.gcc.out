@@ -1,0 +1,4 @@
+/rhome/a/amulalic1/workspace/TP/T6/Z1/main.cpp: In function ‘TipElemenata* GenerirajStepeneDvojke(int)’:
+/rhome/a/amulalic1/workspace/TP/T6/Z1/main.cpp:31:2: error: expected ‘,’ or ‘;’ before ‘p’
+  p[0] = 1;
+  ^

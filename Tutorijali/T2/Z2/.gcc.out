@@ -1,0 +1,17 @@
+/rhome/a/amulalic1/workspace/TP/T2/Z2/main.cpp: In function ‘int TestPerioda(std::vector<double>, int)’:
+/rhome/a/amulalic1/workspace/TP/T2/Z2/main.cpp:14:34: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         if(niz.at(i)== niz.at(i+p))
+                                  ^
+/rhome/a/amulalic1/workspace/TP/T2/Z2/main.cpp: In function ‘int main()’:
+/rhome/a/amulalic1/workspace/TP/T2/Z2/main.cpp:50:18: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+         if(unos==0) break;
+                  ^
+/rhome/a/amulalic1/workspace/TP/T2/Z2/main.cpp:52:19: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     } while(unos!=0);
+                   ^
+/rhome/a/amulalic1/workspace/TP/T2/Z2/main.cpp:58:5: warning: this ‘else’ clause does not guard... [-Wmisleading-indentation]
+     else
+     ^~~~
+/rhome/a/amulalic1/workspace/TP/T2/Z2/main.cpp:61:2: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘else’
+  return 0;
+  ^~~~~~

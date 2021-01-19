@@ -1,0 +1,101 @@
+{
+    "id": 5747,
+    "name": "Tehnike programiranja (2019\/2020), Ispit 6, Zadatak 3",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::cout<<\"------ AT 1 ------\"<<std::endl;\n    \/\/ AT 1: Konstruktor klase Sanduk i metoda DajTezinu i DajUkupnuTezinu\n    {\n        Sanduk s(2,\"Tekucina\",10,1);\n\n        std::cout<<s.DajTezinu()<<\" \"<<s.DajUkupnuTezinu();\n    }\n\n    std::cout<<std::endl<<\"------ AT 2 ------\"<<std::endl;\n    \/\/ AT 2: Test izuzetaka za klasu Sanduk\n    {\n        try\n        {\n            Sanduk s(-2,\"Tekucina\",10,1);\n\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Bacen je izuzetak pogresnog tipa!\";\n        }\n\n        std::cout<<std::endl;\n        try\n        {\n            Sanduk s(2,\"Tekucina\",-10,1);\n\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Bacen je izuzetak pogresnog tipa!\";\n        }\n\n        std::cout<<std::endl;\n        try\n        {\n            Sanduk s(2,\"Tekucina\",10,-1);\n\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Bacen je izuzetak pogresnog tipa!\";\n        }\n    }\n\n    std::cout<<std::endl<<\"------ AT 3 ------\"<<std::endl;\n    \/\/ AT 3: Test metoda DajTezinu i DajUkupnuTezinu za klasu Sanduk\n    {\n        Sanduk s(30,\"Odjeca\",250,0.4);\n\n        std::cout<<s.DajTezinu()<<\" \"<<s.DajUkupnuTezinu();\n    }\n\n    std::cout<<std::endl<<\"------ AT 4 ------\"<<std::endl;\n    \/\/ AT 4: Test metode Ispisi za klasu Sanduk\n    {\n        Sanduk s(2.5,\"Paket\",3,7);\n\n        s.Ispisi();\n    }\n\n    std::cout<<std::endl<<\"------ AT 5 ------\"<<std::endl;\n    \/\/ AT 5: Test da li su metode realizirane kao inspektori za klasu Sanduk\n    {\n        Sanduk s1(2.5,\"Paket\",3,7);\n\n        const Sanduk s(s1);\n\n        std::cout<<s.DajTezinu()<<\" \"<<s.DajUkupnuTezinu()<<std::endl;\n\n        s.Ispisi();\n    }\n\n    std::cout<<std::endl<<\"------ AT 6 ------\"<<std::endl;\n    \/\/ AT 6: Konstruktor klase Bure i metoda DajTezinu i DajUkupnuTezinu\n    {\n        Bure b(3,\"Tekucina\",10);\n\n        std::cout<<b.DajTezinu()<<\" \"<<b.DajUkupnuTezinu();\n    }\n\n    std::cout<<std::endl<<\"------ AT 7 ------\"<<std::endl;\n    \/\/ AT 7: Test izuzetaka za klasu Bure\n    {\n        try\n        {\n            Bure s(-2,\"Tekucina\",10);\n\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Bacen je izuzetak pogresnog tipa!\";\n        }\n\n        std::cout<<std::endl;\n        try\n        {\n            Bure s(2,\"Tekucina\",-10);\n\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Bacen je izuzetak pogresnog tipa!\";\n        }\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "------ AT 1 ------\\n2 12\\n------ AT 2 ------\\nNeispravni parametri\\nNeispravni parametri\\nNeispravni parametri\\n------ AT 3 ------\\n30 130\\n------ AT 4 ------\\nSanduk 2.5 Paket 3 7\\n\\n------ AT 5 ------\\n2.5 23.5\\nSanduk 2.5 Paket 3 7\\n\\n------ AT 6 ------\\n3 13\\n------ AT 7 ------\\nNeispravni parametri\\nNeispravni parametri"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::cout<<\"------ AT 8 ------\"<<std::endl;\n    \/\/ AT 8: Test metoda DajTezinu i DajUkupnuTezinu za klasu Bure\n    {\n        Bure s(12.5,\"Barel\",52.5);\n\n        std::cout<<s.DajTezinu()<<\" \"<<s.DajUkupnuTezinu();\n    }\n\n    std::cout<<std::endl<<\"------ AT 9 ------\"<<std::endl;\n    \/\/ AT 9: Test metode Ispisi za klasu Bure\n    {\n        Bure s(12.5,\"Barel\",52.5);\n\n        s.Ispisi();\n    }\n\n    std::cout<<std::endl<<\"------ AT 10 ------\"<<std::endl;\n    \/\/ AT 10: Test da li su metode realizirane kao inspektori za klasu Bure\n    {\n        Bure s1(12.5,\"Barel\",52.5);\n\n        const Bure s(s1);\n\n        std::cout<<s.DajTezinu()<<\" \"<<s.DajUkupnuTezinu()<<std::endl;\n\n        s.Ispisi();\n    }\n\n    std::cout<<std::endl<<\"------ AT 11 ------\"<<std::endl;\n    \/\/ AT 11: Test konstruktora klase Skladiste\n    {\n        \/\/ Kod se mora samo kompjalirati kompajlirati\n        Skladiste s;\n\n        std::cout<<\"OK\";\n    }\n\n    std::cout<<std::endl<<\"------ AT 12 ------\"<<std::endl;\n    \/\/ AT 12: Test kopirajuceg konstruktora i metode Ispisi\n    {\n\n        Skladiste s;\n\n        \/\/ Dodavanje razlicitih objekata\n        s.DodajBure(12.5,\"Barel\",52.5);\n        s.DodajSanduk(2.5,\"Paket\",3,7);\n        s.DodajBure(3,\"Tekucina\",10);\n\n        if (true)\n        {\n            \/\/ Kopirajuci konstruktor\n            Skladiste kopija(s);\n\n            \/\/ Modifikacija kopiranog objekta\n            kopija.DodajSanduk(30,\"Odjeca\",250,0.4);\n\n            std::cout<<\"Kopija:\"<<std::endl;\n            kopija.Ispisi();\n        }\n\n        \/\/ Test da li je originial ostao netaknut\n        std::cout<<std::endl<<\"Original:\"<<std::endl;\n        s.Ispisi();\n    }\n\n    std::cout<<std::endl<<\"------ AT 13 ------\"<<std::endl;\n    \/\/ AT 13: Test kopirajuceg operatora dodjele i metode Ispisi\n    {\n\n        Skladiste s;\n\n        \/\/ Dodavanje razlicitih objekata\n        s.DodajBure(12.5,\"Barel\",52.5);\n        s.DodajSanduk(2.5,\"Paket\",3,7);\n        s.DodajBure(3,\"Tekucina\",10);\n\n        if (true)\n        {\n            \/\/ Provjera na destruktivnu samododjelu\n            s = s;\n\n            \/\/ Kopirajuci operator dodjele\n            Skladiste kopija;\n            kopija = s;\n\n            \/\/ Modifikacija kopiranog objekta\n            kopija.DodajSanduk(30,\"Odjeca\",250,0.4);\n\n            std::cout<<\"Kopija:\"<<std::endl;\n            kopija.Ispisi();\n        }\n\n        \/\/ Test da li je originial ostao netaknut\n        std::cout<<std::endl<<\"Original:\"<<std::endl;\n        s.Ispisi();\n    }\n\n    std::cout<<std::endl<<\"------ AT 14 ------\"<<std::endl;\n    \/\/ AT 14: Test pomjerajuceg konstruktora i metode Ispisi\n    {\n\n        Skladiste s;\n\n        \/\/ Dodavanje razlicitih objekata\n        s.DodajBure(12.5,\"Barel\",52.5);\n        s.DodajSanduk(2.5,\"Paket\",3,7);\n        s.DodajBure(3,\"Tekucina\",10);\n\n        if (true)\n        {\n            \/\/ Pomjerajuci konstruktor\n            Skladiste kopija(std::move(s));\n\n            \/\/ Modifikacija kopiranog objekta\n            kopija.DodajSanduk(30,\"Odjeca\",250,0.4);\n\n            std::cout<<\"Kopija:\"<<std::endl;\n            kopija.Ispisi();\n        }\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "------ AT 8 ------\\n12.5 65\\n------ AT 9 ------\\nBure 12.5 Barel 52.5\\n\\n------ AT 10 ------\\n12.5 65\\nBure 12.5 Barel 52.5\\n\\n------ AT 11 ------\\nOK\\n------ AT 12 ------\\nKopija:\\nSanduk 30 Odjeca 250 0.4\\nBure 12.5 Barel 52.5\\nSanduk 2.5 Paket 3 7\\nBure 3 Tekucina 10\\n\\nOriginal:\\nBure 12.5 Barel 52.5\\nSanduk 2.5 Paket 3 7\\nBure 3 Tekucina 10\\n\\n------ AT 13 ------\\nKopija:\\nSanduk 30 Odjeca 250 0.4\\nBure 12.5 Barel 52.5\\nSanduk 2.5 Paket 3 7\\nBure 3 Tekucina 10\\n\\nOriginal:\\nBure 12.5 Barel 52.5\\nSanduk 2.5 Paket 3 7\\nBure 3 Tekucina 10\\n\\n------ AT 14 ------\\nKopija:\\nSanduk 30 Odjeca 250 0.4\\nBure 12.5 Barel 52.5\\nSanduk 2.5 Paket 3 7\\nBure 3 Tekucina 10"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::cout<<\"------ AT 15 ------\"<<std::endl;\n    \/\/ AT 15: Test pomjerajuceg operatora dodjele i metode Ispisi\n    {\n\n        Skladiste s;\n\n        \/\/ Dodavanje razlicitih objekata\n        s.DodajBure(12.5,\"Barel\",52.5);\n        s.DodajSanduk(2.5,\"Paket\",3,7);\n        s.DodajBure(3,\"Tekucina\",10);\n\n        if (true)\n        {\n            \/\/ Pomjerajuci operator dodjele\n            Skladiste kopija;\n            kopija = std::move(s);\n\n            \/\/ Modifikacija kopiranog objekta\n            kopija.DodajSanduk(30,\"Odjeca\",250,0.4);\n\n            std::cout<<\"Kopija:\"<<std::endl;\n            kopija.Ispisi();\n\n        }\n    }\n\n    std::cout<<std::endl<<\"------ AT 16 ------\"<<std::endl;\n    \/\/ AT 16: Test metode DajBrojObjekata\n    {\n        Skladiste s;\n        for (int i{};i<10;i++)\n            s.DodajBure(10,\"Bure\",i);\n\n        for (int i{10};i<22;i++)\n            s.DodajSanduk(15,\"Sanduk\",3,i);\n\n        std::cout<<s.DajBrojObjekata();\n    }\n\n    std::cout<<std::endl<<\"------ AT 17 ------\"<<std::endl;\n    \/\/ AT 17: Test metode DodajSanduk\n    {\n        Skladiste s;\n\n        s.DodajSanduk(2.5,\"Prvi\",2,13.5);\n        s.DodajSanduk(2,\"Drugi\",4,10);\n\n        \/\/ Test da li klasa ostaje ispravna nakon izuzetaka\n        try\n        {\n            s.DodajSanduk(-2.5,\"Neispravan\",2,13.5);\n\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Bacen pogresan tip izuzetka!\";\n        }\n\n        \/\/ Provjera broja objekata - mora biti 2\n        std::cout<<std::endl<<s.DajBrojObjekata();\n    }\n\n    std::cout<<std::endl<<\"------ AT 18 ------\"<<std::endl;\n    \/\/ AT 18: Test metode DodajBure\n    {\n        Skladiste s;\n\n        s.DodajBure(2.5,\"Prvi\",13.5);\n        s.DodajBure(2,\"Drugi\",10);\n\n        \/\/ Test da li klasa ostaje ispravna nakon izuzetaka\n        try\n        {\n            s.DodajBure(2.5,\"Neispravan\",-13.5);\n\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Bacen pogresan tip izuzetka!\";\n        }\n\n        \/\/ Provjera broja objekata - mora biti 2\n        std::cout<<std::endl<<s.DajBrojObjekata();\n    }\n\n    std::cout<<std::endl<<\"------ AT 19 ------\"<<std::endl;\n    \/\/ AT 19: Test metode DajNajlaksi - 1\n    {\n        Skladiste s;\n        for (int i{};i<10;i++)\n            s.DodajBure(10,\"Bure\",i);\n\n        for (int i{10};i<22;i++)\n            s.DodajSanduk(15,\"Sanduk\",3,i);\n\n        s.DodajBure(2,\"Najlaksi\",2.5);\n        s.DodajSanduk(3,\"Nije najlaksi\",3,22);\n\n        \/\/ Ispis najlakseg objekta - provjera da li je vracena referenca na ispravan objekt\n        s.DajNajlaksi().Ispisi();\n    }\n\n    std::cout<<std::endl<<\"------ AT 20 ------\"<<std::endl;\n    \/\/ AT 20: Test metode DajNajlaksi - 2\n    {\n        Skladiste s;\n        for (int i{};i<10;i++)\n            s.DodajBure(10,\"Bure\",i);\n\n        for (int i{10};i<22;i++)\n        {\n            s.DodajSanduk(15,\"Sanduk\",3,i);\n\n            if (i == 14)\n                s.DodajSanduk(1.75,\"Najlaksi\",1,0.5);\n        }\n\n        \/\/ Ispis najlakseg objekta - provjera da li je vracena referenca na ispravan objekt\n        s.DajNajlaksi().Ispisi();\n    }\n\n    std::cout<<std::endl<<\"------ AT 21 ------\"<<std::endl;\n    \/\/ AT 21: Test metode DajBrojPreteskih\n    {\n        Skladiste s;\n        for (int i{};i<10;i++)\n            s.DodajBure(10,\"Bure\",i*5);\n\n        for (int i{10};i<22;i++)\n            s.DodajSanduk(15,\"Sanduk\",3,i);\n\n        std::cout<<s.DajBrojPreteskih(50);\n\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "------ AT 15 ------\\nKopija:\\nSanduk 30 Odjeca 250 0.4\\nBure 12.5 Barel 52.5\\nSanduk 2.5 Paket 3 7\\nBure 3 Tekucina 10\\n\\n------ AT 16 ------\\n22\\n------ AT 17 ------\\nNeispravni parametri\\n2\\n------ AT 18 ------\\nNeispravni parametri\\n2\\n------ AT 19 ------\\nBure 2 Najlaksi 2.5\\n\\n------ AT 20 ------\\nSanduk 1.75 Najlaksi 1 0.5\\n\\n------ AT 21 ------\\n11"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::cout<<\"------ AT 22 ------\"<<std::endl;\n    \/\/ AT 22: Test metode Ispisi - 1\n    {\n        Skladiste s;\n        for (int i{};i<10;i++)\n            s.DodajBure(10,\"Bure\",i);\n\n        for (int i{10};i<22;i++)\n        {\n            s.DodajSanduk(15,\"Sanduk\",3,i);\n\n            if (i == 14)\n                s.DodajSanduk(1.75,\"Najlaksi\",1,0.5);\n        }\n\n        \/\/ Sortiran spisak\n        s.Ispisi();\n    }\n\n    std::cout<<std::endl<<\"------ AT 23 ------\"<<std::endl;\n    \/\/ AT 23: Test metode Ispisi - 2\n    {\n        Skladiste s;\n        for (int i{};i<10;i++)\n            s.DodajBure(10,\"Bure\",i);\n\n        for (int i{10};i<22;i++)\n        {\n            s.DodajSanduk(15,\"Sanduk\",3,i);\n\n            if (i == 14)\n                s.DodajSanduk(1.75,\"Najlaksi\",1,0.5);\n        }\n\n        \/\/ Sadrzaj objekta se ne smije izmijeniti - mora raditi za const objekte\n        const Skladiste s1(s);\n\n        \/\/ Sortiran spisak\n        s1.Ispisi();\n    }\n\n    std::cout<<std::endl<<\"------ AT 24 ------\"<<std::endl;\n    \/\/ AT 24: Test operatora []\n    {\n        Skladiste s;\n        for (int i{};i<10;i++)\n            s.DodajBure(10,\"Bure\",i);\n\n        for (int i{10};i<22;i++)\n        {\n            s.DodajSanduk(15,\"Sanduk\",3,i);\n\n            if (i == 14)\n                s.DodajSanduk(1.75,\"Najlaksi\",1,0.5);\n        }\n\n        \/\/ Test da li je vracena referenca na i-ti objekt\n        s[16].Ispisi();\n    }\n\n    std::cout<<std::endl<<\"------ AT 25 ------\"<<std::endl;\n    \/\/ AT 25: Test izuzetka operatora []\n    {\n        Skladiste s;\n        for (int i{};i<10;i++)\n            s.DodajBure(10,\"Bure\",i);\n\n        for (int i{10};i<22;i++)\n        {\n            s.DodajSanduk(15,\"Sanduk\",3,i);\n\n            if (i == 14)\n                s.DodajSanduk(1.75,\"Najlaksi\",1,0.5);\n        }\n\n        try\n        {\n            s[-16].Ispisi();\n\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::range_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Bacen neispravan tip izuzetka!\";\n        }\n\n        std::cout<<std::endl;\n\n        try\n        {\n            s[116].Ispisi();\n\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::range_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Bacen neispravan tip izuzetka!\";\n        }\n    }\n\n    std::cout<<std::endl<<\"------ AT 26 ------\"<<std::endl;\n    \/\/ AT 26: Test da li su metode koje trebaju biti inspektori deklarirani kao inspektori\n    {\n        Skladiste s1;\n        s1.DodajBure(1,\"Dobar\",22);\n\n        const Skladiste s(s1);\n        s.DajBrojObjekata();\n        s.DajNajlaksi();\n        s.DajBrojPreteskih(100);\n        s[1];\n        s.Ispisi();\n    }\n\n    std::cout<<std::endl<<\"------ AT 27 ------\"<<std::endl;\n    \/\/ AT 27: Test main programa - 1\n    {\n        _main();\n    }\n\n    std::cout<<std::endl<<\"------ AT 28 ------\"<<std::endl;\n    \/\/ AT 28: Test main programa - 2\n    {\n        _main();\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "B\n0.7\nMaslinovo ulje\n50\nS\n1.5\nEkseri\n1000\n0.002\nB\n1.3\nRakija\n35\nK\nB\n5\nMlijeko\n30\nK\n"
+            },
+            "expected": [
+                "------ AT 22 ------\\nSanduk 15 Sanduk 3 21\\nSanduk 15 Sanduk 3 20\\nSanduk 15 Sanduk 3 19\\nSanduk 15 Sanduk 3 18\\nSanduk 15 Sanduk 3 17\\nSanduk 15 Sanduk 3 16\\nSanduk 15 Sanduk 3 15\\nSanduk 15 Sanduk 3 14\\nSanduk 15 Sanduk 3 13\\nSanduk 15 Sanduk 3 12\\nSanduk 15 Sanduk 3 11\\nSanduk 15 Sanduk 3 10\\nBure 10 Bure 9\\nBure 10 Bure 8\\nBure 10 Bure 7\\nBure 10 Bure 6\\nBure 10 Bure 5\\nBure 10 Bure 4\\nBure 10 Bure 3\\nBure 10 Bure 2\\nBure 10 Bure 1\\nBure 10 Bure 0\\nSanduk 1.75 Najlaksi 1 0.5\\n\\n------ AT 23 ------\\nSanduk 15 Sanduk 3 21\\nSanduk 15 Sanduk 3 20\\nSanduk 15 Sanduk 3 19\\nSanduk 15 Sanduk 3 18\\nSanduk 15 Sanduk 3 17\\nSanduk 15 Sanduk 3 16\\nSanduk 15 Sanduk 3 15\\nSanduk 15 Sanduk 3 14\\nSanduk 15 Sanduk 3 13\\nSanduk 15 Sanduk 3 12\\nSanduk 15 Sanduk 3 11\\nSanduk 15 Sanduk 3 10\\nBure 10 Bure 9\\nBure 10 Bure 8\\nBure 10 Bure 7\\nBure 10 Bure 6\\nBure 10 Bure 5\\nBure 10 Bure 4\\nBure 10 Bure 3\\nBure 10 Bure 2\\nBure 10 Bure 1\\nBure 10 Bure 0\\nSanduk 1.75 Najlaksi 1 0.5\\n\\n------ AT 24 ------\\nSanduk 1.75 Najlaksi 1 0.5\\n\\n------ AT 25 ------\\nNeispravan indeks\\nNeispravan indeks\\n------ AT 26 ------\\nBure 1 Dobar 22\\n\\n------ AT 27 ------\\nS - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina sanduka: Sadrzaj: Broj predmeta: Tezina predmeta: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Bure 0.7 Maslinovo ulje 50\\nBure 1.3 Rakija 35\\nSanduk 1.5 Ekseri 1000 0.002\\n\\n------ AT 28 ------\\nS - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Bure 5 Mlijeko 30"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

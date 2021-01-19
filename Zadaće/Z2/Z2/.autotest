@@ -1,0 +1,101 @@
+{
+    "id": 570202,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 2, zadatak 2",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 14,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1 - specifikacija studentskog maina\n\n\/\/Ispisivanje kontejnera prije sortiranja, sortiranje, \n\/\/te ispisivanje sortiranog kontejnera se odvijaju u main funkciji.\n\n\/\/Za sva dodatna pojasnjenja vezana za autotestove ili zadatak opcenito, \n\/\/javiti se na email bcocalic1@etf.unsa.ba ili na chat.google.com.\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "363 15 231 15 42 100 231 91 213 7 15 76 -1"
+            },
+            "expected": [
+                "Unesite brojeve: Izdvojeni brojevi: 15, 231, 42, 91, 213, 7\\nModificirani kontejner (prije sortiranja): 363, 42, 91, 213\\nModificirani kontejner (nakon sortiranja): 213, 42, 91, 363"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 15,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2 - specifikacija studentskog maina\n\n\/\/Ispisivanje kontejnera prije sortiranja, sortiranje, \n\/\/te ispisivanje sortiranog kontejnera se odvijaju u main funkciji.\n\n\/\/Za sva dodatna pojasnjenja vezana za autotestove ili zadatak opcenito, \n\/\/javiti se na email bcocalic1@etf.unsa.ba ili na chat.google.com.\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "25 9 15 2 9 3 8 4 -1"
+            },
+            "expected": [
+                "Unesite brojeve: Izdvojeni brojevi: 15, 2, 3 \\nModificirani kontejner (prije sortiranja): 25, 15 \\nModificirani kontejner (nakon sortiranja): 15, 25 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 16,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3 - specifikacija studentskog maina\n\/\/Cifre su elementi skupa {0, 1, 2, 3, 4, 5, 6, 7, 8, 9}. Broj -1 nema cifru -1 vec 1!\n\/\/Prosti faktori su takodjer uvijek pozitivni (iz definicije prostosti), tako da su prosti faktori broja -100 2 i 5.\n\n\/\/Za sva dodatna pojasnjenja vezana za autotestove ili zadatak opcenito, \n\/\/javiti se na email bcocalic1@etf.unsa.ba ili na chat.google.com.\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "363 15 -231 -15 42 100 231 91 213 7 -15 76 -1"
+            },
+            "expected": [
+                "Unesite brojeve: Izdvojeni brojevi: 15, -231, -15, 42, 231, 91, 213, 7\\nModificirani kontejner (prije sortiranja): 363, 42, 91, 213\\nModificirani kontejner (nakon sortiranja): 213, 42, 91, 363"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 17,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT4 - specifikacija studentskog maina\n\n\/\/Za sva dodatna pojasnjenja vezana za autotestove ili zadatak opcenito, \n\/\/javiti se na email bcocalic1@etf.unsa.ba ili na chat.google.com.\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 10 15 20 25 30 -30 -25 -20 -15 -10 -5 -1"
+            },
+            "expected": [
+                "Unesite brojeve: Izdvojeni brojevi: 5, 10, 15, 30, -30, -15, -10, -5 \\nModificirani kontejner (prije sortiranja): \\nModificirani kontejner (nakon sortiranja): "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

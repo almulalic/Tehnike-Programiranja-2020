@@ -1,0 +1,648 @@
+{
+    "buildhost_description": {
+        "id": "lab002c27",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3646": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3646.cpp: In function ‘int main()’:\nbs_test_3646.cpp:27:38: error: ‘Krug’ was not declared in this scope\n     << std::is_default_constructible<Krug>::value << \" \"\n                                      ^~~~\nbs_test_3646.cpp:27:42: error: template argument 1 is invalid\n     << std::is_default_constructible<Krug>::value << \" \"\n                                          ^\nbs_test_3646.cpp:28:38: error: ‘Valjak’ was not declared in this scope\n     << std::is_default_constructible<Valjak>::value << \" \"\n                                      ^~~~~~\nbs_test_3646.cpp:28:44: error: template argument 1 is invalid\n     << std::is_default_constructible<Valjak>::value << \" \"\n                                            ^\nbs_test_3646.cpp:29:33: error: the value of ‘Krug’ is not usable in a constant expression\n     << std::is_convertible<int, Krug>::value << std::endl;\n                                 ^~~~\nbs_test_3646.cpp:27:38: note: ‘Krug’ was not declared ‘constexpr’\n     << std::is_default_constructible<Krug>::value << \" \"\n                                      ^~~~\nbs_test_3646.cpp:29:37: error: type/value mismatch at argument 2 in template parameter list for ‘template<class _From, class _To> struct std::is_convertible’\n     << std::is_convertible<int, Krug>::value << std::endl;\n                                     ^\nbs_test_3646.cpp:29:37: note:   expected a type, got ‘Krug’",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "38",
+                        "message": "'Krug' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3646.cpp:27:38: error: ‘Krug’ was not declared in this scope     << std::is_default_constructible<Krug>::value << \" \"                                      ^~~~",
+                        "code": "<< std::is_default_constructible<Krug>::value << \" \""
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "42",
+                        "message": "template argument 1 is invalid",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3646.cpp:27:42: error: template argument 1 is invalid     << std::is_default_constructible<Krug>::value << \" \"                                          ^",
+                        "code": "<< std::is_default_constructible<Krug>::value << \" \""
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "38",
+                        "message": "'Valjak' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3646.cpp:28:38: error: ‘Valjak’ was not declared in this scope     << std::is_default_constructible<Valjak>::value << \" \"                                      ^~~~~~",
+                        "code": "<< std::is_default_constructible<Valjak>::value << \" \""
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "44",
+                        "message": "template argument 1 is invalid",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3646.cpp:28:44: error: template argument 1 is invalid     << std::is_default_constructible<Valjak>::value << \" \"                                            ^",
+                        "code": "<< std::is_default_constructible<Valjak>::value << \" \""
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "33",
+                        "message": "the value of 'Krug' is not usable in a constant expression",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3646.cpp:29:33: error: the value of ‘Krug’ is not usable in a constant expression     << std::is_convertible<int, Krug>::value << std::endl;                                 ^~~~",
+                        "code": "<< std::is_convertible<int, Krug>::value << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "37",
+                        "message": "type/value mismatch at argument 2 in template parameter list for 'template<class _From, class _To> struct std::is_convertible'",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3646.cpp:29:37: error: type/value mismatch at argument 2 in template parameter list for ‘template<class _From, class _To> struct std::is_convertible’     << std::is_convertible<int, Krug>::value << std::endl;                                     ^",
+                        "code": "<< std::is_convertible<int, Krug>::value << std::endl;"
+                    }
+                ]
+            }
+        },
+        "3647": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3647.cpp: In function ‘int main()’:\nbs_test_3647.cpp:29:39: error: ‘Valjak’ was not declared in this scope\n TestirajIzuzetak(std::domain_error, { Valjak v(1, -5); });\n                                       ^\nbs_test_3647.cpp:27:5: note: in definition of macro ‘TestirajIzuzetak’\n try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n     ^~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "39",
+                        "message": "'Valjak' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3647.cpp:29:39: error: ‘Valjak’ was not declared in this scope TestirajIzuzetak(std::domain_error, { Valjak v(1, -5); });                                       ^",
+                        "code": "TestirajIzuzetak(std::domain_error, { Valjak v(1, -5); });"
+                    }
+                ]
+            }
+        },
+        "3648": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3648.cpp: In function ‘int main()’:\nbs_test_3648.cpp:29:39: error: ‘Valjak’ was not declared in this scope\n TestirajIzuzetak(std::domain_error, { Valjak v(-1,2); });\n                                       ^\nbs_test_3648.cpp:27:5: note: in definition of macro ‘TestirajIzuzetak’\n try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n     ^~~~~~\nbs_test_3648.cpp:30:39: error: ‘Valjak’ was not declared in this scope\n TestirajIzuzetak(std::domain_error, { Valjak v(-1,-2); });\n                                       ^\nbs_test_3648.cpp:27:5: note: in definition of macro ‘TestirajIzuzetak’\n try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n     ^~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "39",
+                        "message": "'Valjak' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3648.cpp:29:39: error: ‘Valjak’ was not declared in this scope TestirajIzuzetak(std::domain_error, { Valjak v(-1,2); });                                       ^",
+                        "code": "TestirajIzuzetak(std::domain_error, { Valjak v(-1,2); });"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 4,
+                        "col": "39",
+                        "message": "'Valjak' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3648.cpp:30:39: error: ‘Valjak’ was not declared in this scope TestirajIzuzetak(std::domain_error, { Valjak v(-1,-2); });                                       ^",
+                        "code": "TestirajIzuzetak(std::domain_error, { Valjak v(-1,-2); });"
+                    }
+                ]
+            }
+        },
+        "3649": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3649.cpp: In function ‘int main()’:\nbs_test_3649.cpp:29:39: error: ‘Krug’ was not declared in this scope\n TestirajIzuzetak(std::domain_error, { Krug k(-1); });\n                                       ^\nbs_test_3649.cpp:27:5: note: in definition of macro ‘TestirajIzuzetak’\n try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n     ^~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "39",
+                        "message": "'Krug' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3649.cpp:29:39: error: ‘Krug’ was not declared in this scope TestirajIzuzetak(std::domain_error, { Krug k(-1); });                                       ^",
+                        "code": "TestirajIzuzetak(std::domain_error, { Krug k(-1); });"
+                    }
+                ]
+            }
+        },
+        "3650": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3650.cpp: In function ‘int main()’:\nbs_test_3650.cpp:29:1: error: ‘Krug’ was not declared in this scope\n Krug k(5);\n ^~~~\nbs_test_3650.cpp:31:39: error: ‘k’ was not declared in this scope\n TestirajIzuzetak(std::domain_error, { k.Postavi(0); });\n                                       ^\nbs_test_3650.cpp:27:5: note: in definition of macro ‘TestirajIzuzetak’\n try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n     ^~~~~~\nbs_test_3650.cpp:32:39: error: ‘k’ was not declared in this scope\n TestirajIzuzetak(std::domain_error, { k.Postavi(-15); });\n                                       ^\nbs_test_3650.cpp:27:5: note: in definition of macro ‘TestirajIzuzetak’\n try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n     ^~~~~~\nbs_test_3650.cpp:33:39: error: ‘k’ was not declared in this scope\n TestirajIzuzetak(std::domain_error, { k.Postavi(-0.25); });\n                                       ^\nbs_test_3650.cpp:27:5: note: in definition of macro ‘TestirajIzuzetak’\n try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n     ^~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "1",
+                        "message": "'Krug' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3650.cpp:29:1: error: ‘Krug’ was not declared in this scope Krug k(5); ^~~~",
+                        "code": "Krug k(5);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 5,
+                        "col": "39",
+                        "message": "'k' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3650.cpp:31:39: error: ‘k’ was not declared in this scope TestirajIzuzetak(std::domain_error, { k.Postavi(0); });                                       ^",
+                        "code": "TestirajIzuzetak(std::domain_error, { k.Postavi(0); });"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 6,
+                        "col": "39",
+                        "message": "'k' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3650.cpp:32:39: error: ‘k’ was not declared in this scope TestirajIzuzetak(std::domain_error, { k.Postavi(-15); });                                       ^",
+                        "code": "TestirajIzuzetak(std::domain_error, { k.Postavi(-15); });"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "39",
+                        "message": "'k' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3650.cpp:33:39: error: ‘k’ was not declared in this scope TestirajIzuzetak(std::domain_error, { k.Postavi(-0.25); });                                       ^",
+                        "code": "TestirajIzuzetak(std::domain_error, { k.Postavi(-0.25); });"
+                    }
+                ]
+            }
+        },
+        "3651": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3651.cpp: In function ‘int main()’:\nbs_test_3651.cpp:29:1: error: ‘Valjak’ was not declared in this scope\n Valjak v(1,1);\n ^~~~~~\nbs_test_3651.cpp:31:39: error: ‘v’ was not declared in this scope\n TestirajIzuzetak(std::domain_error, { v.Postavi(0,0); });\n                                       ^\nbs_test_3651.cpp:27:5: note: in definition of macro ‘TestirajIzuzetak’\n try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n     ^~~~~~\nbs_test_3651.cpp:32:39: error: ‘v’ was not declared in this scope\n TestirajIzuzetak(std::domain_error, { v.Postavi(-15,5); });\n                                       ^\nbs_test_3651.cpp:27:5: note: in definition of macro ‘TestirajIzuzetak’\n try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n     ^~~~~~\nbs_test_3651.cpp:33:39: error: ‘v’ was not declared in this scope\n TestirajIzuzetak(std::domain_error, { v.Postavi(-0.25,0); });\n                                       ^\nbs_test_3651.cpp:27:5: note: in definition of macro ‘TestirajIzuzetak’\n try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n     ^~~~~~\nbs_test_3651.cpp:34:39: error: ‘v’ was not declared in this scope\n TestirajIzuzetak(std::domain_error, { v.Postavi(5,-5); });\n                                       ^\nbs_test_3651.cpp:27:5: note: in definition of macro ‘TestirajIzuzetak’\n try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n     ^~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "1",
+                        "message": "'Valjak' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3651.cpp:29:1: error: ‘Valjak’ was not declared in this scope Valjak v(1,1); ^~~~~~",
+                        "code": "Valjak v(1,1);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 5,
+                        "col": "39",
+                        "message": "'v' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3651.cpp:31:39: error: ‘v’ was not declared in this scope TestirajIzuzetak(std::domain_error, { v.Postavi(0,0); });                                       ^",
+                        "code": "TestirajIzuzetak(std::domain_error, { v.Postavi(0,0); });"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 6,
+                        "col": "39",
+                        "message": "'v' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3651.cpp:32:39: error: ‘v’ was not declared in this scope TestirajIzuzetak(std::domain_error, { v.Postavi(-15,5); });                                       ^",
+                        "code": "TestirajIzuzetak(std::domain_error, { v.Postavi(-15,5); });"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "39",
+                        "message": "'v' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3651.cpp:33:39: error: ‘v’ was not declared in this scope TestirajIzuzetak(std::domain_error, { v.Postavi(-0.25,0); });                                       ^",
+                        "code": "TestirajIzuzetak(std::domain_error, { v.Postavi(-0.25,0); });"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 8,
+                        "col": "39",
+                        "message": "'v' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3651.cpp:34:39: error: ‘v’ was not declared in this scope TestirajIzuzetak(std::domain_error, { v.Postavi(5,-5); });                                       ^",
+                        "code": "TestirajIzuzetak(std::domain_error, { v.Postavi(5,-5); });"
+                    }
+                ]
+            }
+        },
+        "3652": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3652.cpp: In function ‘int main()’:\nbs_test_3652.cpp:29:1: error: ‘Valjak’ was not declared in this scope\n Valjak v(1,1);\n ^~~~~~\nbs_test_3652.cpp:30:1: error: ‘Krug’ was not declared in this scope\n Krug k(8);\n ^~~~\nbs_test_3652.cpp:31:39: error: ‘v’ was not declared in this scope\n TestirajIzuzetak(std::domain_error, { v.Skaliraj(-1); });\n                                       ^\nbs_test_3652.cpp:27:5: note: in definition of macro ‘TestirajIzuzetak’\n try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n     ^~~~~~\nbs_test_3652.cpp:32:39: error: ‘k’ was not declared in this scope\n TestirajIzuzetak(std::domain_error, { k.Skaliraj(-1); });\n                                       ^\nbs_test_3652.cpp:27:5: note: in definition of macro ‘TestirajIzuzetak’\n try tijelo catch(izuzetak e) { std::cout << e.what() << std::endl; }\n     ^~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "1",
+                        "message": "'Valjak' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3652.cpp:29:1: error: ‘Valjak’ was not declared in this scope Valjak v(1,1); ^~~~~~",
+                        "code": "Valjak v(1,1);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 4,
+                        "col": "1",
+                        "message": "'Krug' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3652.cpp:30:1: error: ‘Krug’ was not declared in this scope Krug k(8); ^~~~",
+                        "code": "Krug k(8);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 5,
+                        "col": "39",
+                        "message": "'v' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3652.cpp:31:39: error: ‘v’ was not declared in this scope TestirajIzuzetak(std::domain_error, { v.Skaliraj(-1); });                                       ^",
+                        "code": "TestirajIzuzetak(std::domain_error, { v.Skaliraj(-1); });"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 6,
+                        "col": "39",
+                        "message": "'k' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3652.cpp:32:39: error: ‘k’ was not declared in this scope TestirajIzuzetak(std::domain_error, { k.Skaliraj(-1); });                                       ^",
+                        "code": "TestirajIzuzetak(std::domain_error, { k.Skaliraj(-1); });"
+                    }
+                ]
+            }
+        },
+        "3653": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3653.cpp: In function ‘int main()’:\nbs_test_3653.cpp:27:1: error: ‘Krug’ was not declared in this scope\n Krug k1(1);\n ^~~~\nbs_test_3653.cpp:28:46: error: ‘k1’ was not declared in this scope\n std::cout<<std::fixed<<std::setprecision(5)<<k1.DajPoluprecnik() << \" \"\n                                              ^~\nbs_test_3653.cpp:32:6: error: expected ‘;’ before ‘k2’\n Krug k2(std::sqrt(2));\n      ^~\nbs_test_3653.cpp:34:47: error: ‘k2’ was not declared in this scope\n std::cout <<std::fixed<<std::setprecision(5)<<k2.DajPoluprecnik() << \" \"\n                                               ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "1",
+                        "message": "'Krug' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3653.cpp:27:1: error: ‘Krug’ was not declared in this scope Krug k1(1); ^~~~",
+                        "code": "Krug k1(1);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "46",
+                        "message": "'k1' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3653.cpp:28:46: error: ‘k1’ was not declared in this scope std::cout<<std::fixed<<std::setprecision(5)<<k1.DajPoluprecnik() << \" \"                                              ^~",
+                        "code": "std::cout<<std::fixed<<std::setprecision(5)<<k1.DajPoluprecnik() << \" \""
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 5,
+                        "col": "6",
+                        "message": "expected ';' before 'k2'",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3653.cpp:32:6: error: expected ‘;’ before ‘k2’ Krug k2(std::sqrt(2));      ^~",
+                        "code": "Krug k2(std::sqrt(2));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "47",
+                        "message": "'k2' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3653.cpp:34:47: error: ‘k2’ was not declared in this scope std::cout <<std::fixed<<std::setprecision(5)<<k2.DajPoluprecnik() << \" \"                                               ^~",
+                        "code": "std::cout <<std::fixed<<std::setprecision(5)<<k2.DajPoluprecnik() << \" \""
+                    }
+                ]
+            }
+        },
+        "3654": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3654.cpp: In function ‘int main()’:\nbs_test_3654.cpp:26:1: error: ‘Valjak’ was not declared in this scope\n Valjak v(2, 2);\n ^~~~~~\nbs_test_3654.cpp:27:50: error: ‘v’ was not declared in this scope\n   std::cout <<std::fixed<<std::setprecision(3) <<v.DajPoluprecnikBaze() << \" \"\n                                                  ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "1",
+                        "message": "'Valjak' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3654.cpp:26:1: error: ‘Valjak’ was not declared in this scope Valjak v(2, 2); ^~~~~~",
+                        "code": "Valjak v(2, 2);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "50",
+                        "message": "'v' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3654.cpp:27:50: error: ‘v’ was not declared in this scope   std::cout <<std::fixed<<std::setprecision(3) <<v.DajPoluprecnikBaze() << \" \"                                                  ^",
+                        "code": "std::cout <<std::fixed<<std::setprecision(3) <<v.DajPoluprecnikBaze() << \" \""
+                    }
+                ]
+            }
+        },
+        "3655": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3655.cpp: In function ‘int main()’:\nbs_test_3655.cpp:26:1: error: ‘Valjak’ was not declared in this scope\n Valjak v(std::sqrt(2), std::sqrt(3));\n ^~~~~~\nbs_test_3655.cpp:28:48: error: ‘v’ was not declared in this scope\n std::cout << std::fixed<<std::setprecision(3)<<v.DajBazu().DajPoluprecnik() << std::endl;\n                                                ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "1",
+                        "message": "'Valjak' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3655.cpp:26:1: error: ‘Valjak’ was not declared in this scope Valjak v(std::sqrt(2), std::sqrt(3)); ^~~~~~",
+                        "code": "Valjak v(std::sqrt(2), std::sqrt(3));"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "48",
+                        "message": "'v' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3655.cpp:28:48: error: ‘v’ was not declared in this scope std::cout << std::fixed<<std::setprecision(3)<<v.DajBazu().DajPoluprecnik() << std::endl;                                                ^",
+                        "code": "std::cout << std::fixed<<std::setprecision(3)<<v.DajBazu().DajPoluprecnik() << std::endl;"
+                    }
+                ]
+            }
+        },
+        "3656": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3656.cpp: In function ‘int main()’:\nbs_test_3656.cpp:27:1: error: ‘Krug’ was not declared in this scope\n Krug k(5);\n ^~~~\nbs_test_3656.cpp:28:1: error: ‘k’ was not declared in this scope\n k.Ispisi(); std::cout << std::endl;\n ^\nbs_test_3656.cpp:29:1: error: ‘Valjak’ was not declared in this scope\n Valjak v1(1, 9);\n ^~~~~~\nbs_test_3656.cpp:30:1: error: ‘v1’ was not declared in this scope\n v1.Ispisi(); std::cout << std::endl;\n ^~\nbs_test_3656.cpp:32:8: error: expected ‘;’ before ‘v2’\n Valjak v2(k.DajPoluprecnik(),8);\n        ^~\nbs_test_3656.cpp:33:1: error: ‘v2’ was not declared in this scope\n v2.DajBazu().Ispisi(); std::cout << std::endl;\n ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "1",
+                        "message": "'Krug' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3656.cpp:27:1: error: ‘Krug’ was not declared in this scope Krug k(5); ^~~~",
+                        "code": "Krug k(5);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "1",
+                        "message": "'k' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3656.cpp:28:1: error: ‘k’ was not declared in this scope k.Ispisi(); std::cout << std::endl; ^",
+                        "code": "k.Ispisi(); std::cout << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "1",
+                        "message": "'Valjak' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3656.cpp:29:1: error: ‘Valjak’ was not declared in this scope Valjak v1(1, 9); ^~~~~~",
+                        "code": "Valjak v1(1, 9);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 4,
+                        "col": "1",
+                        "message": "'v1' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3656.cpp:30:1: error: ‘v1’ was not declared in this scope v1.Ispisi(); std::cout << std::endl; ^~",
+                        "code": "v1.Ispisi(); std::cout << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 6,
+                        "col": "8",
+                        "message": "expected ';' before 'v2'",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3656.cpp:32:8: error: expected ‘;’ before ‘v2’ Valjak v2(k.DajPoluprecnik(),8);        ^~",
+                        "code": "Valjak v2(k.DajPoluprecnik(),8);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "1",
+                        "message": "'v2' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3656.cpp:33:1: error: ‘v2’ was not declared in this scope v2.DajBazu().Ispisi(); std::cout << std::endl; ^~",
+                        "code": "v2.DajBazu().Ispisi(); std::cout << std::endl;"
+                    }
+                ]
+            }
+        },
+        "3657": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3657.cpp: In function ‘int main()’:\nbs_test_3657.cpp:27:1: error: ‘Krug’ was not declared in this scope\n Krug k1(5);\n ^~~~\nbs_test_3657.cpp:28:1: error: ‘Valjak’ was not declared in this scope\n Valjak v1(1,9);\n ^~~~~~\nbs_test_3657.cpp:29:7: error: ‘Krug’ does not name a type\n const Krug k2(k1);\n       ^~~~\nbs_test_3657.cpp:30:7: error: ‘Valjak’ does not name a type\n const Valjak v2(v1);\n       ^~~~~~\nbs_test_3657.cpp:31:1: error: ‘k2’ was not declared in this scope\n k2.Ispisi(); std::cout << std::endl;\n ^~\nbs_test_3657.cpp:32:1: error: ‘v2’ was not declared in this scope\n v2.Ispisi(); std::cout << std::endl;\n ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "1",
+                        "message": "'Krug' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3657.cpp:27:1: error: ‘Krug’ was not declared in this scope Krug k1(5); ^~~~",
+                        "code": "Krug k1(5);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "1",
+                        "message": "'Valjak' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3657.cpp:28:1: error: ‘Valjak’ was not declared in this scope Valjak v1(1,9); ^~~~~~",
+                        "code": "Valjak v1(1,9);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "7",
+                        "message": "'Krug' does not name a type",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3657.cpp:29:7: error: ‘Krug’ does not name a type const Krug k2(k1);       ^~~~",
+                        "code": "const Krug k2(k1);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 4,
+                        "col": "7",
+                        "message": "'Valjak' does not name a type",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3657.cpp:30:7: error: ‘Valjak’ does not name a type const Valjak v2(v1);       ^~~~~~",
+                        "code": "const Valjak v2(v1);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 5,
+                        "col": "1",
+                        "message": "'k2' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3657.cpp:31:1: error: ‘k2’ was not declared in this scope k2.Ispisi(); std::cout << std::endl; ^~",
+                        "code": "k2.Ispisi(); std::cout << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 6,
+                        "col": "1",
+                        "message": "'v2' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3657.cpp:32:1: error: ‘v2’ was not declared in this scope v2.Ispisi(); std::cout << std::endl; ^~",
+                        "code": "v2.Ispisi(); std::cout << std::endl;"
+                    }
+                ]
+            }
+        },
+        "3658": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3658.cpp: In function ‘int main()’:\nbs_test_3658.cpp:26:1: error: ‘Krug’ was not declared in this scope\n Krug k(5);\n ^~~~\nbs_test_3658.cpp:27:1: error: ‘k’ was not declared in this scope\n k.Postavi(10);\n ^\nbs_test_3658.cpp:28:1: error: ‘Valjak’ was not declared in this scope\n Valjak v(5,5);\n ^~~~~~\nbs_test_3658.cpp:29:1: error: ‘v’ was not declared in this scope\n v.Postavi(10,10);\n ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "1",
+                        "message": "'Krug' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3658.cpp:26:1: error: ‘Krug’ was not declared in this scope Krug k(5); ^~~~",
+                        "code": "Krug k(5);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "1",
+                        "message": "'k' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3658.cpp:27:1: error: ‘k’ was not declared in this scope k.Postavi(10); ^",
+                        "code": "k.Postavi(10);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "1",
+                        "message": "'Valjak' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3658.cpp:28:1: error: ‘Valjak’ was not declared in this scope Valjak v(5,5); ^~~~~~",
+                        "code": "Valjak v(5,5);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "1",
+                        "message": "'v' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3658.cpp:29:1: error: ‘v’ was not declared in this scope v.Postavi(10,10); ^",
+                        "code": "v.Postavi(10,10);"
+                    }
+                ]
+            }
+        },
+        "3659": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3659.cpp: In function ‘int main()’:\nbs_test_3659.cpp:26:1: error: ‘Krug’ was not declared in this scope\n Krug k(5);\n ^~~~\nbs_test_3659.cpp:27:1: error: ‘k’ was not declared in this scope\n k.Skaliraj(10);\n ^\nbs_test_3659.cpp:28:1: error: ‘Valjak’ was not declared in this scope\n Valjak v(5,5);\n ^~~~~~\nbs_test_3659.cpp:29:1: error: ‘v’ was not declared in this scope\n v.Skaliraj(10);\n ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 0,
+                        "col": "1",
+                        "message": "'Krug' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3659.cpp:26:1: error: ‘Krug’ was not declared in this scope Krug k(5); ^~~~",
+                        "code": "Krug k(5);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "1",
+                        "message": "'k' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3659.cpp:27:1: error: ‘k’ was not declared in this scope k.Skaliraj(10); ^",
+                        "code": "k.Skaliraj(10);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "1",
+                        "message": "'Valjak' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3659.cpp:28:1: error: ‘Valjak’ was not declared in this scope Valjak v(5,5); ^~~~~~",
+                        "code": "Valjak v(5,5);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "1",
+                        "message": "'v' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_7079/bs_test_3659.cpp:29:1: error: ‘v’ was not declared in this scope v.Skaliraj(10); ^",
+                        "code": "v.Skaliraj(10);"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 2,
+    "time": 1589269978
+}

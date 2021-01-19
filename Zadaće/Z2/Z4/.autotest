@@ -1,0 +1,143 @@
+{
+    "id": 570204,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 2, zadatak 4",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 4, obratite se na mail:\n\/\/ hcapelj1@etf.unsa.ba\n\n\/\/ AT 1: Test main funkcije - normalni uslovi",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3\nJa volim TP\nMalo je tezak, ali ide\nSvi ce poloziti :)\nSvi ce poloziti :)"
+            },
+            "expected": [
+                "Unesite broj recenica: Unesite recenice:\\nRecenice nakon sortiranja:\\nJa volim TP\\nSvi ce poloziti :)\\nMalo je tezak, ali ide\\n\\nUnesite recenicu za pretragu: Recenica se nalazi na poziciji: 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 4, obratite se na mail:\n\/\/ hcapelj1@etf.unsa.ba\n\n\/\/ AT 2: Test normalnog stanja - recenica se ne nalazi u nizu",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4\nKoje je vase najdraze jelo?\nMoje je pita.\nSpecificno krompirusa.\nDa li ima bolje?\nBurek\n"
+            },
+            "expected": [
+                "Unesite broj recenica: Unesite recenice:\\nRecenice nakon sortiranja:\\nMoje je pita.\\nDa li ima bolje?\\nSpecificno krompirusa.\\nKoje je vase najdraze jelo?\\n\\nUnesite recenicu za pretragu: Trazena recenica se ne nalazi u nizu!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 4, obratite se na mail:\n\/\/ hcapelj1@etf.unsa.ba\n\n\/\/ AT 3: Test normalnog stanja - sortiranje prema postavci zadatka",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3\ncdfa\na\nabcd\na"
+            },
+            "expected": [
+                "Unesite broj recenica: Unesite recenice:\\nRecenice nakon sortiranja:\\na\\nabcd\\ncdfa\\n\\nUnesite recenicu za pretragu: Recenica se nalazi na poziciji: 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::string* pok = new std::string[3] {\"abc\",\"jdef\",\"haha\"};\n    try\n    {\n        SortirajRecenice(pok+3,pok);\n    }\n    catch(std::domain_error e)\n    {\n        std::cout<<\"Izuzetak: \"<<e.what()<<\"!\";\n    }\n\n\n    delete[] pok;",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 4, obratite se na mail:\n\/\/ hcapelj1@etf.unsa.ba\n\n\/\/ AT 4: Funkcija SortirajRecenice baca izuzetak tipa domain_error ukoliko\n\/\/ je nisu pravilno uneseni pokazivaci",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Nije moguce sortiranje!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 4, obratite se na mail:\n\/\/ hcapelj1@etf.unsa.ba\n\n\/\/ AT 5: Dodatni test main-a (vise recenica)",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7\nqwerst\netf\nddddf\nfff\ncc\nllllkjhgg\na\nllllkjhgg"
+            },
+            "expected": [
+                "Unesite broj recenica: Unesite recenice:\\nRecenice nakon sortiranja:\\na\\ncc\\netf\\nfff\\nddddf\\nqwerst\\nllllkjhgg\\n\\nUnesite recenicu za pretragu: Recenica se nalazi na poziciji: 6"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 4, obratite se na mail:\n\/\/ hcapelj1@etf.unsa.ba\n\n\/\/ AT 6: Kombiniran test sortiranja sa vise razmaka i brojevima",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3\nNeka malo duza recenica\nTP     2\nTP     1\nNeka malo duza recenica\n"
+            },
+            "expected": [
+                "Unesite broj recenica: Unesite recenice:\\nRecenice nakon sortiranja:\\nTP     1\\nTP     2\\nNeka malo duza recenica\\n\\nUnesite recenicu za pretragu: Recenica se nalazi na poziciji: 2"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,143 @@
+{
+    "id": 56183,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 1, zadatak 3",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 69,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ Za sva pitanja vezana za zadatak 3 mo\u017eete se obratiti na e-mail adresu: hcapelj1@etf.unsa.ba\n\n\/\/ AT 1: Provjera main funkcije.\n\/\/ Sirina ispisa: 9\n\/\/ Decimalna preciznost: 4\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "3\n8 1 -2 2 -7 1 1 2 9"
+            },
+            "expected": [
+                "Unesite dimenziju kvadratne matrice H: Unesite elemente matrice H:\\nElementi 1. reda: Elementi 2. reda: Elementi 3. reda: Matrica L:\\n   1.0000   0.0000   0.0000\\n   0.2500   1.0000   0.0000\\n   0.1250  -0.2586   1.0000\\nMatrica U:\\n   8.0000   1.0000  -2.0000\\n   0.0000  -7.2500   1.5000\\n   0.0000   0.0000   9.6379"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 70,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ AT 2: main funkcija sa H matricom 4x4\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4\n2 3 4 5 3 7 7 3 4 7 9 2 5 3 2 7"
+            },
+            "expected": [
+                "Unesite dimenziju kvadratne matrice H: Unesite elemente matrice H:\\nElementi 1. reda: Elementi 2. reda: Elementi 3. reda: Elementi 4. reda: Matrica L:\\n   1.0000   0.0000   0.0000   0.0000\\n   1.5000   1.0000   0.0000   0.0000\\n   2.0000   0.4000   1.0000   0.0000\\n   2.5000  -1.8000 -10.3333   1.0000\\nMatrica U:\\n   2.0000   3.0000   4.0000   5.0000\\n   0.0000   2.5000   1.0000  -4.5000\\n   0.0000   0.0000   0.6000  -6.2000\\n   0.0000   0.0000   0.0000 -77.6667"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 71,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ AT 4: Provjera saglasnosti za mnozenje\n\nstd::vector<std::vector<double>> a {{1,0,2},{-1,3,1}};\n    std::vector<std::vector<double>> b {{3,1},{2,1},{1,0},{0,7}};\n    try\n    {\n        std::vector<std::vector<double>> ispis = MnozenjeMatrica(a,b);\n        for (auto v : ispis)\n        {\n            for (auto x : v)\n                std::cout<<x<<\" \";\n            std::cout<<std::endl;\n        }\n    }\n    catch (std::domain_error e)\n    {\n        std::cout<<e.what();\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nije moguce mnozenje matrica!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 72,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ AT 5: Provjera ispravnosti matrice\n\nstd::vector<std::vector<double>> a {{1,0,2},{-1,1}};\n    std::vector<std::vector<double>> b {{3,1},{2,1},{1,0}};\n    try\n    {\n        std::vector<std::vector<double>> ispis = MnozenjeMatrica(a,b);\n        for (auto v : ispis)\n        {\n            for (auto x : v)\n                std::cout<<x<<\" \";\n            std::cout<<std::endl;\n        }\n    }\n    catch (std::domain_error e)\n    {\n        std::cout<<e.what();\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Neispravna matrica!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 73,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ AT 7: Ispravnost funkcije DoolitleLU\n\nstd::vector<std::vector<double>> H {{4,3},{6,3}};\n\n    try\n    {\n        auto rezultat = DoolitleLU(H);\n\n        for (auto v : rezultat.at(0))\n        {\n            for (auto x : v)\n                std::cout<<std::right<<std::setw(5)<<x;\n            std::cout<<std::endl;\n        }\n        std::cout<<std::endl;\n        for (auto v : rezultat.at(1))\n        {\n            for (auto x : v)\n                std::cout<<std::right<<std::setw(5)<<x;\n            std::cout<<std::endl;\n        }\n    }\n    catch(std::domain_error e)\n    {\n        std::cout<<e.what();\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "    1    0\\n  1.5    1\\n\\n    4    3\\n    0 -1.5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 74,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/ AT 8: Provjera da li je H matrica kvadratna\n\nstd::vector<std::vector<double>> H {{4,3},{6,3},{3,3}};\n\n    try\n    {\n        auto rezultat = DoolitleLU(H);\n\n        for (auto v : rezultat.at(0))\n        {\n            for (auto x : v)\n                std::cout<<std::right<<std::setw(5)<<x;\n            std::cout<<std::endl;\n        }\n        std::cout<<std::endl;\n        for (auto v : rezultat.at(1))\n        {\n            for (auto x : v)\n                std::cout<<std::right<<std::setw(5)<<x;\n            std::cout<<std::endl;\n        }\n    }\n    catch(std::domain_error e)\n    {\n        std::cout<<e.what();\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Matrica mora biti kvadratnog oblika!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

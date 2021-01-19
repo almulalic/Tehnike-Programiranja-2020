@@ -1,0 +1,19 @@
+/rhome/a/amulalic1/workspace/TP/T6/Z2/main.cpp:15:34: error: ‘iterator’ is not a template
+ TipElemenata* KreirajIzvrnutiNiz(iterator< p,iterator q) {
+                                  ^~~~~~~~
+/rhome/a/amulalic1/workspace/TP/T6/Z2/main.cpp:15:44: error: ‘p’ was not declared in this scope
+ TipElemenata* KreirajIzvrnutiNiz(iterator< p,iterator q) {
+                                            ^
+/rhome/a/amulalic1/workspace/TP/T6/Z2/main.cpp:15:56: error: expected primary-expression before ‘)’ token
+ TipElemenata* KreirajIzvrnutiNiz(iterator< p,iterator q) {
+                                                        ^
+/rhome/a/amulalic1/workspace/TP/T6/Z2/main.cpp:15:15: warning: variable templates only available with -std=c++14 or -std=gnu++14
+ TipElemenata* KreirajIzvrnutiNiz(iterator< p,iterator q) {
+               ^~~~~~~~~~~~~~~~~~
+/rhome/a/amulalic1/workspace/TP/T6/Z2/main.cpp:15:58: error: expected ‘;’ before ‘{’ token
+ TipElemenata* KreirajIzvrnutiNiz(iterator< p,iterator q) {
+                                                          ^
+/rhome/a/amulalic1/workspace/TP/T6/Z2/main.cpp: In function ‘int main()’:
+/rhome/a/amulalic1/workspace/TP/T6/Z2/main.cpp:51:34: error: missing template arguments before ‘(’ token
+  double *pok = KreirajIzvrnutiNiz(niz.begin(),niz.end());
+                                  ^

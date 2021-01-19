@@ -1,0 +1,59 @@
+{
+    "id": 5718,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 5, Zadatak 6",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT 1: Sortiranje, x > y\n\/\/ne zaboravite ukljuciti <functional>, mora biti po postavci (less)\n\nstd::ofstream fo (\"dat.bin\", std::ios::binary);\nfor (long long int i = 5; i <= 40; ++i)\n    fo.write ((char *)&i, sizeof i);\nfo.close();\nSortirajBinarnuDatoteku<long long int> (\"dat.bin\", std::greater<long long int>());\nstd::ifstream fi (\"dat.bin\", std::ios::binary);\nlong long int p = -1;\nwhile (fi.read ((char *)&p, sizeof p)) std::cout << p << \" \";",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 6, obratite se na mail: hcapelj1@etf.unsa.ba\n\n\/\/ NAPOMENA: Ukoliko budete imali problema sa slanjem zadace, uradite log-out, zatim log-in i pokusajte ponovo! :)",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "40 39 38 37 36 35 34 33 32 31 30 29 28 27 26 25 24 23 22 21 20 19 18 17 16 15 14 13 12 11 10 9 8 7 6 5 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT 6: Ne postoji datoteka\n        try {SortirajBinarnuDatoteku<int> (\"ne-postoji.bat\"); std::cout << \"Izuzetak nije bacen!\" << std::endl;}\n        catch (const std::logic_error &c) {std::cout << \"OK: \" << c.what() << std::endl;}\n        catch (...) {std::cout << \"Pogresan tip izuzetka!\" << std::endl;}\n    }",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 6, obratite se na mail: hcapelj1@etf.unsa.ba\n\n\/\/ NAPOMENA: Ukoliko budete imali problema sa slanjem zadace, uradite log-out, zatim log-in i pokusajte ponovo! :)",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK: Datoteka ne postoji"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

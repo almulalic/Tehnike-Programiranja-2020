@@ -1,0 +1,131 @@
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp: In destructor ‘Liga::~Liga()’:
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:74:64: error: type ‘__gnu_cxx::__alloc_traits<std::allocator<std::shared_ptr<Tim> > >::value_type {aka class std::shared_ptr<Tim>}’ argument given to ‘delete’, expected pointer
+   ~Liga() { for(int i=0;i<timovi.size();i++) delete timovi.at(i);}
+                                                                ^
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp: In copy constructor ‘Liga::Liga(const Liga&)’:
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:80:47: error: no matching function for call to ‘std::vector<std::shared_ptr<Tim> >::push_back(Tim*)’
+      timovi.push_back(new Tim(*l.timovi.at(i)));
+                                               ^
+In file included from /usr/include/c++/7/vector:64:0,
+                 from /rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:13:
+/usr/include/c++/7/bits/stl_vector.h:939:7: note: candidate: void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::shared_ptr<Tim>; _Alloc = std::allocator<std::shared_ptr<Tim> >; std::vector<_Tp, _Alloc>::value_type = std::shared_ptr<Tim>]
+       push_back(const value_type& __x)
+       ^~~~~~~~~
+/usr/include/c++/7/bits/stl_vector.h:939:7: note:   no known conversion for argument 1 from ‘Tim*’ to ‘const value_type& {aka const std::shared_ptr<Tim>&}’
+/usr/include/c++/7/bits/stl_vector.h:953:7: note: candidate: void std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = std::shared_ptr<Tim>; _Alloc = std::allocator<std::shared_ptr<Tim> >; std::vector<_Tp, _Alloc>::value_type = std::shared_ptr<Tim>]
+       push_back(value_type&& __x)
+       ^~~~~~~~~
+/usr/include/c++/7/bits/stl_vector.h:953:7: note:   no known conversion for argument 1 from ‘Tim*’ to ‘std::vector<std::shared_ptr<Tim> >::value_type&& {aka std::shared_ptr<Tim>&&}’
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:83:21: error: type ‘__gnu_cxx::__alloc_traits<std::allocator<std::shared_ptr<Tim> > >::value_type {aka class std::shared_ptr<Tim>}’ argument given to ‘delete’, expected pointer
+      delete timovi[i];
+                     ^
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp: In member function ‘void Liga::DodajNoviTim(const char*)’:
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:117:37: error: no matching function for call to ‘std::vector<std::shared_ptr<Tim> >::push_back(Tim*)’
+    timovi.push_back(new Tim(imeTima));
+                                     ^
+In file included from /usr/include/c++/7/vector:64:0,
+                 from /rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:13:
+/usr/include/c++/7/bits/stl_vector.h:939:7: note: candidate: void std::vector<_Tp, _Alloc>::push_back(const value_type&) [with _Tp = std::shared_ptr<Tim>; _Alloc = std::allocator<std::shared_ptr<Tim> >; std::vector<_Tp, _Alloc>::value_type = std::shared_ptr<Tim>]
+       push_back(const value_type& __x)
+       ^~~~~~~~~
+/usr/include/c++/7/bits/stl_vector.h:939:7: note:   no known conversion for argument 1 from ‘Tim*’ to ‘const value_type& {aka const std::shared_ptr<Tim>&}’
+/usr/include/c++/7/bits/stl_vector.h:953:7: note: candidate: void std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = std::shared_ptr<Tim>; _Alloc = std::allocator<std::shared_ptr<Tim> >; std::vector<_Tp, _Alloc>::value_type = std::shared_ptr<Tim>]
+       push_back(value_type&& __x)
+       ^~~~~~~~~
+/usr/include/c++/7/bits/stl_vector.h:953:7: note:   no known conversion for argument 1 from ‘Tim*’ to ‘std::vector<std::shared_ptr<Tim> >::value_type&& {aka std::shared_ptr<Tim>&&}’
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp: In member function ‘void Liga::RegistrirajUtakmicu(const char*, const char*, int, int)’:
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:126:24: error: cannot convert ‘__gnu_cxx::__alloc_traits<std::allocator<std::shared_ptr<Tim> > >::value_type {aka std::shared_ptr<Tim>}’ to ‘Tim*’ in assignment
+      prvi = timovi.at(i);
+                        ^
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:128:25: error: cannot convert ‘__gnu_cxx::__alloc_traits<std::allocator<std::shared_ptr<Tim> > >::value_type {aka std::shared_ptr<Tim>}’ to ‘Tim*’ in assignment
+      drugi = timovi.at(i);
+                         ^
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp: In constructor ‘Liga::Liga(std::initializer_list<Tim>)’:
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:154:28: error: no match for ‘operator=’ (operand types are ‘__gnu_cxx::__alloc_traits<std::allocator<std::shared_ptr<Tim> > >::value_type {aka std::shared_ptr<Tim>}’ and ‘Tim*’)
+    timovi.at(j) = new Tim(i);
+                            ^
+In file included from /usr/include/c++/7/memory:81:0,
+                 from /rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:10:
+/usr/include/c++/7/bits/shared_ptr.h:296:19: note: candidate: std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Tp>&) [with _Tp = Tim]
+       shared_ptr& operator=(const shared_ptr&) noexcept = default;
+                   ^~~~~~~~
+/usr/include/c++/7/bits/shared_ptr.h:296:19: note:   no known conversion for argument 1 from ‘Tim*’ to ‘const std::shared_ptr<Tim>&’
+/usr/include/c++/7/bits/shared_ptr.h:300:2: note: candidate: template<class _Yp> std::shared_ptr<_Tp>::_Assignable<const std::shared_ptr<_Yp>&> std::shared_ptr<_Tp>::operator=(const std::shared_ptr<_Yp>&) [with _Yp = _Yp; _Tp = Tim]
+  operator=(const shared_ptr<_Yp>& __r) noexcept
+  ^~~~~~~~
+/usr/include/c++/7/bits/shared_ptr.h:300:2: note:   template argument deduction/substitution failed:
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:154:28: note:   mismatched types ‘const std::shared_ptr<_Tp>’ and ‘Tim*’
+    timovi.at(j) = new Tim(i);
+                            ^
+In file included from /usr/include/c++/7/memory:81:0,
+                 from /rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:10:
+/usr/include/c++/7/bits/shared_ptr.h:309:2: note: candidate: template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::auto_ptr<_Up> > std::shared_ptr<_Tp>::operator=(std::auto_ptr<_Up>&&) [with _Yp = _Yp; _Tp = Tim]
+  operator=(auto_ptr<_Yp>&& __r)
+  ^~~~~~~~
+/usr/include/c++/7/bits/shared_ptr.h:309:2: note:   template argument deduction/substitution failed:
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:154:28: note:   mismatched types ‘std::auto_ptr<_Up>’ and ‘Tim*’
+    timovi.at(j) = new Tim(i);
+                            ^
+In file included from /usr/include/c++/7/memory:81:0,
+                 from /rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:10:
+/usr/include/c++/7/bits/shared_ptr.h:317:7: note: candidate: std::shared_ptr<_Tp>& std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Tp>&&) [with _Tp = Tim]
+       operator=(shared_ptr&& __r) noexcept
+       ^~~~~~~~
+/usr/include/c++/7/bits/shared_ptr.h:317:7: note:   no known conversion for argument 1 from ‘Tim*’ to ‘std::shared_ptr<Tim>&&’
+/usr/include/c++/7/bits/shared_ptr.h:325:2: note: candidate: template<class _Yp> std::shared_ptr<_Tp>::_Assignable<std::shared_ptr<_Yp> > std::shared_ptr<_Tp>::operator=(std::shared_ptr<_Yp>&&) [with _Yp = _Yp; _Tp = Tim]
+  operator=(shared_ptr<_Yp>&& __r) noexcept
+  ^~~~~~~~
+/usr/include/c++/7/bits/shared_ptr.h:325:2: note:   template argument deduction/substitution failed:
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:154:28: note:   mismatched types ‘std::shared_ptr<_Tp>’ and ‘Tim*’
+    timovi.at(j) = new Tim(i);
+                            ^
+In file included from /usr/include/c++/7/memory:81:0,
+                 from /rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:10:
+/usr/include/c++/7/bits/shared_ptr.h:333:2: note: candidate: template<class _Yp, class _Del> std::shared_ptr<_Tp>::_Assignable<std::unique_ptr<_Up, _Ep> > std::shared_ptr<_Tp>::operator=(std::unique_ptr<_Up, _Ep>&&) [with _Yp = _Yp; _Del = _Del; _Tp = Tim]
+  operator=(unique_ptr<_Yp, _Del>&& __r)
+  ^~~~~~~~
+/usr/include/c++/7/bits/shared_ptr.h:333:2: note:   template argument deduction/substitution failed:
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:154:28: note:   mismatched types ‘std::unique_ptr<_Tp, _Dp>’ and ‘Tim*’
+    timovi.at(j) = new Tim(i);
+                            ^
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:160:22: error: type ‘__gnu_cxx::__alloc_traits<std::allocator<std::shared_ptr<Tim> > >::value_type {aka class std::shared_ptr<Tim>}’ argument given to ‘delete’, expected pointer
+    delete timovi.at(i);
+                      ^
+In file included from /usr/include/c++/7/bits/stl_algobase.h:71:0,
+                 from /usr/include/c++/7/bits/char_traits.h:39,
+                 from /usr/include/c++/7/ios:40,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from /rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:8:
+/usr/include/c++/7/bits/predefined_ops.h: In instantiation of ‘bool __gnu_cxx::__ops::_Iter_comp_iter<_Compare>::operator()(_Iterator1, _Iterator2) [with _Iterator1 = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Iterator2 = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Compare = bool (*)(Tim*, Tim*)]’:
+/usr/include/c++/7/bits/stl_algo.h:1847:14:   required from ‘void std::__insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(Tim*, Tim*)>]’
+/usr/include/c++/7/bits/stl_algo.h:1885:25:   required from ‘void std::__final_insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(Tim*, Tim*)>]’
+/usr/include/c++/7/bits/stl_algo.h:1971:31:   required from ‘void std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(Tim*, Tim*)>]’
+/usr/include/c++/7/bits/stl_algo.h:4868:18:   required from ‘void std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Compare = bool (*)(Tim*, Tim*)]’
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:142:54:   required from here
+/usr/include/c++/7/bits/predefined_ops.h:143:18: error: cannot convert ‘std::shared_ptr<Tim>’ to ‘Tim*’ in argument passing
+         { return bool(_M_comp(*__it1, *__it2)); }
+                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/7/bits/predefined_ops.h: In instantiation of ‘bool __gnu_cxx::__ops::_Val_comp_iter<_Compare>::operator()(_Value&, _Iterator) [with _Value = std::shared_ptr<Tim>; _Iterator = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Compare = bool (*)(Tim*, Tim*)]’:
+/usr/include/c++/7/bits/stl_algo.h:1828:20:   required from ‘void std::__unguarded_linear_insert(_RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Compare = __gnu_cxx::__ops::_Val_comp_iter<bool (*)(Tim*, Tim*)>]’
+/usr/include/c++/7/bits/stl_algo.h:1855:36:   required from ‘void std::__insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(Tim*, Tim*)>]’
+/usr/include/c++/7/bits/stl_algo.h:1885:25:   required from ‘void std::__final_insertion_sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(Tim*, Tim*)>]’
+/usr/include/c++/7/bits/stl_algo.h:1971:31:   required from ‘void std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(Tim*, Tim*)>]’
+/usr/include/c++/7/bits/stl_algo.h:4868:18:   required from ‘void std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Compare = bool (*)(Tim*, Tim*)]’
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:142:54:   required from here
+/usr/include/c++/7/bits/predefined_ops.h:215:11: error: cannot convert ‘std::shared_ptr<Tim>’ to ‘Tim*’ in argument passing
+  { return bool(_M_comp(__val, *__it)); }
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+/usr/include/c++/7/bits/predefined_ops.h: In instantiation of ‘bool __gnu_cxx::__ops::_Iter_comp_val<_Compare>::operator()(_Iterator, _Value&) [with _Iterator = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Value = std::shared_ptr<Tim>; _Compare = bool (*)(Tim*, Tim*)]’:
+/usr/include/c++/7/bits/stl_heap.h:133:48:   required from ‘void std::__push_heap(_RandomAccessIterator, _Distance, _Distance, _Tp, _Compare&) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Distance = long int; _Tp = std::shared_ptr<Tim>; _Compare = __gnu_cxx::__ops::_Iter_comp_val<bool (*)(Tim*, Tim*)>]’
+/usr/include/c++/7/bits/stl_heap.h:237:23:   required from ‘void std::__adjust_heap(_RandomAccessIterator, _Distance, _Distance, _Tp, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Distance = long int; _Tp = std::shared_ptr<Tim>; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(Tim*, Tim*)>]’
+/usr/include/c++/7/bits/stl_heap.h:342:22:   required from ‘void std::__make_heap(_RandomAccessIterator, _RandomAccessIterator, _Compare&) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(Tim*, Tim*)>]’
+/usr/include/c++/7/bits/stl_algo.h:1672:23:   required from ‘void std::__heap_select(_RandomAccessIterator, _RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(Tim*, Tim*)>]’
+/usr/include/c++/7/bits/stl_algo.h:1933:25:   required from ‘void std::__partial_sort(_RandomAccessIterator, _RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(Tim*, Tim*)>]’
+/usr/include/c++/7/bits/stl_algo.h:1948:27:   required from ‘void std::__introsort_loop(_RandomAccessIterator, _RandomAccessIterator, _Size, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Size = long int; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(Tim*, Tim*)>]’
+/usr/include/c++/7/bits/stl_algo.h:1968:25:   required from ‘void std::__sort(_RandomAccessIterator, _RandomAccessIterator, _Compare) [with _RandomAccessIterator = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Compare = __gnu_cxx::__ops::_Iter_comp_iter<bool (*)(Tim*, Tim*)>]’
+/usr/include/c++/7/bits/stl_algo.h:4868:18:   required from ‘void std::sort(_RAIter, _RAIter, _Compare) [with _RAIter = __gnu_cxx::__normal_iterator<std::shared_ptr<Tim>*, std::vector<std::shared_ptr<Tim> > >; _Compare = bool (*)(Tim*, Tim*)]’
+/rhome/a/amulalic1/workspace/TP/T11/Z5/main.cpp:142:54:   required from here
+/usr/include/c++/7/bits/predefined_ops.h:177:11: error: cannot convert ‘std::shared_ptr<Tim>’ to ‘Tim*’ in argument passing
+  { return bool(_M_comp(*__it, __val)); }
+           ^~~~~~~~~~~~~~~~~~~~~~~~~~~

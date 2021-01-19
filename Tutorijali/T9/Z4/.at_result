@@ -1,0 +1,252 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3570": {
+            "status": 1,
+            "run_result": {
+                "output": "1\n0\n0\n0\n0\n0\n0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3571": {
+            "status": 1,
+            "run_result": {
+                "output": "10:15:30\n00:04:03",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3572": {
+            "status": 1,
+            "run_result": {
+                "output": "OK\nOK\nOK\nOK\nOK\nOK\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3573": {
+            "status": 6,
+            "run_result": {
+                "output": "-2:03:10\n15:-30:00\n20:30:-15\n06:10:15\n21:10:15\n20:16:00\n10:69:34",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3574": {
+            "status": 1,
+            "run_result": {
+                "output": "10:10:11\n10:10:13\n00:00:00\n11:00:00\n10:11:00\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3575": {
+            "status": 1,
+            "run_result": {
+                "output": "10:10:09\n10:10:07\n23:59:59\n09:59:59\n10:09:59\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3576": {
+            "status": 1,
+            "run_result": {
+                "output": "10:10:15\n10:10:10\n10:10:10\n00:00:04\n11:00:04\n10:11:04\n23:59:55\n09:59:55\n10:09:55",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3577": {
+            "status": 1,
+            "run_result": {
+                "output": "10 10 10",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3578": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3578.cpp: In function ‘int main()’:\nbs_test_3578.cpp:177:41: error: ‘BrojSekundiIzmedju’ was not declared in this scope\n   std::cout << BrojSekundiIzmedju(s2, s1) << \" \"\n                                         ^\nbs_test_3578.cpp:178:16: error: ‘Razmak’ is not a member of ‘Sat’\n             << Sat::Razmak(s2, s1) << std::endl;\n                ^~~\nbs_test_3578.cpp:180:16: error: ‘Razmak’ is not a member of ‘Sat’\n             << Sat::Razmak(s1, s2) << std::endl;\n                ^~~\nbs_test_3578.cpp:185:16: error: ‘Razmak’ is not a member of ‘Sat’\n             << Sat::Razmak(s2, s1) << std::endl;\n                ^~~\nbs_test_3578.cpp:187:16: error: ‘Razmak’ is not a member of ‘Sat’\n             << Sat::Razmak(s1, s2);\n                ^~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "41",
+                        "message": "'BrojSekundiIzmedju' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_5403/bs_test_3578.cpp:177:41: error: ‘BrojSekundiIzmedju’ was not declared in this scope   std::cout << BrojSekundiIzmedju(s2, s1) << \" \"                                         ^",
+                        "code": "std::cout << BrojSekundiIzmedju(s2, s1) << \" \""
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 4,
+                        "col": "16",
+                        "message": "'Razmak' is not a member of 'Sat'",
+                        "output": "/tmp/buildservice/bs_5403/bs_test_3578.cpp:178:16: error: ‘Razmak’ is not a member of ‘Sat’             << Sat::Razmak(s2, s1) << std::endl;                ^~~",
+                        "code": "<< Sat::Razmak(s2, s1) << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 6,
+                        "col": "16",
+                        "message": "'Razmak' is not a member of 'Sat'",
+                        "output": "/tmp/buildservice/bs_5403/bs_test_3578.cpp:180:16: error: ‘Razmak’ is not a member of ‘Sat’             << Sat::Razmak(s1, s2) << std::endl;                ^~~",
+                        "code": "<< Sat::Razmak(s1, s2) << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 11,
+                        "col": "16",
+                        "message": "'Razmak' is not a member of 'Sat'",
+                        "output": "/tmp/buildservice/bs_5403/bs_test_3578.cpp:185:16: error: ‘Razmak’ is not a member of ‘Sat’             << Sat::Razmak(s2, s1) << std::endl;                ^~~",
+                        "code": "<< Sat::Razmak(s2, s1) << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 13,
+                        "col": "16",
+                        "message": "'Razmak' is not a member of 'Sat'",
+                        "output": "/tmp/buildservice/bs_5403/bs_test_3578.cpp:187:16: error: ‘Razmak’ is not a member of ‘Sat’             << Sat::Razmak(s1, s2);                ^~~",
+                        "code": "<< Sat::Razmak(s1, s2);"
+                    }
+                ]
+            }
+        },
+        "3579": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3579.cpp: In function ‘int main()’:\nbs_test_3579.cpp:177:31: error: passing ‘const Sat’ as ‘this’ argument discards qualifiers [-fpermissive]\n   std::cout << sConst.DajSate() << \" \"\n                               ^\nbs_test_3579.cpp:117:7: note:   in call to ‘int Sat::DajSate()’\n   int DajSate() {\n       ^~~~~~~\nbs_test_3579.cpp:178:33: error: passing ‘const Sat’ as ‘this’ argument discards qualifiers [-fpermissive]\n             << sConst.DajMinute() << \" \"\n                                 ^\nbs_test_3579.cpp:121:7: note:   in call to ‘int Sat::DajMinute()’\n   int DajMinute() {\n       ^~~~~~~~~\nbs_test_3579.cpp:179:34: error: passing ‘const Sat’ as ‘this’ argument discards qualifiers [-fpermissive]\n             << sConst.DajSekunde() << std::endl;\n                                  ^\nbs_test_3579.cpp:125:7: note:   in call to ‘int Sat::DajSekunde()’\n   int DajSekunde() {\n       ^~~~~~~~~~\nbs_test_3579.cpp:181:17: error: passing ‘const Sat’ as ‘this’ argument discards qualifiers [-fpermissive]\n   sConst.Ispisi();\n                 ^\nbs_test_3579.cpp:96:8: note:   in call to ‘void Sat::Ispisi()’\n   void Ispisi() {\n        ^~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "31",
+                        "message": "passing 'const Sat' as 'this' argument discards qualifiers [-fpermissive]",
+                        "output": "/tmp/buildservice/bs_5403/bs_test_3579.cpp:177:31: error: passing ‘const Sat’ as ‘this’ argument discards qualifiers [-fpermissive]   std::cout << sConst.DajSate() << \" \"                               ^",
+                        "code": "std::cout << sConst.DajSate() << \" \""
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 4,
+                        "col": "33",
+                        "message": "passing 'const Sat' as 'this' argument discards qualifiers [-fpermissive]",
+                        "output": "/tmp/buildservice/bs_5403/bs_test_3579.cpp:178:33: error: passing ‘const Sat’ as ‘this’ argument discards qualifiers [-fpermissive]             << sConst.DajMinute() << \" \"                                 ^",
+                        "code": "<< sConst.DajMinute() << \" \""
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 5,
+                        "col": "34",
+                        "message": "passing 'const Sat' as 'this' argument discards qualifiers [-fpermissive]",
+                        "output": "/tmp/buildservice/bs_5403/bs_test_3579.cpp:179:34: error: passing ‘const Sat’ as ‘this’ argument discards qualifiers [-fpermissive]             << sConst.DajSekunde() << std::endl;                                  ^",
+                        "code": "<< sConst.DajSekunde() << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "17",
+                        "message": "passing 'const Sat' as 'this' argument discards qualifiers [-fpermissive]",
+                        "output": "/tmp/buildservice/bs_5403/bs_test_3579.cpp:181:17: error: passing ‘const Sat’ as ‘this’ argument discards qualifiers [-fpermissive]   sConst.Ispisi();                 ^",
+                        "code": "sConst.Ispisi();"
+                    }
+                ]
+            }
+        },
+        "3580": {
+            "status": 1,
+            "run_result": {
+                "output": "12",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 1,
+    "time": 1588581650
+}

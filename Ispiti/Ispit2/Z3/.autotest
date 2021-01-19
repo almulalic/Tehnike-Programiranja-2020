@@ -1,0 +1,123 @@
+{
+    "id": 5696,
+    "name": "Tehnike programiranja (2019\/2020), Ispit 2, Zadatak 3",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 10,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "     Riba   ribi    grize    rep! \n3\n"
+            },
+            "expected": [
+                "Unesite string: Redni broj rijeci: Modificirani string:     Riba   ribi        rep! \\nBroj rijeci: 4"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 11,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "     Bla bla...\n3\n"
+            },
+            "expected": [
+                "Unesite string: Redni broj rijeci: Nema toliko rijeci u tom stringu!\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 12,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3\n\n    try\n    {\n        std::string s{\"     Riba   ribi    grize    rep!\"};\n        int k = OgradiRijec(s, 7);\n        std::cout << k;\n        std::cout << \"Ovo se ne smije ispisati\";\n    }\n    catch(std::range_error e)\n    {\n        std::cout << e.what() << std::endl;\n    }\n\n    try\n    {\n        std::string s{\"     Riba   ribi    grize    rep!\"};\n        int k = OgradiRijec(s, 0);\n        std::cout << k;\n        std::cout << \"Ovo se ne smije ispisati\" << std::endl;\n    }\n    catch(std::range_error e)\n    {\n        std::cout << e.what() << std::endl;\n    }\n\n    try\n    {\n        std::string s{\"     Riba   ribi    grize    rep!\"};\n        int k = OgradiRijec(s, -5);\n        std::cout << k;\n        std::cout << \"Ovo se ne smije ispisati\" << std::endl;\n    }\n    catch(std::range_error e)\n    {\n        std::cout << e.what();\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nekorektan redni broj rijeci\\nNekorektan redni broj rijeci\\nNekorektan redni broj rijeci",
+                "Nekorektan redni broj rijeci!\\nNekorektan redni broj rijeci!\\nNekorektan redni broj rijeci!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 13,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "        std::string s{\"     Riba   ribi    grize    rep\"};\n        std::cout << s << std::endl;\n        int k = OgradiRijec(s, 3);\n        std::cout << s << std::endl << k;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "     Riba   ribi    grize    rep\\n     Riba   ribi        rep\\n4"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 14,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT5\n\n        std::string s{\"     Riba   ...ribi....    grize    rep\"};\n        std::cout << s << std::endl;\n        int k = OgradiRijec(s, 2);\n        std::cout << s << std::endl << k;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "     Riba   ...ribi....    grize    rep   \\n     Riba       grize    rep\\n4"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        }
+    ]
+}

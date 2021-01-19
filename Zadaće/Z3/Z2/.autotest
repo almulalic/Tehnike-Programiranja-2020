@@ -1,0 +1,80 @@
+{
+    "id": 5701,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 3, Zadatak 2",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1 - test iz postavke zadatka\n\/\/Sva pitanja vezana za zadatak ili autotestove uputiti na chat.google.com (bcocalic1@etf.unsa.ba)\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "I\nabc qwe stsda abc abc dhi qwe hrkw dhi\n.\n.\nabc\nhrkw\nxyzzy\n.\n"
+            },
+            "expected": [
+                "Unesite naziv poglavlja: Unesite sadrzaj stranice 1: Unesite sadrzaj stranice 2: Unesite naziv poglavlja: \\nKreirani indeks pojmova:\\nabc: I\/1\/0, I\/1\/14, I\/1\/18\\ndhi: I\/1\/22, I\/1\/35\\nhrkw: I\/1\/30\\nqwe: I\/1\/4, I\/1\/26\\nstsda: I\/1\/8\\nUnesite rijec: I\/1\/0 I\/1\/14 I\/1\/18 \\nUnesite rijec: I\/1\/30 \\nUnesite rijec: Unesena rijec nije nadjena!\\nUnesite rijec: "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2 - test studentskog maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "A\nabc qwe stsda abc abc dhi qwe hrkw dhi\nstsda abc abc dhi\nB\nghj kjh poi gfd asdfg\npoiu mng hjzi cxy\nghj sdf cdf cvb qwe\n.\n.\nabc\nghj\ncdf\ndhi\nqwe\nxyzzy\n."
+            },
+            "expected": [
+                "Unesite naziv poglavlja: Unesite sadrzaj stranice 1: Unesite sadrzaj stranice 2: Unesite sadrzaj stranice 3: Unesite sadrzaj stranice 4: Unesite sadrzaj stranice 5: Unesite sadrzaj stranice 6: Unesite sadrzaj stranice 7: Unesite naziv poglavlja: \\nKreirani indeks pojmova:\\nabc: A\/1\/0, A\/1\/14, A\/1\/18, A\/2\/6, A\/2\/10\\nasdfg: A\/4\/16\\nb: A\/3\/0\\ncdf: A\/6\/8\\ncvb: A\/6\/12\\ncxy: A\/5\/14\\ndhi: A\/1\/22, A\/1\/35, A\/2\/14\\ngfd: A\/4\/12\\nghj: A\/4\/0, A\/6\/0\\nhjzi: A\/5\/9\\nhrkw: A\/1\/30\\nkjh: A\/4\/4\\nmng: A\/5\/5\\npoi: A\/4\/8\\npoiu: A\/5\/0\\nqwe: A\/1\/4, A\/1\/26, A\/6\/16\\nsdf: A\/6\/4\\nstsda: A\/1\/8, A\/2\/0\\nUnesite rijec: A\/1\/0 A\/1\/14 A\/1\/18 A\/2\/6 A\/2\/10 \\nUnesite rijec: A\/4\/0 A\/6\/0 \\nUnesite rijec: A\/6\/8 \\nUnesite rijec: A\/1\/22 A\/1\/35 A\/2\/14 \\nUnesite rijec: A\/1\/4 A\/1\/26 A\/6\/16 \\nUnesite rijec: Unesena rijec nije nadjena!\\nUnesite rijec: "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3 - test studentskog maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "A\nabc ABC abC\nABc aBc\nabc aBC\n.\n.\nabc\n.\n\n"
+            },
+            "expected": [
+                "Unesite naziv poglavlja: Unesite sadrzaj stranice 1: Unesite sadrzaj stranice 2: Unesite sadrzaj stranice 3: Unesite sadrzaj stranice 4: Unesite naziv poglavlja: \\nKreirani indeks pojmova:\\nabc: A\/1\/0, A\/1\/4, A\/1\/8, A\/2\/0, A\/2\/4, A\/3\/0, A\/3\/4\\nUnesite rijec: A\/1\/0 A\/1\/4 A\/1\/8 A\/2\/0 A\/2\/4 A\/3\/0 A\/3\/4 \\nUnesite rijec: "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,88 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In member function ‘Skladiste& Skladiste::operator=(Skladiste&&)’:\nmain.cpp:102:5: warning: no return statement in function returning non-void [-Wreturn-type]\n     }\n     ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "102",
+                "col": "5",
+                "message": "no return statement in function returning non-void",
+                "output": "/tmp/buildservice/bs_5333/main.cpp:102:5: warning: no return statement in function returning non-void [-Wreturn-type]     }     ^",
+                "code": "}"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 1,
+            "run_result": {
+                "output": "------ AT 1 ------\n2 12\n------ AT 2 ------\nNeispravni parametri\nNeispravni parametri\nNeispravni parametri\n------ AT 3 ------\n30 130\n------ AT 4 ------\nSanduk 2.5 Paket 3 7\n\n------ AT 5 ------\n2.5 23.5\nSanduk 2.5 Paket 3 7\n\n------ AT 6 ------\n3 13\n------ AT 7 ------\nNeispravni parametri\nNeispravni parametri",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 1,
+            "run_result": {
+                "output": "------ AT 8 ------\n12.5 65\n------ AT 9 ------\nBure 12.5 Barel 52.5\n\n------ AT 10 ------\n12.5 65\nBure 12.5 Barel 52.5\n\n------ AT 11 ------\nOK\n------ AT 12 ------\nKopija:\nSanduk 30 Odjeca 250 0.4\nBure 12.5 Barel 52.5\nSanduk 2.5 Paket 3 7\nBure 3 Tekucina 10\n\nOriginal:\nBure 12.5 Barel 52.5\nSanduk 2.5 Paket 3 7\nBure 3 Tekucina 10\n\n------ AT 13 ------\nKopija:\nSanduk 30 Odjeca 250 0.4\nBure 12.5 Barel 52.5\nSanduk 2.5 Paket 3 7\nBure 3 Tekucina 10\n\nOriginal:\nBure 12.5 Barel 52.5\nSanduk 2.5 Paket 3 7\nBure 3 Tekucina 10\n\n------ AT 14 ------\nKopija:\nSanduk 30 Odjeca 250 0.4\nBure 12.5 Barel 52.5\nSanduk 2.5 Paket 3 7\nBure 3 Tekucina 10\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3": {
+            "status": 1,
+            "run_result": {
+                "output": "------ AT 15 ------\nKopija:\nSanduk 30 Odjeca 250 0.4\nBure 12.5 Barel 52.5\nSanduk 2.5 Paket 3 7\nBure 3 Tekucina 10\n\n------ AT 16 ------\n22\n------ AT 17 ------\nNeispravni parametri\n2\n------ AT 18 ------\nNeispravni parametri\n2\n------ AT 19 ------\nBure 2 Najlaksi 2.5\n\n------ AT 20 ------\nSanduk 1.75 Najlaksi 1 0.5\n\n------ AT 21 ------\n11",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4": {
+            "status": 6,
+            "run_result": {
+                "output": "------ AT 22 ------\nSanduk 15 Sanduk 3 21\nSanduk 15 Sanduk 3 20\nSanduk 15 Sanduk 3 19\nSanduk 15 Sanduk 3 18\nSanduk 15 Sanduk 3 17\nSanduk 15 Sanduk 3 16\nSanduk 15 Sanduk 3 15\nSanduk 15 Sanduk 3 14\nSanduk 15 Sanduk 3 13\nSanduk 15 Sanduk 3 12\nSanduk 15 Sanduk 3 11\nSanduk 15 Sanduk 3 10\nBure 10 Bure 9\nBure 10 Bure 8\nBure 10 Bure 7\nBure 10 Bure 6\nBure 10 Bure 5\nBure 10 Bure 4\nBure 10 Bure 3\nBure 10 Bure 2\nBure 10 Bure 1\nBure 10 Bure 0\nSanduk 1.75 Najlaksi 1 0.5\n\n------ AT 23 ------\nSanduk 15 Sanduk 3 21\nSanduk 15 Sanduk 3 20\nSanduk 15 Sanduk 3 19\nSanduk 15 Sanduk 3 18\nSanduk 15 Sanduk 3 17\nSanduk 15 Sanduk 3 16\nSanduk 15 Sanduk 3 15\nSanduk 15 Sanduk 3 14\nSanduk 15 Sanduk 3 13\nSanduk 15 Sanduk 3 12\nSanduk 15 Sanduk 3 11\nSanduk 15 Sanduk 3 10\nBure 10 Bure 9\nBure 10 Bure 8\nBure 10 Bure 7\nBure 10 Bure 6\nBure 10 Bure 5\nBure 10 Bure 4\nBure 10 Bure 3\nBure 10 Bure 2\nBure 10 Bure 1\nBure 10 Bure 0\nSanduk 1.75 Najlaksi 1 0.5\n\n------ AT 24 ------\nSanduk 1.75 Najlaksi 1 0.5\n\n------ AT 25 ------\nNeispravan indeks\nNeispravan indeks\n------ AT 26 ------\nBure 1 Dobar 22\n\n------ AT 27 ------\nS - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti: S - sanduk, B - bure, K - kraj: Tezina bureta: Sadrzaj: Tezina tecnosti:\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1594735792
+}

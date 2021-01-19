@@ -1,0 +1,11 @@
+/rhome/a/amulalic1/workspace/TP/T11/Z1/main.cpp: In member function ‘NeobicnaKlasa& NeobicnaKlasa::operator=(const NeobicnaKlasa&)’:
+/rhome/a/amulalic1/workspace/TP/T11/Z1/main.cpp:23:23: error: ‘class NeobicnaKlasa’ has no member named ‘number’
+                 this->number = num.number;
+                       ^~~~~~
+/rhome/a/amulalic1/workspace/TP/T11/Z1/main.cpp:23:36: error: ‘const class NeobicnaKlasa’ has no member named ‘number’
+                 this->number = num.number;
+                                    ^~~~~~
+/rhome/a/amulalic1/workspace/TP/T11/Z1/main.cpp: In function ‘int main()’:
+/rhome/a/amulalic1/workspace/TP/T11/Z1/main.cpp:34:21: error: conversion from ‘int’ to non-scalar type ‘NeobicnaKlasa’ requested
+  NeobicnaKlasa k2 = 5;
+                     ^

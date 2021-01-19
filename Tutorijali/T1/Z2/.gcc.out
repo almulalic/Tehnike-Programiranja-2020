@@ -1,0 +1,7 @@
+/rhome/a/amulalic1/workspace/TP/T1/Z2/main.cpp: In function ‘int main()’:
+/rhome/a/amulalic1/workspace/TP/T1/Z2/main.cpp:46:7: warning: this ‘else’ clause does not guard... [-Wmisleading-indentation]
+     } else 
+       ^~~~
+/rhome/a/amulalic1/workspace/TP/T1/Z2/main.cpp:49:2: note: ...this statement, but the latter is misleadingly indented as if it were guarded by the ‘else’
+  return 0;
+  ^~~~~~

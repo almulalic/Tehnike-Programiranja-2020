@@ -1,0 +1,122 @@
+{
+    "id": 5531,
+    "name": "Tehnike programiranja (2017\/2018), Tutorijal 14, zadatak 4",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\tdouble niz[] = {1, 2, 0.5, 0.2, 6.23};\n\tdouble novi[5]{};\n\tstd::ofstream f (\"dat.bin\", std::ios::binary);\n\tf.write((char *)niz, sizeof niz);\n\tf.close();\n\tIzvrniDatoteku(\"dat.bin\");\n\tstd::ifstream ff (\"dat.bin\", std::ios::binary);\n\tff.read((char *)novi, sizeof novi);\n\tfor (int i = 0; i < 5; ++i) std::cout << novi[i] << \", \";\n\tff.close();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "6.23, 0.2, 0.5, 2, 1,"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\tdouble niz[] = {-1, -2, -3, -4, -5, -5.5, -76, 1, 2, 3, 0, 100};\n\tdouble novi[12]{};\n\tstd::ofstream f (\"dat.bin\", std::ios::binary);\n\tf.write((char *)niz, sizeof niz);\n\tf.close();\n\tIzvrniDatoteku(\"dat.bin\");\n\tstd::ifstream ff (\"dat.bin\", std::ios::binary);\n\tff.read((char *)novi, sizeof novi);\n\tfor (int i = 0; i < 12; ++i) std::cout << novi[i] << \", \";\n\tff.close();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "100, 0, 3, 2, 1, -76, -5.5, -5, -4, -3, -2, -1,"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\n\ttry {IzvrniDatoteku(\"txt.nema\"); std::cout << \"Nije bacen izuzetak!\";}\n\tcatch (std::logic_error e) {std::cout << \"Izuzetak: \" << e.what();}\n\tcatch (...) {std::cout << \"Pogresan tip izuzetka!\";}\n}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Datoteka ne postoji"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\tdouble niz[] = {777.777};\n\tdouble novi[1]{};\n\tstd::ofstream f (\"dat.bin\", std::ios::binary);\n\tf.write((char *)niz, sizeof niz);\n\tf.close();\n\tIzvrniDatoteku (\"dat.bin\");\n\tstd::ifstream ff (\"dat.bin\", std::ios::binary);\n\tff.read((char *)novi, sizeof novi);\n\tstd::cout << novi[0];\n\tff.close();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "777.777"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\tdouble niz[1000] {};\n\tfor (int i = 0; i < 1000; ++i) niz[i] = i + 1;\n\tstd::ofstream f (\"dat.bin\", std::ios::binary);\n\tf.write((char *)niz, sizeof niz);\n\tf.close();\n\tIzvrniDatoteku (\"dat.bin\");\n\tstd::ifstream ff (\"dat.bin\", std::ios::binary);\n\tff.read((char *)niz, sizeof niz);\n\tstd::cout << niz[0] << \" \" << niz[123] << \" \" << niz[641] << \" \" << niz[999];\n\tstd::cout << std::endl;\n\tfor (int i = 2; i < 999; i += 24)\n\t\tstd::cout << niz[i] << \" \";\n\tff.close();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1000 877 359 1\\n998 974 950 926 902 878 854 830 806 782 758 734 710 686 662 638 614 590 566 542 518 494 470 446 422 398 374 350 326 302 278 254 230 206 182 158 134 110 86 62 38 14"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,4 @@
+/rhome/a/amulalic1/workspace/TP/Ispit4/Z2/main.cpp: In member function ‘void Gradovi::DodajGrad(const char*, int)’:
+/rhome/a/amulalic1/workspace/TP/Ispit4/Z2/main.cpp:33:21: error: invalid conversion from ‘const char*’ to ‘char’ [-fpermissive]
+         *g -> ime = ime;
+                     ^~~

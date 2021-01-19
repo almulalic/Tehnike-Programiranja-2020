@@ -1,0 +1,15 @@
+==1600== Memcheck, a memory error detector
+==1600== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1600== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==1600== Command: /rhome/a/amulalic1/workspace/TP/Z14/Z2/.runme
+==1600== Parent PID: 1560
+==1600== 
+==1600== 
+==1600== HEAP SUMMARY:
+==1600==     in use at exit: 0 bytes in 0 blocks
+==1600==   total heap usage: 23 allocs, 23 frees, 108,457 bytes allocated
+==1600== 
+==1600== All heap blocks were freed -- no leaks are possible
+==1600== 
+==1600== For counts of detected and suppressed errors, rerun with: -v
+==1600== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)

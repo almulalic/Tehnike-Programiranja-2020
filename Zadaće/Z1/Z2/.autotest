@@ -1,0 +1,143 @@
+{
+    "id": 56182,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 1, zadatak 2",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 266,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1 - definisanje ispisa i test maina\n\/\/Sva pitanja vezana za AT-ove ovog zadatka \u0161aljite na e-mail bcocalic1@etf.unsa.ba\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 1 2 3 2 1 1"
+            },
+            "expected": [
+                "Unesite broj elemenata niza: Unesite elemente niza: Unesite tip: (1 - rastuci, 0 - opadajuci): \\nMaksimalni balansirani podnizovi: \\n1 2 3 2 1 \\nSavrseni balansirani podnizovi nakon transformacije:\\n1 2 3 2 1 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 267,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2 - definisanje ispisa i test maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 1 2 3 2 1 0"
+            },
+            "expected": [
+                "Unesite broj elemenata niza: Unesite elemente niza: Unesite tip: (1 - rastuci, 0 - opadajuci): \\nMaksimalni balansirani podnizovi: \\n1 2 3 2 1 \\nSavrseni balansirani podnizovi nakon transformacije:\\n2 1 3 1 2 \\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 268,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3 - definisanje ispisa i test maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 3 2 1 2 3 1 "
+            },
+            "expected": [
+                "Unesite broj elemenata niza: Unesite elemente niza: Unesite tip: (1 - rastuci, 0 - opadajuci): \\nMaksimalni balansirani podnizovi: \\n3 2 1 2 3\\nSavrseni balansirani podnizovi nakon transformacije:\\n2 3 1 3 2 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 269,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT4 - definisanje ispisa i test maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 3 2 1 2 3 0"
+            },
+            "expected": [
+                "Unesite broj elemenata niza: Unesite elemente niza: Unesite tip: (1 - rastuci, 0 - opadajuci): \\nMaksimalni balansirani podnizovi: \\n3 2 1 2 3 \\nSavrseni balansirani podnizovi nakon transformacije:\\n3 2 1 2 3 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 270,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT5 - definisanje ispisa i test maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 3 2 1 3 2 1"
+            },
+            "expected": [
+                "Unesite broj elemenata niza: Unesite elemente niza: Unesite tip: (1 - rastuci, 0 - opadajuci): \\nMaksimalni balansirani podnizovi: \\n3 2 1 3 2 \\nSavrseni balansirani podnizovi nakon transformacije:\\n2 3 1 3 2 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 271,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT6 - definisanje ispisa i test maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 3 2 1 3 2 0"
+            },
+            "expected": [
+                "Unesite broj elemenata niza: Unesite elemente niza: Unesite tip: (1 - rastuci, 0 - opadajuci): \\nMaksimalni balansirani podnizovi: \\n3 2 1 3 2 \\nSavrseni balansirani podnizovi nakon transformacije:\\n3 2 1 2 3 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

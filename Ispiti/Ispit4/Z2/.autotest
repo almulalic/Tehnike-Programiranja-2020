@@ -1,0 +1,122 @@
+{
+    "id": 5727,
+    "name": "Tehnike programiranja (2019\/2020), Ispit 4, Zadatak 2",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 21,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    std::cout << \"AT1\" << std::endl;\n    {\n        \/\/AT1 - testiranje konstruktora klase Gradovi (potrebno je samo da se kompajlira)\n        Gradovi g;\n        std::cout << \"OK\" << std::endl;\n    }\n\n        std::cout << \"AT15\" << std::endl;\n    {\n        \/\/AT15 - test strukture Grad\n        struct Grad g1;\n        char c[50]{\"Tuzla\"};\n        std::strcpy(g1.ime, c);\n        g1.broj_stanovnika = 130000;\n        std::cout << g1.ime << \" \" << g1.broj_stanovnika << std::endl;\n    }\n\n    std::cout << \"AT2\" << std::endl;\n    {\n        \/\/AT2 - testiranje funkcija \u010dlanica DodajGrad, ObrisiGrad, DajBrojGradova\n        Gradovi g;\n        std::cout << g.DajBrojGradova() << \" \";\n        g.DodajGrad(\"Tuzla\", 130000);\n        std::cout << g.DajBrojGradova() << \" \";\n        g.ObrisiGrad(\"Tuzla\");\n        std::cout << g.DajBrojGradova() << \" \";\n        g.DodajGrad(\"Bihac\", 50000);\n        g.DodajGrad(\"Sarajevo\", 350000);\n        g.DodajGrad(\"Mostar\", 100000);\n        std::cout << g.DajBrojGradova() << \" \";\n        g.ObrisiGrad(\"Mostar\");\n        std::cout << g.DajBrojGradova() << std::endl;\n    }\n\n        std::cout << \"AT3\" << std::endl;\n    {\n        \/\/AT3 - testiranje funkcija \u010dlanica DodajGrad, ObrisiGrad, Ispisi\n        Gradovi g;\n        g.Ispisi();\n        g.DodajGrad(\"Tuzla\", 130000);\n        g.Ispisi();\n        g.ObrisiGrad(\"Tuzla\");\n        g.Ispisi();\n        g.DodajGrad(\"Bihac\", 50000);\n        g.DodajGrad(\"Sarajevo\", 350000);\n        g.DodajGrad(\"Mostar\", 100000);\n        g.Ispisi();\n        g.ObrisiGrad(\"Mostar\");\n        g.Ispisi();\n    }\n\n    std::cout << \"AT4\" << std::endl;\n    {\n        \/\/AT4 - testiranje funkcije \u010dlanice DodajGrad za izuzetkom\n        Gradovi g;\n        g.DodajGrad(\"Tuzla\", 130000);\n        \n        try\n        {\n            g.DodajGrad(\"Tuzla\", 130000);\n            std::cout << \"Ovo se ne smije ispisati!\" << std::endl;\n        } \n        catch (std::domain_error e)\n        {\n            std::cout << e.what() << std::endl;\n        }\n        catch (...)\n        {\n            std::cout << \"Pogresan izuzetak!\" << std::endl;\n        }\n    }\n    std::cout << \"AT5\" << std::endl;\n    {\n        \/\/AT5 - testiranje funkcije \u010dlanice DodajGrad za izuzetkom\n        Gradovi g;\n        g.DodajGrad(\"Tuzla\", 130000);\n        g.ObrisiGrad(\"Tuzl\");\n        g.Ispisi();\n    }\n\n",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "AT1\\nOK\\nAT15\\nTuzla 130000\\nAT2\\n0 1 0 3 2\\nAT3\\nTuzla: 130000\\nBihac: 50000\\nSarajevo: 350000\\nMostar: 100000\\nBihac: 50000\\nSarajevo: 350000\\nAT4\\nGrad vec postoji\\nAT5\\nTuzla: 130000\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 22,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    std::cout << \"AT6\" << std::endl;\n    {\n        \/\/AT6 - testiranje preklopljenog operatora []\n        Gradovi g;\n        g.DodajGrad(\"Tuzla\", 130000);\n        g.DodajGrad(\"Bihac\", 50000);\n        g.DodajGrad(\"Sarajevo\", 350000);\n        g.DodajGrad(\"Mostar\", 100000);\n        g.DodajGrad(\"Zenica\", 113000);\n        std::cout << \"Tuzla: \" << g[\"Tuzla\"] << std::endl << \n                     \"Bihac: \" << g[\"Bihac\"] << std::endl << \n                     \"Sarajevo: \" << g[\"Sarajevo\"] << std::endl << \n                     \"Zenica: \" << g[\"Zenica\"] << std::endl;\n    }\n\n    std::cout << \"AT7\" << std::endl;\n    {\n        \/\/AT7 - testiranje preklopljenog operatora [] sa izuzecima\n        Gradovi g;\n        g.DodajGrad(\"Tuzla\", 130000);\n        g.ObrisiGrad(\"Tuzla\");\n        g.DodajGrad(\"Bihac\", 50000);\n        g.DodajGrad(\"Sarajevo\", 350000);\n        g.DodajGrad(\"Mostar\", 100000);\n        \n        try\n        {\n          std::cout << g[\"Tuzla\"];\n          std::cout << \"Ovo se ne smije ispisati\";\n        }\n        catch(std::range_error e)\n        {\n          std::cout << e.what() << std::endl;\n        }\n        catch(...)\n        {\n          std::cout << \"Pogre\u0161an izuzetak\";\n        }\n        \n        std::cout << \"Bihac: \" << g[\"Bihac\"] << std::endl;\n        g.DodajGrad(\"Tuzla\", 130000);\n        g.ObrisiGrad(\"Bihac\");\n        \n        std::cout << \"Tuzla: \" << g[\"Tuzla\"] << std::endl;\n        \n        try\n        {\n          std::cout << g[\"Bihac\"];\n          std::cout << \"Ovo se ne smije ispisati\";\n        }\n        catch(std::range_error e)\n        {\n          std::cout << e.what() << std::endl;\n        }\n        catch(...)\n        {\n          std::cout << \"Pogre\u0161an izuzetak\";\n        }\n    }\n    std::cout << \"AT8\" << std::endl;\n    {\n        \/\/AT8 - testiranje preklopljenog operatora []\n            \/\/ kada se koristi sa lijeve strane znaka =\n        Gradovi g;\n        g.DodajGrad(\"Tuzla\", 130000);\n        g.DodajGrad(\"Bihac\", 50000);\n        g.DodajGrad(\"Sarajevo\", 350000);\n        g.DodajGrad(\"Mostar\", 100000);\n        g.DodajGrad(\"Zenica\", 113000);\n        g[\"Tuzla\"] = 130001;\n        g[\"Sarajevo\"] = 350001;\n        g[\"Mostar\"] = 100001;\n        \n        std::cout << \"Tuzla: \" << g[\"Tuzla\"] << std::endl << \n                     \"Bihac: \" << g[\"Bihac\"] << std::endl << \n                     \"Sarajevo: \" << g[\"Sarajevo\"] << std::endl << \n                     \"Zenica: \" << g[\"Zenica\"] << std::endl <<\n                     \"Mostar: \" << g[\"Mostar\"] << std::endl;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "AT6\\nTuzla: 130000\\nBihac: 50000\\nSarajevo: 350000\\nZenica: 113000\\nAT7\\nNepostojeci grad\\nBihac: 50000\\nTuzla: 130000\\nNepostojeci grad\\nAT8\\nTuzla: 130001\\nBihac: 50000\\nSarajevo: 350001\\nZenica: 113000\\nMostar: 100001"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 23,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    std::cout << \"AT10\" << std::endl;\n    {\n        \/\/AT10 - testiranje metoda SacuvajUBinarnuDatoteku i ObnoviIzBinarneDatoteke\n          \n        Gradovi g;\n        g.DodajGrad(\"Tuzla\", 130000);\n        g.DodajGrad(\"Bihac\", 50000);\n        g.DodajGrad(\"Sarajevo\", 350000);\n        g.DodajGrad(\"Mostar\", 100000);\n        g.SortirajGradove();\n        g.Ispisi();\n        g.SacuvajUBinarnuDatoteku(\"AT14.DAT\");\n        Gradovi g2;\n        g2.ObnoviIzBinarneDatoteke(\"AT14.DAT\");\n        g2.Ispisi();\n    }\n\n    std::cout << \"AT11\" << std::endl;\n    {\n        \/\/AT11 - testiranje metode ObnoviIzBinarneDatoteke sa izuzetkom\n          \n        Gradovi g2;\n        \n        try\n        {\n          g2.ObnoviIzBinarneDatoteke(\"AT15.DAT\");\n        }\n        catch(std::logic_error e)\n        {\n          std::cout << \"Izuzetak: \" << e.what() << std::endl;\n        }\n        catch(...)\n        {\n          std::cout << \"Pogre\u0161an izuzetak\";\n        }\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "AT10\\nSarajevo: 350000\\nTuzla: 130000\\nMostar: 100000\\nBihac: 50000\\nSarajevo: 350000\\nTuzla: 130000\\nMostar: 100000\\nBihac: 50000\\nAT11\\nIzuzetak: Greska pri citanju iz datoteke"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 24,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    std::cout << \"AT12\" << std::endl;\n    {\n        \/\/AT12 - da li je metoda Ispisi const\n        const Gradovi g;\n        std::cout << \".\";\n        g.Ispisi();\n        std::cout << \".\" << std::endl;\n    }\n\n    std::cout << \"AT9\" << std::endl;\n    {\n        \/\/AT9 - testiranje metode SortirajGradove\n        Gradovi g;\n        g.DodajGrad(\"Tuzla\", 130000);\n        g.DodajGrad(\"Bihac\", 50000);\n        g.DodajGrad(\"Sarajevo\", 350000);\n        g.DodajGrad(\"Mostar\", 100000);\n        g.DodajGrad(\"Zenica\", 113000);\n        g.DodajGrad(\"Banja Luka\", 200000);\n        g.SortirajGradove();\n        g.Ispisi();\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "AT12\\n..\\nAT9\\nSarajevo: 350000\\nBanja Luka: 200000\\nTuzla: 130000\\nZenica: 113000\\nMostar: 100000\\nBihac: 50000"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 25,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    std::cout << \"AT13\" << std::endl;\n    {\n        \/\/AT13 - test konstruktora kopije\n        Gradovi g1;\n        g1.DodajGrad(\"Tuzla\", 130000);\n        g1.DodajGrad(\"Bihac\", 50000);\n        g1.DodajGrad(\"Sarajevo\", 350000);\n        g1.DodajGrad(\"Mostar\", 100000);\n        g1.Ispisi();\n        Gradovi g2(g1);\n        g2.Ispisi();\n    }\n    std::cout << \"AT14\" << std::endl;\n    {\n        \/\/AT14 - test operatora dodjele\n        Gradovi g1;\n        g1.DodajGrad(\"Tuzla\", 130000);\n        g1.DodajGrad(\"Bihac\", 50000);\n        g1.DodajGrad(\"Sarajevo\", 350000);\n        g1.DodajGrad(\"Mostar\", 100000);\n        g1.Ispisi();\n        Gradovi g2;\n        g2 = g1;\n        g1.Ispisi();\n        g2.Ispisi();\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "AT13\\nTuzla: 130000\\nBihac: 50000\\nSarajevo: 350000\\nMostar: 100000\\nTuzla: 130000\\nBihac: 50000\\nSarajevo: 350000\\nMostar: 100000\\nAT14\\nTuzla: 130000\\nBihac: 50000\\nSarajevo: 350000\\nMostar: 100000\\nTuzla: 130000\\nBihac: 50000\\nSarajevo: 350000\\nMostar: 100000\\nTuzla: 130000\\nBihac: 50000\\nSarajevo: 350000\\nMostar: 100000"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,59 @@
+{
+    "id": 5706,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 4, Zadatak 1",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT5 (javni): test maina \n\/\/ovo je i zvanicni format dijaloga s korisnikom\n\/\/u main funkciji za prvi zadatak\n\n\/\/ NAPOMENA 1: Ostali AT su dodati i nalaze se na Zamger-u, te se nece\n\/\/ dodavati na C9 zbog velikog broja zadataka i opterecenja servera\n\n\/\/ NAPOMENA 2 (21.05.2020. godine): U postavci zadace stoji da se treba\n\/\/ bacati izuzetak tipa domain_error \"Pravougaonici se ne presijecaju\".\n\/\/ Zbog velikog broja testova koji ispisuju \"Pravougaonici se ne presjecaju\"\n\/\/ (znaci bez \"i\"), molim vas da promijenite izuzetak da bude bez \"i\". Ovi\n\/\/ AT su dobro provjereni i tacni, te je stvar jednog slova, pa da ne bude komplikacija i upita. Ovo pisem 3 dana nakon objave zadace, tako da svi mogu stici vidjeti ovo, jer svakako moraju provjeravati ovaj AT radi main-a.\n\n\n    _main();\n}",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 1, obratite se na mail: hcapelj1@etf.unsa.ba",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4\n0 0\n5 10\n1 3\n5 1\n1 1\n3 5\n5 5\n7 7\n1 -2"
+            },
+            "expected": [
+                "Unesite n: Unesite 1. tjeme pravougaonika 1: Unesite 2. tjeme pravougaonika 1: Unesite 1. tjeme pravougaonika 2: Unesite 2. tjeme pravougaonika 2: Unesite 1. tjeme pravougaonika 3: Unesite 2. tjeme pravougaonika 3: Unesite 1. tjeme pravougaonika 4: Unesite 2. tjeme pravougaonika 4: Unesite podatke za transliranje (dx dy): Pravougaonici, nakon transformacija:\\n{{-1.5,5.5},{8.5,0.5}}\\n{{3,2},{5,-2}}\\n{{1,2},{5,0}}\\n{{6,5},{8,3}}\\nPravougaonik s najvecom povrsinom: {{-1.5,5.5},{8.5,0.5}}"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT27 (javni): Presjek, test X\n\/\/ Ovaj AT je dodan na C9 radi lakse provjere najzahtjevnijih funkcija\n        Pravougaonik p ({0, 0}, {100, 100});\n        p.Postavi (GoreDesno, {5, 5}); \/\/sad je (0, 0), (5, 5) [DL, GD]\n        p.Ispisi(); std::cout << std::endl;\n        p.Postavi (DoljeLijevo, {-5, -5}); \/\/sad je (-5, -5), (5, 5)\n        p.Ispisi(); std::cout << std::endl;\n        auto c = p.DajCentar(); \/\/sad mu je centar na (0, 0)\n        std::cout << \"Centar: (\" << c.first << \", \" << c.second << \")\" << std::endl;\n        p.Postavi (DoljeDesno, {10, 0}); \/\/sad je (-5, 5), (10, 0); [GL, DD]\n        p.Ispisi(); std::cout << std::endl;\n        auto r = p; \/\/kopija\n        r.Rotiraj ({0, 5}, Nadesno);\n        r.Ispisi(); std::cout << std::endl;\n        auto P = Pravougaonik::Presjek(p, r); \/\/presjek je kvadrat {(-5, 5), (0, 0)} [GL, DD]\n        P.Ispisi(); std::cout << std::endl << std::endl;\n        Pravougaonik k ({1, 1}, {7, 5}), q (k);\n        k.Rotiraj(k.DajTjeme(DoljeDesno), Nadesno); \/\/rotirajmo jednom (uspravan)\n        k.Rotiraj(k.DajTjeme(DoljeLijevo), Nadesno); \/\/rotirajmo jednom (horizontalan)\n        k.Transliraj(0, k.DajVertikalnu()); \/\/pomjerimo ga \"gore\"\n        \/\/sada je 'k' u ogledalu u odnosu na 'q' (osa ogledaja im je zajednicna vertikalna stranica\n        \/\/lijeva od 'k' odnosno desna od 'q')\n        \/\/presjek ova dva pravougaonika je, ocito, ta zajednicka stranica (odnosno degenerirani pravougaonik)\n        \/\/sa tjemenima GL: (7, 5), GD: (7, 5), DL: (7, 1), DD: (7, 1), W = 0, H = 4\n        k.Ispisi(); std::cout << std::endl;\n        q.Ispisi(); std::cout << std::endl;\n        P = Pravougaonik::Presjek(k, q);\n        P.Ispisi(); std::cout << std::endl << \"W: \" << P.DajHorizontalnu() << \", H: \" << P.DajVertikalnu();\n    }",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 1, obratite se na mail: hcapelj1@etf.unsa.ba",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "{{0,5},{5,0}}\\n{{-5,5},{5,-5}}\\nCentar: (0, 0)\\n{{-5,5},{10,0}}\\n{{-5,10},{0,-5}}\\n{{-5,5},{0,0}}\\n\\n{{7,5},{13,1}}\\n{{1,5},{7,1}}\\n{{7,5},{7,1}}\\nW: 0, H: 4"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

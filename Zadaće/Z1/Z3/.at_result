@@ -1,0 +1,105 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "69": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite dimenziju kvadratne matrice H: Unesite elemente matrice H: \nElementi 1. reda: Elementi 2. reda: Elementi 3. reda: Matrica L: \n   1.0000   0.0000   0.0000\n   0.2500   1.0000   0.0000\n   0.1250  -0.2586   1.0000\nMatrica U: \n   8.0000   1.0000  -2.0000\n   0.0000  -7.2500   1.5000\n   0.0000   0.0000   9.6379\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "70": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite dimenziju kvadratne matrice H: Unesite elemente matrice H: \nElementi 1. reda: Elementi 2. reda: Elementi 3. reda: Elementi 4. reda: Matrica L: \n   1.0000   0.0000   0.0000   0.0000\n   1.5000   1.0000   0.0000   0.0000\n   2.0000   0.4000   1.0000   0.0000\n   2.5000  -1.8000 -10.3333   1.0000\nMatrica U: \n   2.0000   3.0000   4.0000   5.0000\n   0.0000   2.5000   1.0000  -4.5000\n   0.0000   0.0000   0.6000  -6.2000\n   0.0000   0.0000   0.0000 -77.6667\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "71": {
+            "status": 1,
+            "run_result": {
+                "output": "Nije moguce mnozenje matrica!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "72": {
+            "status": 1,
+            "run_result": {
+                "output": "Neispravna matrica!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "73": {
+            "status": 1,
+            "run_result": {
+                "output": "    1    0\n  1.5    1\n\n    4    3\n    0 -1.5\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "74": {
+            "status": 1,
+            "run_result": {
+                "output": "Matrica mora biti kvadratnog oblika!",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1585683966
+}

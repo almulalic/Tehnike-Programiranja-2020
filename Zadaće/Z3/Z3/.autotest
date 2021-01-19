@@ -1,0 +1,80 @@
+{
+    "id": 5702,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 3, Zadatak 3",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1\n\/\/Sva pitanja vezana za zadatak, kao i autotestove uputiti na chat.google.com (bcocalic1@etf.unsa.ba)\n\n Matrica<int> m1(StvoriMatricu<int>(3,3));\n  m1.elementi[0][0] = 2;\n  m1.elementi[0][1] = 4;\n  m1.elementi[0][2] = 3;\n  m1.elementi[1][0] = 1;\n  m1.elementi[1][1] = 7;\n  m1.elementi[1][2] = -3;\n  m1.elementi[2][0] = 9;\n  m1.elementi[2][1] = 14;\n  m1.elementi[2][2] = -13;\n  IspisiMatricu(m1, 3, 0, true);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "  2  4  3\\n  1  7 -3\\n  9 14-13"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2\n\n  Matrica<int> m1(StvoriMatricu<int>(3,2)), m2(StvoriMatricu<int>(4,2)), m3;\n  try {\n    m3 = ProduktMatrica(m1, m2);\n    IspisiMatricu(m3, 4);\n  }\n  catch (std::domain_error e)\n  {\n    std::cout << \"Domain error: \" << e.what();\n  }\n  UnistiMatricu(m1); UnistiMatricu(m2);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Domain error: Matrice nisu saglasne za mnozenje"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3\n\nMatrica<double> m1(StvoriMatricu<double>(2,2));\n  m1.elementi[0][0] = 1;\n  m1.elementi[0][1] = 2;\n  m1.elementi[1][0] = 3;\n  m1.elementi[1][1] = 4;\n  IspisiMatricu(MatricniHarmonijskiPolinom(m1,6),9,6,true);\nUnistiMatricu(m1);",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "  1237.55   1804.1\\n  2706.15   3943.7"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

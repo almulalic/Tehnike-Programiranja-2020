@@ -1,0 +1,91 @@
+{
+    "buildhost_description": {
+        "id": "lab002c26",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3478": {
+            "status": 6,
+            "run_result": {
+                "output": "Mujo Suljo Haso Hrvoje Ivan Ante Milutin Dragan Zoran ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3479": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko ima elemenata: Unesite elemente: Sortirana lista: -100 -75 -50 -30 10 25 45 55 150 200 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3480": {
+            "status": 6,
+            "run_result": {
+                "output": "23 5 -5 10 -100 200 63 -50 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3481": {
+            "status": 1,
+            "run_result": {
+                "output": "Koliko ima elemenata: Unesite elemente: Sortirana lista: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3482": {
+            "status": 6,
+            "run_result": {
+                "output": "23.3847 2.3974 34.1837 23 43.3638 22.3 32 32.1919 43.9384 34.3836 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1586764974
+}

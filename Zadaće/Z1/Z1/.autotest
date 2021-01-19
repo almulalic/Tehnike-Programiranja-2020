@@ -1,0 +1,143 @@
+{
+    "id": 56181,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 1, zadatak 1",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 108,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1 - definisanje i testiranje main funkcije (za parametar true)\n\/\/Za sva pitanja vezana za autotestove za ovaj zadatak, javiti se na e-mail bcocalic1@etf.unsa.ba\n\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "14 191 233 43 -313 142 13 121 678 -151 23 -12 727 173 656 1\n"
+            },
+            "expected": [
+                "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: 121, -151, 656"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 109,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2 - testiranje main funkcije (za parametar false)\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "15 191 100 233 43 -313 142 13 121 678 -151 23 -12 727 173 656 0\n"
+            },
+            "expected": [
+                "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: 100, 233, 142, 13, 23, 173"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 110,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3 - testiranje main funkcije (za parametar true, sa ponavljanjem)\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "17 191 233 14 43 -313 233 142 -12 13 121 678 -151 23 -12 727 173 656 1\n"
+            },
+            "expected": [
+                "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: 121, -151, 656"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 111,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT4 - testiranje main funkcije (za parametar false, sa ponavljanjem)\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "18 191 100 233 656 43 -313 142 13 121 100 678 -151 23 -12 727 191 173 656 0"
+            },
+            "expected": [
+                "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: 100, 233, 142, 13, 23, 173"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 112,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT5 - testiranje main funkcije (za parametar true, sa ponavljanjem)\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "20 191 233 14 43 -313 233 142 -12 13 121 678 -151 121 -151 656 23 -12 727 173 656 1"
+            },
+            "expected": [
+                "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: 121, -151, 656"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 113,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT6 - testiranje main funkcije (za parametar false, sa ponavljanjem)\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "22 191 100 233 656 233 43 -313 142 13 142 121 100 678 13 -151 23 -12 727 23 191 173 656 0\n"
+            },
+            "expected": [
+                "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: 100, 233, 142, 13, 23, 173"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

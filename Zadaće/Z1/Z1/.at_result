@@ -1,0 +1,469 @@
+{
+    "buildhost_description": {
+        "id": "lab002c02",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "102": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: 121, -151, 656",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "103": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: 100, 233, 142, 13, 23, 173",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "104": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: 121, -151, 656",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "105": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: 100, 233, 142, 13, 23, 173",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "106": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: 121, -151, 656",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "107": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: 100, 233, 142, 13, 23, 173",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "108": {
+            "status": 1,
+            "run_result": {
+                "output": "121 -151 656 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "109": {
+            "status": 1,
+            "run_result": {
+                "output": "121 -151 656 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "110": {
+            "status": 1,
+            "run_result": {
+                "output": "121 -151 656 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "111": {
+            "status": 1,
+            "run_result": {
+                "output": "0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "112": {
+            "status": 1,
+            "run_result": {
+                "output": "121 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "113": {
+            "status": 1,
+            "run_result": {
+                "output": "0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "114": {
+            "status": 1,
+            "run_result": {
+                "output": "0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "115": {
+            "status": 1,
+            "run_result": {
+                "output": "130 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "116": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "117": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "118": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "119": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: 0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "120": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: -242, -212, -151, -121",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "121": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "122": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: -757, -656, -484, -242, -212, -151, -121, -8, -4, -2, -1, 0, 1, 2, 4, 8, 121, 151, 212, 242, 484, 656, 757",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "123": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "124": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: -847, -820, -784, -730, -728, -692, -644, -608, -572, -560, -524, -488, -448, -412, -400, -364, -328, -316, -280, -244",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "125": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "126": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite parametar (1 ili 0): Izdvojeni elementi su: 121, -151, 656",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "127": {
+            "status": 1,
+            "run_result": {
+                "output": "142 -316\n0 0\n151\n1 0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "128": {
+            "status": 1,
+            "run_result": {
+                "output": "1 2 4 -8 ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "129": {
+            "status": 1,
+            "run_result": {
+                "output": "-74647 75457 -76267 -92929 93739 74647 92929 -93739 \nGotovo\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "130": {
+            "status": 1,
+            "run_result": {
+                "output": "0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "131": {
+            "status": 1,
+            "run_result": {
+                "output": "200\n50288 50324 50648 50972 51080 51404 51728 51836 52160 52484 52496 52820 53144 53252 53576 53900 54008 54332 54656 54692 55016 55340 55448 55772 56096 56204 56528 56852 56888 57212 57536 57644 57968 58292 58400 58724 59048 59050 59293 59536 59860 60103 60346 60670 60913 61156 61264 61507 61750 62074 62317 62560 62884 63127 63370 63478 63721 63964 64288 64531 64774 65098 65341 65584 65620 65863 66106 66430 66673 66916 67240 67483 67726 67834 68077 68320 68644 68887 69130 69454 69697 69940 70048 70291 70534 70858 71101 71344 71668 71911 72154 72190 72433 72676 73000 73243 73486 73810 74053 74296 74404 74890 75214 75700 76024 76510 76618 76861 77104 77428 77671 77914 78238 78481 78724 78736 78979 79222 79546 79789 80032 80356 80599 80842 80950 81193 81436 81760 82003 82246 82570 82813 83056 83164 83407 83650 83974 84217 84460 84784 85027 85270 85306 85549 85792 86116 86359 86602 86926 87169 87412 87520 87763 88006 88330 88573 88816 89140 89383 89626 89734 89977 90220 90544 90787 91030 91354 91597 91840 91876 92119 92362 92686 93172 93496 93982 94090 94333 94576 94900 95143 95386 95710 95953 96196 96304 96547 96790 97114 97357 97600 97924 98167 98410 98422 98665 98908 99232 99475 99718 \nGotovo\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "132": {
+            "status": 1,
+            "run_result": {
+                "output": "0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "133": {
+            "status": 1,
+            "run_result": {
+                "output": "-2147474068 2147474068 0",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1585418048
+}

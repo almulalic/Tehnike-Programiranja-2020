@@ -1,0 +1,193 @@
+{
+    "buildhost_description": {
+        "id": "lab002c26",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 3,
+    "compile_result": {
+        "status": 2,
+        "output": "main.cpp: In function ‘int main()’:\nmain.cpp:21:36: error: expected ‘,’ or ‘...’ before ‘&’ token\n  void UnesiUcenike(Ucenik *ucenici &p_ucenici);\n                                    ^\nmain.cpp:22:37: error: expected ‘,’ or ‘...’ before ‘&’ token\n  void ObradiUcenike(Ucenik *ucenici &p_ucenici);\n                                     ^\nmain.cpp:23:45: error: expected ‘,’ or ‘...’ before ‘&’ token\n  void IspisiIzvjestaj(const Ucenik *ucenici &p_ucenici);\n                                             ^\nmain.cpp:24:40: error: expected ‘,’ or ‘...’ before ‘&’ token\n  void OslobodiMemoriju(Ucenik *ucenici &p_ucenici);\n                                        ^\nmain.cpp:31:2: error: ‘ucenici’ was not declared in this scope\n  ucenici = new Ucenik[broj_ucenika];\n  ^~~~~~~\nmain.cpp:34:24: error: cannot convert ‘Ucenik**’ to ‘Ucenik*’ for argument ‘1’ to ‘void UnesiUcenike(Ucenik*)’\n  UnesiUcenike(p_ucenici); // Ovo može izazvati izuzetak!!!\n                        ^\nmain.cpp:37:28: error: cannot convert ‘Ucenik**’ to ‘Ucenik*’ for argument ‘1’ to ‘void OslobodiMemoriju(Ucenik*)’\n  OslobodiMemoriju(p_ucenici);\n                            ^\nmain.cpp:40:24: error: cannot convert ‘Ucenik**’ to ‘Ucenik*’ for argument ‘1’ to ‘void ObradiUcenike(Ucenik*)’\n ObradiUcenike(p_ucenici);\n                        ^\nmain.cpp:41:27: error: cannot convert ‘Ucenik**’ to ‘const Ucenik*’ for argument ‘1’ to ‘void IspisiIzvjestaj(const Ucenik*)’\n  IspisiIzvjestaj(p_ucenici);\n                           ^\nmain.cpp:42:28: error: cannot convert ‘Ucenik**’ to ‘Ucenik*’ for argument ‘1’ to ‘void OslobodiMemoriju(Ucenik*)’\n  OslobodiMemoriju(p_ucenici);\n                            ^\nmain.cpp: At global scope:\nmain.cpp:49:35: error: expected ‘,’ or ‘...’ before ‘&’ token\n void UnesiUcenike(Ucenik *ucenici &p_ucenici) {\n                                   ^\nmain.cpp: In function ‘void UnesiUcenike(Ucenik*)’:\nmain.cpp:51:21: error: ‘p_ucenici’ was not declared in this scope\n  for(int i = 0; i < p_ucenici.size(); i++) {\n                     ^~~~~~~~~\nmain.cpp: At global scope:\nmain.cpp:76:36: error: expected ‘,’ or ‘...’ before ‘&’ token\n void ObradiUcenike(Ucenik *ucenici &p_ucenici) {\n                                    ^\nmain.cpp: In function ‘void ObradiUcenike(Ucenik*)’:\nmain.cpp:78:25: error: ‘p_ucenici’ was not declared in this scope\n  for(Ucenik *p_ucenik : p_ucenici) ObradiJednogUcenika(p_ucenik);\n                         ^~~~~~~~~\nmain.cpp:79:12: error: ‘p_ucenici’ was not declared in this scope\n  std::sort(p_ucenici.begin(), p_ucenici.end(),\n            ^~~~~~~~~\nmain.cpp: At global scope:\nmain.cpp:94:44: error: expected ‘,’ or ‘...’ before ‘&’ token\n void IspisiIzvjestaj(const Ucenik *ucenici &p_ucenici) {\n                                            ^\nmain.cpp: In function ‘void IspisiIzvjestaj(const Ucenik*)’:\nmain.cpp:97:31: error: ‘p_ucenici’ was not declared in this scope\n  for(const Ucenik *p_ucenik : p_ucenici) IspisiJednogUcenika(p_ucenik);\n                               ^~~~~~~~~\nmain.cpp: At global scope:\nmain.cpp:113:39: error: expected ‘,’ or ‘...’ before ‘&’ token\n void OslobodiMemoriju(Ucenik *ucenici &p_ucenici) {\n                                       ^\nmain.cpp: In function ‘void OslobodiMemoriju(Ucenik*)’:\nmain.cpp:114:25: error: ‘p_ucenici’ was not declared in this scope\n  for(Ucenik *p_ucenik : p_ucenici) delete p_ucenik;\n                         ^~~~~~~~~",
+        "parsed_output": [
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "21",
+                "col": "36",
+                "message": "expected ',' or '...' before '&' token",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:21:36: error: expected ‘,’ or ‘...’ before ‘&’ token  void UnesiUcenike(Ucenik *ucenici &p_ucenici);                                    ^",
+                "code": "void UnesiUcenike(Ucenik *ucenici &p_ucenici);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "22",
+                "col": "37",
+                "message": "expected ',' or '...' before '&' token",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:22:37: error: expected ‘,’ or ‘...’ before ‘&’ token  void ObradiUcenike(Ucenik *ucenici &p_ucenici);                                     ^",
+                "code": "void ObradiUcenike(Ucenik *ucenici &p_ucenici);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "23",
+                "col": "45",
+                "message": "expected ',' or '...' before '&' token",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:23:45: error: expected ‘,’ or ‘...’ before ‘&’ token  void IspisiIzvjestaj(const Ucenik *ucenici &p_ucenici);                                             ^",
+                "code": "void IspisiIzvjestaj(const Ucenik *ucenici &p_ucenici);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "24",
+                "col": "40",
+                "message": "expected ',' or '...' before '&' token",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:24:40: error: expected ‘,’ or ‘...’ before ‘&’ token  void OslobodiMemoriju(Ucenik *ucenici &p_ucenici);                                        ^",
+                "code": "void OslobodiMemoriju(Ucenik *ucenici &p_ucenici);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "31",
+                "col": "2",
+                "message": "'ucenici' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:31:2: error: ‘ucenici’ was not declared in this scope  ucenici = new Ucenik[broj_ucenika];  ^~~~~~~",
+                "code": "ucenici = new Ucenik[broj_ucenika];"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "34",
+                "col": "24",
+                "message": "cannot convert 'Ucenik**' to 'Ucenik*' for argument '1' to 'void UnesiUcenike(Ucenik*)'",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:34:24: error: cannot convert ‘Ucenik**’ to ‘Ucenik*’ for argument ‘1’ to ‘void UnesiUcenike(Ucenik*)’  UnesiUcenike(p_ucenici); // Ovo može izazvati izuzetak!!!                        ^",
+                "code": "UnesiUcenike(p_ucenici); // Ovo može izazvati izuzetak!!!"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "37",
+                "col": "28",
+                "message": "cannot convert 'Ucenik**' to 'Ucenik*' for argument '1' to 'void OslobodiMemoriju(Ucenik*)'",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:37:28: error: cannot convert ‘Ucenik**’ to ‘Ucenik*’ for argument ‘1’ to ‘void OslobodiMemoriju(Ucenik*)’  OslobodiMemoriju(p_ucenici);                            ^",
+                "code": "OslobodiMemoriju(p_ucenici);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "40",
+                "col": "24",
+                "message": "cannot convert 'Ucenik**' to 'Ucenik*' for argument '1' to 'void ObradiUcenike(Ucenik*)'",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:40:24: error: cannot convert ‘Ucenik**’ to ‘Ucenik*’ for argument ‘1’ to ‘void ObradiUcenike(Ucenik*)’ ObradiUcenike(p_ucenici);                        ^",
+                "code": "ObradiUcenike(p_ucenici);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "41",
+                "col": "27",
+                "message": "cannot convert 'Ucenik**' to 'const Ucenik*' for argument '1' to 'void IspisiIzvjestaj(const Ucenik*)'",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:41:27: error: cannot convert ‘Ucenik**’ to ‘const Ucenik*’ for argument ‘1’ to ‘void IspisiIzvjestaj(const Ucenik*)’  IspisiIzvjestaj(p_ucenici);                           ^",
+                "code": "IspisiIzvjestaj(p_ucenici);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "42",
+                "col": "28",
+                "message": "cannot convert 'Ucenik**' to 'Ucenik*' for argument '1' to 'void OslobodiMemoriju(Ucenik*)'",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:42:28: error: cannot convert ‘Ucenik**’ to ‘Ucenik*’ for argument ‘1’ to ‘void OslobodiMemoriju(Ucenik*)’  OslobodiMemoriju(p_ucenici);                            ^/tmp/buildservice/bs_8575/main.cpp: At global scope:",
+                "code": "OslobodiMemoriju(p_ucenici);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "49",
+                "col": "35",
+                "message": "expected ',' or '...' before '&' token",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:49:35: error: expected ‘,’ or ‘...’ before ‘&’ token void UnesiUcenike(Ucenik *ucenici &p_ucenici) {                                   ^",
+                "code": "void UnesiUcenike(Ucenik *ucenici &p_ucenici) {"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "51",
+                "col": "21",
+                "message": "'p_ucenici' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:51:21: error: ‘p_ucenici’ was not declared in this scope  for(int i = 0; i < p_ucenici.size(); i++) {                     ^~~~~~~~~/tmp/buildservice/bs_8575/main.cpp: At global scope:",
+                "code": "for(int i = 0; i < p_ucenici.size(); i++) {"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "76",
+                "col": "36",
+                "message": "expected ',' or '...' before '&' token",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:76:36: error: expected ‘,’ or ‘...’ before ‘&’ token void ObradiUcenike(Ucenik *ucenici &p_ucenici) {                                    ^",
+                "code": "void ObradiUcenike(Ucenik *ucenici &p_ucenici) {"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "78",
+                "col": "25",
+                "message": "'p_ucenici' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:78:25: error: ‘p_ucenici’ was not declared in this scope  for(Ucenik *p_ucenik : p_ucenici) ObradiJednogUcenika(p_ucenik);                         ^~~~~~~~~",
+                "code": "for(Ucenik *p_ucenik : p_ucenici) ObradiJednogUcenika(p_ucenik);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "79",
+                "col": "12",
+                "message": "'p_ucenici' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:79:12: error: ‘p_ucenici’ was not declared in this scope  std::sort(p_ucenici.begin(), p_ucenici.end(),            ^~~~~~~~~/tmp/buildservice/bs_8575/main.cpp: At global scope:",
+                "code": "std::sort(p_ucenici.begin(), p_ucenici.end(),"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "94",
+                "col": "44",
+                "message": "expected ',' or '...' before '&' token",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:94:44: error: expected ‘,’ or ‘...’ before ‘&’ token void IspisiIzvjestaj(const Ucenik *ucenici &p_ucenici) {                                            ^",
+                "code": "void IspisiIzvjestaj(const Ucenik *ucenici &p_ucenici) {"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "97",
+                "col": "31",
+                "message": "'p_ucenici' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:97:31: error: ‘p_ucenici’ was not declared in this scope  for(const Ucenik *p_ucenik : p_ucenici) IspisiJednogUcenika(p_ucenik);                               ^~~~~~~~~/tmp/buildservice/bs_8575/main.cpp: At global scope:",
+                "code": "for(const Ucenik *p_ucenik : p_ucenici) IspisiJednogUcenika(p_ucenik);"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "113",
+                "col": "39",
+                "message": "expected ',' or '...' before '&' token",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:113:39: error: expected ‘,’ or ‘...’ before ‘&’ token void OslobodiMemoriju(Ucenik *ucenici &p_ucenici) {                                       ^",
+                "code": "void OslobodiMemoriju(Ucenik *ucenici &p_ucenici) {"
+            },
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "114",
+                "col": "25",
+                "message": "'p_ucenici' was not declared in this scope",
+                "output": "/tmp/buildservice/bs_8575/main.cpp:114:25: error: ‘p_ucenici’ was not declared in this scope  for(Ucenik *p_ucenik : p_ucenici) delete p_ucenik;                         ^~~~~~~~~",
+                "code": "for(Ucenik *p_ucenik : p_ucenici) delete p_ucenik;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": [],
+    "queue_items": 0,
+    "time": 1587976252
+}

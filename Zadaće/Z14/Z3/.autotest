@@ -1,0 +1,143 @@
+{
+    "id": 5530,
+    "name": "Tehnike programiranja (2017\/2018), Tutorijal 14, zadatak 3",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  Liga l (10);\n  l.DodajNoviTim(\"Tim1\"); l.DodajNoviTim(\"Tim2\"); l.DodajNoviTim(\"Tim3\"); l.DodajNoviTim(\"Tim4\");\n\tl.RegistrirajUtakmicu (\"Tim1\", \"Tim4\", 3, 1);\n\tstd::remove (\"liga.txt\");\n\tconst char *c = R\"eon(Tim1\nTim2\n3:2\nTim1\nTim2\n3:2\nTim3\nTim1\n2:1\nTim2\nTim3\n0:1)eon\";\n  std::ofstream (\"liga.txt\") << c;\n\tl.AzurirajIzDatoteke(\"liga.txt\");\n\tl.IspisiTabelu();",
+            "global_above_main": "#include <cstdlib>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Tim1                   4   3   0   1  10   7   9\\nTim3                   2   2   0   0   3   1   6\\nTim4                   1   0   0   1   1   3   0\\nTim2                   3   0   0   3   4   7   0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "        Liga l (7);\n\tl.DodajNoviTim(\"A\"); l.DodajNoviTim(\"B\"); l.DodajNoviTim(\"C\"); \n        l.DodajNoviTim(\"D\"); l.DodajNoviTim(\"E\");\n\tl.RegistrirajUtakmicu(\"A\", \"B\", 1, 2);\n\tl.RegistrirajUtakmicu(\"A\", \"B\", 2, 1);\n\tl.RegistrirajUtakmicu(\"C\", \"B\", 1, 3);\n\tl.RegistrirajUtakmicu(\"E\", \"B\", 4, 3);\n\tl.RegistrirajUtakmicu(\"B\", \"D\", 2, 2);\n\tl.RegistrirajUtakmicu(\"D\", \"A\", 1, 2);\n\tl.IspisiTabelu(); \/\/za vas, radi orijentacije\n\tstd::remove (\"premier.bin\"); \/\/pobrisimo datoteku...\n\tl.SacuvajStanje (\"premier.bin\");\n\tl.DodajNoviTim(\"NoviTim 1\"); \n\tl.DodajNoviTim(\"NoviTim 2\"); \n\tstd::cout << std::string (48, '-') << std::endl;\n\tLiga nova (\"premier.bin\"); \/\/kreiramo novu iz datoteke\n\tnova.IspisiTabelu();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "B                      5   2   1   2  11  10   7\\nA                      3   2   0   1   5   4   6\\nE                      1   1   0   0   4   3   3\\nD                      2   0   1   1   3   4   1\\nC                      1   0   0   1   1   3   0\\n------------------------------------------------\\nB                      5   2   1   2  11  10   7\\nA                      3   2   0   1   5   4   6\\nE                      1   1   0   0   4   3   3\\nD                      2   0   1   1   3   4   1\\nC                      1   0   0   1   1   3   0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  Liga ll (1);\n  try {ll.AzurirajIzDatoteke(\"nepostoji.txt\"); std::cout << \"Nije bacen izuzetak!\";}\n  catch (std::logic_error e) {std::cout << \"Izuzetak: \" << e.what();}\n  catch (...) {std::cout << \"Pogresan tip izuzetka!\";}",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Datoteka ne postoji"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    const char *c = R\"eon(Tim1\nsdfdsfdsfdsfdsfdsfdsfdsfdsfdsfsdfdsf)eon\";\n  std::ofstream (\"liga.txt\") << c;\n    Liga ll (1);\n    try {ll.AzurirajIzDatoteke(\"liga.txt\"); std::cout << \"Nije bacen izuzetak!\";}\n    catch (std::logic_error e) {std::cout << \"Izuzetak: \" << e.what();}\n    catch (...) {std::cout << \"Pogresan tip izuzetka!\";}\n  ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Problemi pri citanju datoteke"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    const char *c = R\"eon(Tim1\nsdfdsfdsfdsfdsfdsfdsfdsfdsfdsfsdfdsf)eon\";\n  std::ofstream (\"liga.txt\") << c;\n    Liga ll (1);\n    try {ll.AzurirajIzDatoteke(\"liga.txt\"); std::cout << \"Nije bacen izuzetak!\";}\n    catch (std::logic_error e) {std::cout << \"Izuzetak: \" << e.what();}\n    catch (...) {std::cout << \"Pogresan tip izuzetka!\";}\n  ",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Problemi pri citanju datoteke"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  {\n    try {Liga l(\"liga.txt.nema\"); std::cout << \"Nije bacen izuzetak!\";}\n    catch (std::logic_error e) {std::cout << \"Izuzetak: \" << e.what();}\n    catch (...) {std::cout << \"Pogresan tip izuzetka!\";}\n  }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Datoteka ne postoji"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

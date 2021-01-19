@@ -1,0 +1,31 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 3,
+    "compile_result": {
+        "status": 2,
+        "output": "main.cpp: In member function ‘void Gradovi::DodajGrad(const char*, int)’:\nmain.cpp:33:21: error: invalid conversion from ‘const char*’ to ‘char’ [-fpermissive]\n         *g -> ime = ime;\n                     ^~~",
+        "parsed_output": [
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "33",
+                "col": "21",
+                "message": "invalid conversion from 'const char*' to 'char' [-fpermissive]",
+                "output": "/tmp/buildservice/bs_1157/main.cpp:33:21: error: invalid conversion from ‘const char*’ to ‘char’ [-fpermissive]         *g -> ime = ime;                     ^~~",
+                "code": "*g -> ime = ime;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": [],
+    "queue_items": 0,
+    "time": 1593966222
+}

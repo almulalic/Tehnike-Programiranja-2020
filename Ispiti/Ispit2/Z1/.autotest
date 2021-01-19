@@ -1,0 +1,125 @@
+{
+    "id": 5694,
+    "name": "Tehnike programiranja (2019\/2020), Ispit 2, Zadatak 1",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 16,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5 3 1 2 -3 1.5 2.5 3.5 4 5 6 5.5 -3.5 -5.5 9 8 7\n"
+            },
+            "expected": [
+                "Unesite broj redova: Unesite broj kolona: Unesite elemente matrice: Transformirana matrica:\\n      -3       1       2\\n     3.5     1.5     2.5\\n       6       4       5\\n    -5.5     5.5    -3.5\\n       7       9       8\\nRezultujuca lista: false true true true true",
+                "Unesite broj redova: Unesite broj kolona: Unesite elemente matrice: Transformirana matrica: \\n       2      -3       1\\n     2.5     3.5     1.5\\n       5       6       4\\n    -3.5    -5.5     5.5\\n       8       7       9\\nRezultujuca lista: false true true true true "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 17,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "4 3 1 2 3 1.5 2.5 3.5 4 5 6 5.5 -3.5 -5.5\n"
+            },
+            "expected": [
+                "Unesite broj redova: Unesite broj kolona: Unesite elemente matrice: Transformirana matrica:\\n       3       1       2\\n     3.5     1.5     2.5\\n       6       4       5\\n    -5.5     5.5    -3.5\\nRezultujuca lista: true true true true ",
+                "Unesite broj redova: Unesite broj kolona: Unesite elemente matrice: Transformirana matrica: \\n       2       3       1\\n     2.5     3.5     1.5\\n       5       6       4\\n    -3.5    -5.5     5.5\\nRezultujuca lista: true true true true "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 18,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3\n\n    std::deque<std::deque<double>> zadaniVektor{{1, 2, -3}, {1.5, 2.5, 3.5}, {4, 5, 6}, {5.5, -3.5, -5.5}, {9, 8, 7}};\n    std::list <bool> rezultujucaLIsta = TransformirajMatricu(zadaniVektor);\n    \n    for (auto i : zadaniVektor)\n    {\n        for (auto j : i)\n        {\n            std::cout << j << \" \";\n        }\n        std::cout << std::endl;\n    }\n        \n    for (auto i : rezultujucaLIsta)\n    {\n        std::cout << i << \" \";\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "-3 1 2\\n3.5 1.5 2.5\\n6 4 5\\n-5.5 5.5 -3.5\\n7 9 8\\n0 1 1 1 1 ",
+                "2 -3 1 \\n2.5 3.5 1.5 \\n5 6 4 \\n-3.5 -5.5 5.5 \\n8 7 9 \\n0 1 1 1 1 "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 19,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t   \/\/AT4\n try\n    {\n        std::deque<std::deque<double>> zadaniVektor{{1, 2}, {1.5, 2.5, 3.5}, {4, 5}, {5.5, 3.4, 5.5},  {9, 8, 7}};\n        std::list <bool> rezultujucaLIsta = TransformirajMatricu(zadaniVektor);\n        std::cout << \"Ovo se ne smije ispisati\";\n    }\n    catch (std::domain_error e)\n    {\n        std::cout << \"Izuzetak: \" << e.what();\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Parametar nema formu matrice"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 20,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT5\n        std::deque<std::deque<double>> zadaniVektor{};\n        std::list <bool> rezultujucaLIsta = TransformirajMatricu(zadaniVektor);\n        std::cout << zadaniVektor.size() << \" \" << rezultujucaLIsta.size();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "0 0"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        }
+    ]
+}

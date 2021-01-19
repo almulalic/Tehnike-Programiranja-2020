@@ -1,0 +1,101 @@
+{
+    "id": 570203,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 2, zadatak 3",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 3, obratite se na mail:\n\/\/ hcapelj1@etf.unsa.ba\n\n\/\/ AT 1: Testiranje main funkcije",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "5"
+            },
+            "expected": [
+                "Unesite broj n: \\nStirlingovi brojevi - fragmentirana alokacija:\\n  1\\n  0  1\\n  0  1  1\\n  0  1  3  1\\n  0  1  7  6  1\\n  0  1 15 25 10  1\\n\\nStirlingovi brojevi - kontinualna alokacija:\\n  1\\n  0  1\\n  0  1  1\\n  0  1  3  1\\n  0  1  7  6  1\\n  0  1 15 25 10  1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 3, obratite se na mail:\n\/\/ hcapelj1@etf.unsa.ba\n\n\/\/ AT 2: Testiranje main funkcije",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "7"
+            },
+            "expected": [
+                "Unesite broj n: \\nStirlingovi brojevi - fragmentirana alokacija:\\n   1\\n   0   1\\n   0   1   1\\n   0   1   3   1\\n   0   1   7   6   1\\n   0   1  15  25  10   1\\n   0   1  31  90  65  15   1\\n   0   1  63 301 350 140  21   1\\n\\nStirlingovi brojevi - kontinualna alokacija:\\n   1\\n   0   1\\n   0   1   1\\n   0   1   3   1\\n   0   1   7   6   1\\n   0   1  15  25  10   1\\n   0   1  31  90  65  15   1\\n   0   1  63 301 350 140  21   1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 3, obratite se na mail:\n\/\/ hcapelj1@etf.unsa.ba\n\n\/\/ AT 3: Testiranje main funkcije za negativno n",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "-7"
+            },
+            "expected": [
+                "Unesite broj n: Izuzetak: Parametar ne smije biti negativan!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "_main();",
+            "global_above_main": "\/\/ Za sva pitanja vezana za zadatak 3, obratite se na mail:\n\/\/ hcapelj1@etf.unsa.ba\n\n\/\/ AT 4: Testiranje na nedostatak memorije za dinamicku alokaciju",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1000000"
+            },
+            "expected": [
+                "Unesite broj n: Izuzetak: Parametar prevelik za raspolozivu memoriju!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,40 @@
+/rhome/a/amulalic1/workspace/TP/T5/Z3/main.cpp: In lambda function:
+/rhome/a/amulalic1/workspace/TP/T5/Z3/main.cpp:44:17: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+    if(pow(2,i)==broj) return true;
+                 ^~~~
+/rhome/a/amulalic1/workspace/TP/T5/Z3/main.cpp: In lambda function:
+/rhome/a/amulalic1/workspace/TP/T5/Z3/main.cpp:52:24: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+   return log(a) + 1 != 3;
+                        ^
+/rhome/a/amulalic1/workspace/TP/T5/Z3/main.cpp: In function ‘int main()’:
+/rhome/a/amulalic1/workspace/TP/T5/Z3/main.cpp:62:2: error: expected ‘;’ before ‘int’
+  int brojac =0;
+  ^~~
+/rhome/a/amulalic1/workspace/TP/T5/Z3/main.cpp:66:15: error: ‘brojac’ was not declared in this scope
+   if(broj==0) brojac++;
+               ^~~~~~
+/rhome/a/amulalic1/workspace/TP/T5/Z3/main.cpp:66:15: note: suggested alternative: ‘broj’
+   if(broj==0) brojac++;
+               ^~~~~~
+               broj
+/rhome/a/amulalic1/workspace/TP/T5/Z3/main.cpp:68:15: error: ‘brojac’ was not declared in this scope
+   if(broj!=0) brojac++;
+               ^~~~~~
+/rhome/a/amulalic1/workspace/TP/T5/Z3/main.cpp:68:15: note: suggested alternative: ‘broj’
+   if(broj!=0) brojac++;
+               ^~~~~~
+               broj
+/rhome/a/amulalic1/workspace/TP/T5/Z3/main.cpp:79:16: error: ‘brojac’ was not declared in this scope
+  for(int i=0;i<brojac;i++)
+                ^~~~~~
+/rhome/a/amulalic1/workspace/TP/T5/Z3/main.cpp:79:16: note: suggested alternative: ‘btowc’
+  for(int i=0;i<brojac;i++)
+                ^~~~~~
+                btowc
+In file included from /usr/include/c++/7/algorithm:62:0,
+                 from /rhome/a/amulalic1/workspace/TP/T5/Z3/main.cpp:16:
+/usr/include/c++/7/bits/stl_algo.h: In instantiation of ‘_Funct std::for_each(_IIter, _IIter, _Funct) [with _IIter = long int; _Funct = main()::<lambda(int)>]’:
+/rhome/a/amulalic1/workspace/TP/T5/Z3/main.cpp:59:3:   required from here
+/usr/include/c++/7/bits/stl_algo.h:3884:6: error: invalid type argument of unary ‘*’ (have ‘long int’)
+  __f(*__first);
+      ^~~~~~~~

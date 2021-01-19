@@ -1,0 +1,105 @@
+{
+    "buildhost_description": {
+        "id": "lab002c05",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "266": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite tip: (1 - rastuci, 0 - opadajuci): \nMaksimalni balansirani podnizovi: \n1 2 3 2 1 \nSavrseni balansirani podnizovi nakon transformacije: \n1 2 3 2 1 \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "267": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite tip: (1 - rastuci, 0 - opadajuci): \nMaksimalni balansirani podnizovi: \n1 2 3 2 1 \nSavrseni balansirani podnizovi nakon transformacije: \n2 1 3 1 2 \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "268": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite tip: (1 - rastuci, 0 - opadajuci): \nMaksimalni balansirani podnizovi: \n3 2 1 2 3 \nSavrseni balansirani podnizovi nakon transformacije: \n2 3 1 3 2 \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "269": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite tip: (1 - rastuci, 0 - opadajuci): \nMaksimalni balansirani podnizovi: \n3 2 1 2 3 \nSavrseni balansirani podnizovi nakon transformacije: \n3 2 1 2 3 \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "270": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite tip: (1 - rastuci, 0 - opadajuci): \nMaksimalni balansirani podnizovi: \n3 2 1 3 2 \nSavrseni balansirani podnizovi nakon transformacije: \n2 3 1 3 2 \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "271": {
+            "status": 1,
+            "run_result": {
+                "output": "Unesite broj elemenata niza: Unesite elemente niza: Unesite tip: (1 - rastuci, 0 - opadajuci): \nMaksimalni balansirani podnizovi: \n3 2 1 3 2 \nSavrseni balansirani podnizovi nakon transformacije: \n3 2 1 2 3 \n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1585763077
+}

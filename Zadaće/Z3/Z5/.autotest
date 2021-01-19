@@ -1,0 +1,59 @@
+{
+    "id": 3997,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 3, Zadatak 5",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1 - definicija main funkcije\n\/\/Sva pitanja vezana za autotestove i zadatak uputiti na chat.google.com(bcocalic1@etf.unsa.ba)\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "30 6 20 30\n"
+            },
+            "expected": [
+                "Unesi broj punoljetnih clanova (N): Unesi korak razbrajanja (M): Unesi raspon (N1-N2): Redni broj osobe koja postaje poglavica: 4 Sigurno mjesto: 1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2 - definicija main funkcije\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "30 6 10 20\n"
+            },
+            "expected": [
+                "Unesi broj punoljetnih clanova (N): Unesi korak razbrajanja (M): Unesi raspon (N1-N2): Redni broj osobe koja postaje poglavica: 4 Sigurno mjesto: 4"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

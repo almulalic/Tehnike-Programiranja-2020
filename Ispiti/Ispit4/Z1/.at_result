@@ -1,0 +1,107 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 1,
+            "run_result": {
+                "output": "----- AT 1 -----\n1 2 0\n----- AT 2 -----\n2 3 6\n----- AT 3 -----\n3 4 2\n----- AT 4 -----\n3 4 2\n----- AT 5 -----\ntrue false false true",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 1,
+            "run_result": {
+                "output": "----- AT 6 -----\n5\n----- AT 7 -----\ntrue false\n----- AT 8 -----\n4\n7 0\n----- AT 9 -----\n3 4\n7 7 0\n----- AT 10 -----\n(1,2)",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3": {
+            "status": 1,
+            "run_result": {
+                "output": "----- AT 11 -----\nInspektori: -5 5 0\n----- AT 12 -----\n24\n----- AT 13 -----\n48\n----- AT 14 -----\nKonstruktor: (1,2) (3,4) 0\nMetoda Postavi: (5,6) (7,8) 0\n----- AT 15 -----\nNesaglasne boje krajeva\nNesaglasne boje krajeva",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4": {
+            "status": 1,
+            "run_result": {
+                "output": "----- AT 16 -----\nKonstruktor: (1,2) (3,4) 2\nMetoda Postavi: (5,6) (7,8) 3\n----- AT 17 -----\n(1,2) (1,2) (1,2)\n----- AT 18 -----\n(3,4) (3,4) (1,4)\n----- AT 19 -----\ntrue false false true\n----- AT 20 -----\n(1,2)-(3,4)\nNesaglasne boje krajeva",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "5": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_5.cpp: In function ‘int main()’:\nbs_test_5.cpp:275:24: error: passing ‘const Duz’ as ‘this’ argument discards qualifiers [-fpermissive]\n         k.operator==(k2);\n                        ^\nbs_test_5.cpp:110:10: note:   in call to ‘bool Duz::operator==(Duz)’\n     bool operator==(Duz d) {\n          ^~~~~~~~\nbs_test_5.cpp:276:24: error: passing ‘const Duz’ as ‘this’ argument discards qualifiers [-fpermissive]\n         k.operator!=(k2);\n                        ^\nbs_test_5.cpp:114:10: note:   in call to ‘bool Duz::operator!=(Duz)’\n     bool operator!=(Duz d) {\n          ^~~~~~~~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 50,
+                        "col": "24",
+                        "message": "passing 'const Duz' as 'this' argument discards qualifiers [-fpermissive]",
+                        "output": "/tmp/buildservice/bs_1765/bs_test_5.cpp:275:24: error: passing ‘const Duz’ as ‘this’ argument discards qualifiers [-fpermissive]         k.operator==(k2);                        ^",
+                        "code": "k.operator==(k2);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 51,
+                        "col": "24",
+                        "message": "passing 'const Duz' as 'this' argument discards qualifiers [-fpermissive]",
+                        "output": "/tmp/buildservice/bs_1765/bs_test_5.cpp:276:24: error: passing ‘const Duz’ as ‘this’ argument discards qualifiers [-fpermissive]         k.operator!=(k2);                        ^",
+                        "code": "k.operator!=(k2);"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1593433393
+}

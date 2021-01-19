@@ -1,0 +1,164 @@
+{
+    "id": 5717,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 5, Zadatak 5",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 8,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1 - testiranje izuzetaka konstruktora\n    try\n    {\n        Matrica<int> m1(\"datoteka.DAT\", true);\n    }\n    catch (const std::logic_error& e)\n    {\n        std::cout << \"Izuzetak: \" << e.what() << std::endl;\n    }\n    \n    try\n    {\n        Matrica<int> m1(\"datoteka.txt\", false);\n    }\n    catch (const std::logic_error& e)\n    {\n        std::cout << \"Izuzetak: \" << e.what() << std::endl;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Trazena datoteka ne postoji\\nIzuzetak: Trazena datoteka ne postoji"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 9,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2 - testiranje izuzetaka metoda ObnoviIzTekstualneDatoteke i ObnoviIzBinarneDatoteke\n    try\n    {\n        Matrica<int> m1(2,2);\n        m1.ObnoviIzBinarneDatoteke(\"datoteka.DAT\");\n    }\n    catch (const std::logic_error& e)\n    {\n        std::cout << \"Izuzetak: \" << e.what() << std::endl;\n    }\n    \n    try\n    {\n        Matrica<int> m1(2,2);\n        m1.ObnoviIzTekstualneDatoteke(\"datoteka.txt\");\n    }\n    catch (const std::logic_error& e)\n    {\n        std::cout << \"Izuzetak: \" << e.what() << std::endl;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Trazena datoteka ne postoji\\nIzuzetak: Trazena datoteka ne postoji"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 10,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3 - testiranje konstruktora za u\u010ditavanje iz tekstualne datoteke\n    try\n    {\n        kreirajDatotetkuZbii1();\n        Matrica<int> m1(\"matrica.txt\", false);\n        std::cout << std::setw(6) << m1;\n    }\n    catch (const std::logic_error& e)\n    {\n        std::cout << \"Izuzetak: \" << e.what() << std::endl;\n    }\n    std::cout << std::endl << std::endl;\n    try\n    {\n        kreirajDatotetkuZbii2();\n        Matrica<double> m1(\"matrica.txt\", false);\n        std::cout << std::setw(6) << m1;\n    }\n    catch (const std::logic_error& e)\n    {\n        std::cout << \"Izuzetak: \" << e.what() << std::endl;\n    }",
+            "global_above_main": "void kreirajDatotetkuZbii1()\n{\n    std::string ime = \"matrica.txt\";\n    std::ofstream dat(ime);\n    dat << \"1, 2\\n3, 4\";\n    dat.close();\n}\n\nvoid kreirajDatotetkuZbii2()\n{\n    std::string ime = \"matrica.txt\";\n    std::ofstream dat(ime);\n    dat << \"1.4, 2.54\\n3.7, -4.7\";\n    dat.close();\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "1 2\\n 3 4\\n\\n\\n 1.4 2.54\\n 3.7 -4.7"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 11,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT4 - testiranje konstruktora za u\u010ditavanje iz binarne datoteke\n    \n    try\n    {\n        Matrica<int> m0{2, 2};\n        for (int i{0}; i < 2; i++)\n            for (int j{0}; j < 2; j++)\n                m0[i][j] = i + j;\n        m0.SacuvajUBinarnuDatoteku(\"matrica1.DAT\");\n        Matrica<int> m1(\"matrica1.DAT\", true);\n        std::cout << std::setw(6) << m1;\n    }\n    catch (const std::logic_error& e)\n    {\n        std::cout << \"Izuzetak: \" << e.what() << std::endl;\n    }\n    \n    std::cout << std::endl << std::endl;\n    \n    try\n    {\n        Matrica<double> m0{2, 2};\n        for (int i{0}; i < 2; i++)\n            for (int j{0}; j < 2; j++)\n                m0[i][j] = i + j + 0.5;\n        m0.SacuvajUBinarnuDatoteku(\"matrica2.DAT\");\n        Matrica<double> m1(\"matrica2.DAT\", true);\n        std::cout << std::setw(6) << m1;\n    }\n    catch (const std::logic_error& e)\n    {\n        std::cout << \"Izuzetak: \" << e.what() << std::endl;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                " 0 1\\n 1 2\\n\\n\\n 0.5 1.5\\n 1.5 2.5"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 12,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT5 - testiranje izuzetaka metoda ObnoviIzBinarneDatoteke i ObnoviIzTekstualneDatoteke\n        \/\/kada u matricama vec postoje elementi\n    try\n    {\n        Matrica<int> m0{2, 2};\n        for (int i{0}; i < 2; i++)\n            for (int j{0}; j < 2; j++)\n                m0[i][j] = i + j;\n        std::cout << std::setw(6) << m0;\n        m0.ObnoviIzBinarneDatoteke(\"AT5.DAT\");\n        std::cout << std::setw(6) << m0;\n      \n    }\n    catch (const std::logic_error& e)\n    {\n        std::cout << \"Izuzetak: \" << e.what() << std::endl;\n    }\n    \n    std::cout << std::endl << std::endl;\n    \n    try\n    {\n        Matrica<double> m0{2, 2};\n        for (int i{0}; i < 2; i++)\n            for (int j{0}; j < 2; j++)\n                m0[i][j] = i + j + 0.5;\n        std::cout << std::setw(6) << m0;\n        m0.ObnoviIzTekstualneDatoteke(\"AT5.txt\");\n        std::cout << std::setw(6) << m0;\n    }\n    catch (const std::logic_error& e)\n    {\n        std::cout << \"Izuzetak: \" << e.what() << std::endl;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                " 0 1\\n 1 2\\nIzuzetak: Trazena datoteka ne postoji\\n\\n\\n 0.5 1.5\\n 1.5 2.5\\nIzuzetak: Trazena datoteka ne postoji\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 13,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT6 - testiranje konstruktora\n        \/\/kada su u datotekama besmisleni podaci\n    \n    try\n    {\n        kreirajDatotetkuZbii2();\n        Matrica<double> m1(\"matrica2.txt\", false);\n        std::cout << \"Ovo se ne smije ispisati.\" << std::endl;\n    }\n    catch (const std::logic_error& e)\n    {\n        std::cout << \"Izuzetak: \" << e.what() << std::endl;\n    }",
+            "global_above_main": "\t\nvoid kreirajDatotetkuZbii2()\n{\n    std::string ime = \"matrica2.txt\";\n    std::ofstream dat(ime);\n    dat << \"1.4{2.54@3.7*-4.7\";\n    dat.close();\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Izuzetak: Datoteka sadrzi besmislene podatke\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 14,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT8 - testiranje izuzetaka metoda ObnoviIzBinarneDatoteke i ObnoviIzTekstualneDatoteke\n        \/\/kada su u datotekama besmisleni podaci\n        \n    kreirajDatotetkuZbii1();\n    kreirajDatotetkuZbii4();\n    Matrica<int> m1(\"matrica1.txt\", false);\n    try\n    {\n        \n        std::cout << std::setw(6) << m1;\n        m1.ObnoviIzTekstualneDatoteke(\"matrica4.txt\");\n        std::cout << \"Ovo se ne smije ispisati.\" << std::endl;\n    }\n    catch (const std::logic_error& e)\n    {\n        std::cout << \"Izuzetak: \" << e.what() << std::endl;\n    }",
+            "global_above_main": "\t\nvoid kreirajDatotetkuZbii1()\n{\n    std::string ime = \"matrica1.txt\";\n    std::ofstream dat(ime);\n    dat << \"1, 2\\n3, 4\";\n    dat.close();\n}\n\nvoid kreirajDatotetkuZbii4()\n{\n    std::string ime = \"matrica4.txt\";\n    std::ofstream dat(ime);\n    dat << \"1.4{2.54@3.7*-4.7\";\n    dat.close();\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                " 1 2\\n 3 4\\nIzuzetak: Datoteka sadrzi besmislene podatke\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

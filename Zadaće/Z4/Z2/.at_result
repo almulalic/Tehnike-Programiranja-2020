@@ -1,0 +1,532 @@
+{
+    "buildhost_description": {
+        "id": "lab002c02",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In constructor ‘Pravougaonik::Pravougaonik(const Tacka&, const Tacka&)’:\nmain.cpp:57:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     } else if(t1.first == t2.first && t1.first != t2.first) {\n                              ^~~~~\nmain.cpp:57:54: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     } else if(t1.first == t2.first && t1.first != t2.first) {\n                                                      ^~~~~\nmain.cpp:62:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     } else if(t1.first != t2.first && t1.first == t2.first) {\n                              ^~~~~\nmain.cpp:62:54: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     } else if(t1.first != t2.first && t1.first == t2.first) {\n                                                      ^~~~~\nmain.cpp: In member function ‘void Pravougaonik::Postavi(const Tacka&, const Tacka&)’:\nmain.cpp:100:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     } else if(t1.first == t2.first && t1.first != t2.first) {\n                              ^~~~~\nmain.cpp:100:54: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     } else if(t1.first == t2.first && t1.first != t2.first) {\n                                                      ^~~~~\nmain.cpp:105:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     } else if(t1.first != t2.first && t1.first == t2.first) {\n                              ^~~~~\nmain.cpp:105:54: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     } else if(t1.first != t2.first && t1.first == t2.first) {\n                                                      ^~~~~\nmain.cpp: In function ‘bool DaLiSuPodudarni(const Pravougaonik&, const Pravougaonik&)’:\nmain.cpp:212:56: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());\n                                                        ^\nmain.cpp:212:100: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());\n                                                                                                    ^\nmain.cpp:212:148: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());\n                                                                                                                                                    ^\nmain.cpp:212:194: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());\n                                                                                                                                                                                                  ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "57",
+                "col": "30",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4863/main.cpp:57:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     } else if(t1.first == t2.first && t1.first != t2.first) {                              ^~~~~",
+                "code": "} else if(t1.first == t2.first && t1.first != t2.first) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "57",
+                "col": "54",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4863/main.cpp:57:54: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     } else if(t1.first == t2.first && t1.first != t2.first) {                                                      ^~~~~",
+                "code": "} else if(t1.first == t2.first && t1.first != t2.first) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "62",
+                "col": "30",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4863/main.cpp:62:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     } else if(t1.first != t2.first && t1.first == t2.first) {                              ^~~~~",
+                "code": "} else if(t1.first != t2.first && t1.first == t2.first) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "62",
+                "col": "54",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4863/main.cpp:62:54: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     } else if(t1.first != t2.first && t1.first == t2.first) {                                                      ^~~~~/tmp/buildservice/bs_4863/main.cpp: In member function ‘void Pravougaonik::Postavi(const Tacka&, const Tacka&)’:",
+                "code": "} else if(t1.first != t2.first && t1.first == t2.first) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "100",
+                "col": "30",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4863/main.cpp:100:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     } else if(t1.first == t2.first && t1.first != t2.first) {                              ^~~~~",
+                "code": "} else if(t1.first == t2.first && t1.first != t2.first) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "100",
+                "col": "54",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4863/main.cpp:100:54: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     } else if(t1.first == t2.first && t1.first != t2.first) {                                                      ^~~~~",
+                "code": "} else if(t1.first == t2.first && t1.first != t2.first) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "105",
+                "col": "30",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4863/main.cpp:105:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     } else if(t1.first != t2.first && t1.first == t2.first) {                              ^~~~~",
+                "code": "} else if(t1.first != t2.first && t1.first == t2.first) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "105",
+                "col": "54",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4863/main.cpp:105:54: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     } else if(t1.first != t2.first && t1.first == t2.first) {                                                      ^~~~~",
+                "code": "} else if(t1.first != t2.first && t1.first == t2.first) {"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "212",
+                "col": "56",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4863/main.cpp:212:56: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());                                                        ^",
+                "code": "return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "212",
+                "col": "100",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4863/main.cpp:212:100: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());                                                                                                    ^",
+                "code": "return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "212",
+                "col": "148",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4863/main.cpp:212:148: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());                                                                                                                                                    ^",
+                "code": "return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "212",
+                "col": "194",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_4863/main.cpp:212:194: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());                                                                                                                                                                                                  ^",
+                "code": "return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite n: Unesite 1. tjeme pravougaonika 1: Unesite 2. tjeme pravougaonika 1: Unesite 1. tjeme pravougaonika 2: Unesite 2. tjeme pravougaonika 2: Unesite podatke za transliranje (dx dy): Pravougaonici, nakon transformacija: \n{{0,1},{1,0}}\n{{31,23},{51,17}}\nPravougaonik s najvecom povrsinom: {{31,23},{51,17}}",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite n: Unesite 1. tjeme pravougaonika 1: Unesite 2. tjeme pravougaonika 1: Unesite 1. tjeme pravougaonika 2: Unesite 2. tjeme pravougaonika 2: Unesite 1. tjeme pravougaonika 3: Unesite 2. tjeme pravougaonika 3: Unesite 1. tjeme pravougaonika 4: Unesite 2. tjeme pravougaonika 4: Unesite podatke za transliranje (dx dy): Pravougaonici, nakon transformacija: \n{{0,1},{1,0}}\n{{2,4},{4,2}}\n{{3,5},{5,3}}\n{{5,7},{7,5}}\nPravougaonik s najvecom povrsinom: {{2,4},{4,2}}",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3.cpp: In function ‘int main()’:\nbs_test_3.cpp:302:9: error: ‘NepreklapajuciPravougaonik’ was not declared in this scope\n         NepreklapajuciPravougaonik P {{0, 0}, {10, 10}};\n         ^~~~~~~~~~~~~~~~~~~~~~~~~~\nbs_test_3.cpp:304:36: error: expected ‘;’ before ‘A’\n         NepreklapajuciPravougaonik A {{7, 7}, {7, 7}};\n                                    ^\nbs_test_3.cpp:326:1: error: expected ‘}’ at end of input\n }\n ^\nbs_test_3.cpp:326:1: error: expected ‘}’ at end of input\nbs_test_3.cpp:326:1: error: expected ‘catch’ at end of input\nbs_test_3.cpp:326:1: error: expected ‘(’ at end of input\nbs_test_3.cpp:326:1: error: expected type-specifier at end of input\nbs_test_3.cpp:326:1: error: expected ‘)’ at end of input\nbs_test_3.cpp:326:1: error: expected ‘{’ at end of input\nbs_test_3.cpp:326:1: error: expected ‘}’ at end of input",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 6,
+                        "col": "9",
+                        "message": "'NepreklapajuciPravougaonik' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_3.cpp:302:9: error: ‘NepreklapajuciPravougaonik’ was not declared in this scope         NepreklapajuciPravougaonik P {{0, 0}, {10, 10}};         ^~~~~~~~~~~~~~~~~~~~~~~~~~",
+                        "code": "NepreklapajuciPravougaonik P {{0, 0}, {10, 10}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 8,
+                        "col": "36",
+                        "message": "expected ';' before 'A'",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_3.cpp:304:36: error: expected ‘;’ before ‘A’         NepreklapajuciPravougaonik A {{7, 7}, {7, 7}};                                    ^",
+                        "code": "NepreklapajuciPravougaonik A {{7, 7}, {7, 7}};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 30,
+                        "col": "1",
+                        "message": "expected '}' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_3.cpp:326:1: error: expected ‘}’ at end of input } ^",
+                        "code": "}"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 30,
+                        "col": "1",
+                        "message": "expected '}' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_3.cpp:326:1: error: expected ‘}’ at end of input"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 30,
+                        "col": "1",
+                        "message": "expected 'catch' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_3.cpp:326:1: error: expected ‘catch’ at end of input"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 30,
+                        "col": "1",
+                        "message": "expected '(' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_3.cpp:326:1: error: expected ‘(’ at end of input"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 30,
+                        "col": "1",
+                        "message": "expected type-specifier at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_3.cpp:326:1: error: expected type-specifier at end of input"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 30,
+                        "col": "1",
+                        "message": "expected ')' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_3.cpp:326:1: error: expected ‘)’ at end of input"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 30,
+                        "col": "1",
+                        "message": "expected '{' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_3.cpp:326:1: error: expected ‘{’ at end of input"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 30,
+                        "col": "1",
+                        "message": "expected '}' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_3.cpp:326:1: error: expected ‘}’ at end of input"
+                    }
+                ]
+            }
+        },
+        "4": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_4.cpp: In function ‘int main()’:\nbs_test_4.cpp:297:9: error: ‘NepreklapajuciPravougaonik’ was not declared in this scope\n         NepreklapajuciPravougaonik A ({-1, -1}, {-5, -5});\n         ^~~~~~~~~~~~~~~~~~~~~~~~~~\nbs_test_4.cpp:297:47: error: expected primary-expression before ‘,’ token\n         NepreklapajuciPravougaonik A ({-1, -1}, {-5, -5});\n                                               ^\nbs_test_4.cpp:297:49: error: expected primary-expression before ‘{’ token\n         NepreklapajuciPravougaonik A ({-1, -1}, {-5, -5});\n                                                 ^\nbs_test_4.cpp:297:57: error: expected primary-expression before ‘)’ token\n         NepreklapajuciPravougaonik A ({-1, -1}, {-5, -5});\n                                                         ^\nbs_test_4.cpp:299:36: error: expected ‘;’ before ‘B’\n         NepreklapajuciPravougaonik B ({-6, 6}, {7, 7});\n                                    ^\nbs_test_4.cpp:299:46: error: expected primary-expression before ‘,’ token\n         NepreklapajuciPravougaonik B ({-6, 6}, {7, 7});\n                                              ^\nbs_test_4.cpp:299:48: error: expected primary-expression before ‘{’ token\n         NepreklapajuciPravougaonik B ({-6, 6}, {7, 7});\n                                                ^\nbs_test_4.cpp:299:54: error: expected primary-expression before ‘)’ token\n         NepreklapajuciPravougaonik B ({-6, 6}, {7, 7});\n                                                      ^\nbs_test_4.cpp:302:40: error: expected ‘;’ before ‘C’\n             NepreklapajuciPravougaonik C ({16, 11}, {8, 9});\n                                        ^\nbs_test_4.cpp:302:51: error: expected primary-expression before ‘,’ token\n             NepreklapajuciPravougaonik C ({16, 11}, {8, 9});\n                                                   ^\nbs_test_4.cpp:302:53: error: expected primary-expression before ‘{’ token\n             NepreklapajuciPravougaonik C ({16, 11}, {8, 9});\n                                                     ^\nbs_test_4.cpp:302:59: error: expected primary-expression before ‘)’ token\n             NepreklapajuciPravougaonik C ({16, 11}, {8, 9});\n                                                           ^\nbs_test_4.cpp:305:36: error: expected ‘;’ before ‘D’\n         NepreklapajuciPravougaonik D ({8, 8}, {15, 15});\n                                    ^\nbs_test_4.cpp:305:45: error: expected primary-expression before ‘,’ token\n         NepreklapajuciPravougaonik D ({8, 8}, {15, 15});\n                                             ^\nbs_test_4.cpp:305:47: error: expected primary-expression before ‘{’ token\n         NepreklapajuciPravougaonik D ({8, 8}, {15, 15});\n                                               ^\nbs_test_4.cpp:305:55: error: expected primary-expression before ‘)’ token\n         NepreklapajuciPravougaonik D ({8, 8}, {15, 15});\n                                                       ^\nbs_test_4.cpp:309:41: error: expected ‘;’ before ‘K’\n         try {NepreklapajuciPravougaonik K {{-1, -2}, {1, 8}}; std::cout << \"NIJE OK!\" << std::endl;}\n                                         ^\nbs_test_4.cpp:317:1: error: expected ‘}’ at end of input\n }\n ^\nbs_test_4.cpp:317:1: error: expected ‘catch’ at end of input\nbs_test_4.cpp:317:1: error: expected ‘(’ at end of input\nbs_test_4.cpp:317:1: error: expected type-specifier at end of input\nbs_test_4.cpp:317:1: error: expected ‘)’ at end of input\nbs_test_4.cpp:317:1: error: expected ‘{’ at end of input\nbs_test_4.cpp:317:1: error: expected ‘}’ at end of input\nbs_test_4.cpp:317:1: error: expected ‘}’ at end of input\nbs_test_4.cpp:317:1: error: expected ‘catch’ at end of input\nbs_test_4.cpp:317:1: error: expected ‘(’ at end of input\nbs_test_4.cpp:317:1: error: expected type-specifier at end of input\nbs_test_4.cpp:317:1: error: expected ‘)’ at end of input\nbs_test_4.cpp:317:1: error: expected ‘{’ at end of input\nbs_test_4.cpp:317:1: error: expected ‘}’ at end of input",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "9",
+                        "message": "'NepreklapajuciPravougaonik' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:297:9: error: ‘NepreklapajuciPravougaonik’ was not declared in this scope         NepreklapajuciPravougaonik A ({-1, -1}, {-5, -5});         ^~~~~~~~~~~~~~~~~~~~~~~~~~",
+                        "code": "NepreklapajuciPravougaonik A ({-1, -1}, {-5, -5});"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "47",
+                        "message": "expected primary-expression before ',' token",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:297:47: error: expected primary-expression before ‘,’ token         NepreklapajuciPravougaonik A ({-1, -1}, {-5, -5});                                               ^",
+                        "code": "NepreklapajuciPravougaonik A ({-1, -1}, {-5, -5});"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "49",
+                        "message": "expected primary-expression before '{' token",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:297:49: error: expected primary-expression before ‘{’ token         NepreklapajuciPravougaonik A ({-1, -1}, {-5, -5});                                                 ^",
+                        "code": "NepreklapajuciPravougaonik A ({-1, -1}, {-5, -5});"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 1,
+                        "col": "57",
+                        "message": "expected primary-expression before ')' token",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:297:57: error: expected primary-expression before ‘)’ token         NepreklapajuciPravougaonik A ({-1, -1}, {-5, -5});                                                         ^",
+                        "code": "NepreklapajuciPravougaonik A ({-1, -1}, {-5, -5});"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "36",
+                        "message": "expected ';' before 'B'",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:299:36: error: expected ‘;’ before ‘B’         NepreklapajuciPravougaonik B ({-6, 6}, {7, 7});                                    ^",
+                        "code": "NepreklapajuciPravougaonik B ({-6, 6}, {7, 7});"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "46",
+                        "message": "expected primary-expression before ',' token",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:299:46: error: expected primary-expression before ‘,’ token         NepreklapajuciPravougaonik B ({-6, 6}, {7, 7});                                              ^",
+                        "code": "NepreklapajuciPravougaonik B ({-6, 6}, {7, 7});"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "48",
+                        "message": "expected primary-expression before '{' token",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:299:48: error: expected primary-expression before ‘{’ token         NepreklapajuciPravougaonik B ({-6, 6}, {7, 7});                                                ^",
+                        "code": "NepreklapajuciPravougaonik B ({-6, 6}, {7, 7});"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "54",
+                        "message": "expected primary-expression before ')' token",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:299:54: error: expected primary-expression before ‘)’ token         NepreklapajuciPravougaonik B ({-6, 6}, {7, 7});                                                      ^",
+                        "code": "NepreklapajuciPravougaonik B ({-6, 6}, {7, 7});"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 6,
+                        "col": "40",
+                        "message": "expected ';' before 'C'",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:302:40: error: expected ‘;’ before ‘C’             NepreklapajuciPravougaonik C ({16, 11}, {8, 9});                                        ^",
+                        "code": "NepreklapajuciPravougaonik C ({16, 11}, {8, 9});"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 6,
+                        "col": "51",
+                        "message": "expected primary-expression before ',' token",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:302:51: error: expected primary-expression before ‘,’ token             NepreklapajuciPravougaonik C ({16, 11}, {8, 9});                                                   ^",
+                        "code": "NepreklapajuciPravougaonik C ({16, 11}, {8, 9});"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 6,
+                        "col": "53",
+                        "message": "expected primary-expression before '{' token",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:302:53: error: expected primary-expression before ‘{’ token             NepreklapajuciPravougaonik C ({16, 11}, {8, 9});                                                     ^",
+                        "code": "NepreklapajuciPravougaonik C ({16, 11}, {8, 9});"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 6,
+                        "col": "59",
+                        "message": "expected primary-expression before ')' token",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:302:59: error: expected primary-expression before ‘)’ token             NepreklapajuciPravougaonik C ({16, 11}, {8, 9});                                                           ^",
+                        "code": "NepreklapajuciPravougaonik C ({16, 11}, {8, 9});"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 9,
+                        "col": "36",
+                        "message": "expected ';' before 'D'",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:305:36: error: expected ‘;’ before ‘D’         NepreklapajuciPravougaonik D ({8, 8}, {15, 15});                                    ^",
+                        "code": "NepreklapajuciPravougaonik D ({8, 8}, {15, 15});"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 9,
+                        "col": "45",
+                        "message": "expected primary-expression before ',' token",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:305:45: error: expected primary-expression before ‘,’ token         NepreklapajuciPravougaonik D ({8, 8}, {15, 15});                                             ^",
+                        "code": "NepreklapajuciPravougaonik D ({8, 8}, {15, 15});"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 9,
+                        "col": "47",
+                        "message": "expected primary-expression before '{' token",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:305:47: error: expected primary-expression before ‘{’ token         NepreklapajuciPravougaonik D ({8, 8}, {15, 15});                                               ^",
+                        "code": "NepreklapajuciPravougaonik D ({8, 8}, {15, 15});"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 9,
+                        "col": "55",
+                        "message": "expected primary-expression before ')' token",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:305:55: error: expected primary-expression before ‘)’ token         NepreklapajuciPravougaonik D ({8, 8}, {15, 15});                                                       ^",
+                        "code": "NepreklapajuciPravougaonik D ({8, 8}, {15, 15});"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 13,
+                        "col": "41",
+                        "message": "expected ';' before 'K'",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:309:41: error: expected ‘;’ before ‘K’         try {NepreklapajuciPravougaonik K {{-1, -2}, {1, 8}}; std::cout << \"NIJE OK!\" << std::endl;}                                         ^",
+                        "code": "try {NepreklapajuciPravougaonik K {{-1, -2}, {1, 8}}; std::cout << \"NIJE OK!\" << std::endl;}"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 21,
+                        "col": "1",
+                        "message": "expected '}' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:317:1: error: expected ‘}’ at end of input } ^",
+                        "code": "}"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 21,
+                        "col": "1",
+                        "message": "expected 'catch' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:317:1: error: expected ‘catch’ at end of input"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 21,
+                        "col": "1",
+                        "message": "expected '(' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:317:1: error: expected ‘(’ at end of input"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 21,
+                        "col": "1",
+                        "message": "expected type-specifier at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:317:1: error: expected type-specifier at end of input"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 21,
+                        "col": "1",
+                        "message": "expected ')' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:317:1: error: expected ‘)’ at end of input"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 21,
+                        "col": "1",
+                        "message": "expected '{' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:317:1: error: expected ‘{’ at end of input"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 21,
+                        "col": "1",
+                        "message": "expected '}' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:317:1: error: expected ‘}’ at end of input"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 21,
+                        "col": "1",
+                        "message": "expected '}' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:317:1: error: expected ‘}’ at end of input"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 21,
+                        "col": "1",
+                        "message": "expected 'catch' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:317:1: error: expected ‘catch’ at end of input"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 21,
+                        "col": "1",
+                        "message": "expected '(' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:317:1: error: expected ‘(’ at end of input"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 21,
+                        "col": "1",
+                        "message": "expected type-specifier at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:317:1: error: expected type-specifier at end of input"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 21,
+                        "col": "1",
+                        "message": "expected ')' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:317:1: error: expected ‘)’ at end of input"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 21,
+                        "col": "1",
+                        "message": "expected '{' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:317:1: error: expected ‘{’ at end of input"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 21,
+                        "col": "1",
+                        "message": "expected '}' at end of input",
+                        "output": "/tmp/buildservice/bs_4863/bs_test_4.cpp:317:1: error: expected ‘}’ at end of input"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1599751485
+}

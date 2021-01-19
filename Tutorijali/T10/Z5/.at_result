@@ -1,0 +1,200 @@
+{
+    "buildhost_description": {
+        "id": "lab002c27",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In constructor ‘Ugao::Ugao(double)’:\nmain.cpp:32:28: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n    else if(radijani != 2 * PI) radijani -= int(radijani / (2*PI)) * 2* PI;\n                            ^~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "32",
+                "col": "28",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2582/main.cpp:32:28: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]    else if(radijani != 2 * PI) radijani -= int(radijani / (2*PI)) * 2* PI;                            ^~",
+                "code": "else if(radijani != 2 * PI) radijani -= int(radijani / (2*PI)) * 2* PI;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3664": {
+            "status": 1,
+            "run_result": {
+                "output": "12\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3665": {
+            "status": 1,
+            "run_result": {
+                "output": "0.00000\n1.57080\n3.14159\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3666": {
+            "status": 1,
+            "run_result": {
+                "output": "0deg 0min 0sec\n90deg 0min 0sec\n180deg 0min 0sec\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3667": {
+            "status": 1,
+            "run_result": {
+                "output": "1.5708\n90 0 0\n0\n0 0 0\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3668": {
+            "status": 6,
+            "run_result": {
+                "output": "3.71681\n212deg 57min 28sec\n0.01774\n1deg 1min -1sec",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3669": {
+            "status": 6,
+            "run_result": {
+                "output": "140deg 300min 200sec\n350deg -20min -30sec\n50deg 25min 12sec\n140deg 300min 200sec\n350deg -20min -30sec\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3670": {
+            "status": 6,
+            "run_result": {
+                "output": "100deg 1min 0sec\n245deg 4min 0sec\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3671": {
+            "status": 6,
+            "run_result": {
+                "output": "245deg 4min 0sec\n1.39655\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3672": {
+            "status": 6,
+            "run_result": {
+                "output": "107deg 1min 0sec\n3.73588",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3683": {
+            "status": 6,
+            "run_result": {
+                "output": "270deg 4min 0sec\n0deg 0min 0sec\n26deg 0min 0sec\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3686": {
+            "status": 1,
+            "run_result": {
+                "output": "1 57 17 45\n1.00000\n57deg 17min 45sec\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3687": {
+            "status": 6,
+            "run_result": {
+                "output": "90deg 1min 0sec\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 2,
+    "time": 1589280316
+}

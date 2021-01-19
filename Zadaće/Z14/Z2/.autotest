@@ -1,0 +1,145 @@
+{
+    "id": 5529,
+    "name": "Tehnike programiranja (2017\/2018), Tutorijal 14, zadatak 2",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT1\n    std::ofstream f (\"ABC.TXT\");\n    f << \"S Tepsije\" << std::endl\n      << \"10 5 3\" << std::endl\n      << \"S Nesto\" << std::endl\n      << \"1000 2 400.5\" << std::endl\n      << \"B Ulje neko\" << std::endl\n      << \"60.1 50\";\n    f.close();\n    Skladiste s (10);\n    s.UcitajIzDatoteke(\"ABC.TXT\");\n    const Skladiste &cs = s;\n    cs.IzlistajSkladiste(); \/\/cs je const\n}",
+            "global_above_main": "#include <stdexcept>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vrsta spremnika: Sanduk\\nSadrzaj: Nesto\\nVlastita tezina: 1000 kg\\nUkupna tezina: 1801 kg\\nVrsta spremnika: Bure\\nSadrzaj: Ulje neko\\nVlastita tezina: 60.1 kg\\nUkupna tezina: 110.1 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Tepsije\\nVlastita tezina: 10 kg\\nUkupna tezina: 25 kg\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT2 funkcionalnosti klase (bez datoteka), test 1 (od 2)\n      \/\/ako bazna klasa nema virt. destruktor onda je UB (nedefinisano ponasanje)\n      \/\/raditi nesto poput sljedeceg:\n      \/\/Spremnik *s = new Bure (...);\n      \/\/delete s; \/\/nedefinisano ponasanje, ne pozove se ~Bure!\n\n        std::cout << std::boolalpha\n                  << \"Spremnik.Apstraktan: \" << std::is_abstract<Spremnik>::value << std::endl\n                  << \"Spremink.ImaVirtualniDestruktor: \" << std::has_virtual_destructor<Spremnik>::value;\n        const Bure b (10, \"Nesto\", 400);\n        const Sanduk s (25, \"Nehbitno\", 10, 40);\n        std::cout << std::endl;\n        std::cout << \"b.Tezina: \" << b.DajTezinu() << std::endl\n                  << \"b.UkupnaTezina: \" << b.DajUkupnuTezinu() << std::endl\n                  << \"s.Tezina: \" << s.DajTezinu() << std::endl\n                  << \"s.UkupnaTezina: \" << s.DajUkupnuTezinu() << std::endl;\n        Skladiste sk (7);\n        sk.DodajBure (10, \"Nesto\", 400);\n        sk.DodajBure (11, \"Nesto\", 400);\n        sk.DodajBure (10, \"Nesto\", 401);\n        sk.DodajSanduk (20, \"Nehbitno\", 5, 10);\n        sk.DodajSanduk (21, \"Nehbitno\", 5, 10);\n        sk.DodajSanduk (20, \"Nehbitno\", 5, 11);\n        sk.DodajSanduk (20, \"Nehbitno\", 7, 9);\n        const Skladiste &cref = sk;\n        try {sk.DodajBure (0, \"1\", 0); std::cout << \"NijeOK, skladiste je popunjenooooooo!\";}\n        catch (const std::exception &e) {std::cout << \"Greska: \" << e.what() << std::endl;}\n        std::cout << \"BrojPreteskih (10): \" << cref.BrojPreteskih (10) << std::endl\n                  << \"BrojPreteskih (50): \" << cref.BrojPreteskih (50) << std::endl\n                  << \"BrojPreteskih (100): \" << cref.BrojPreteskih (100) << std::endl\n                  << \"BrojPreteskih (500): \" << cref.BrojPreteskih (50) << std::endl;\n        Spremnik &nl = sk.DajNajlaksi(), &nt = sk.DajNajtezi();\n        std::cout << \"Najlaksi.Tezina: \" << nl.DajTezinu() << std::endl\n                  << \"Najlaksi.UkupnaTezina: \" << nl.DajUkupnuTezinu() << std::endl\n                  << \"Najtezi.Tezina: \" << nt.DajTezinu() << std::endl\n                  << \"Najtezi.UkupnaTezina: \" << nt.DajUkupnuTezinu() << std::endl;\n        std::cout << \"-----------------------------------------\" << std::endl;\n        cref.IzlistajSkladiste();\n    }",
+            "global_above_main": "#include <type_traits>\n#include <stdexcept>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Spremnik.Apstraktan: true\\nSpremink.ImaVirtualniDestruktor: true\\nb.Tezina: 10\\nb.UkupnaTezina: 410\\ns.Tezina: 25\\ns.UkupnaTezina: 425\\nGreska: Popunjeno skladiste\\nBrojPreteskih (10): 7\\nBrojPreteskih (50): 7\\nBrojPreteskih (100): 3\\nBrojPreteskih (500): 7\\nNajlaksi.Tezina: 10\\nNajlaksi.UkupnaTezina: 410\\nNajtezi.Tezina: 21\\nNajtezi.UkupnaTezina: 71\\n-----------------------------------------\\nVrsta spremnika: Bure\\nSadrzaj: Nesto\\nVlastita tezina: 11 kg\\nUkupna tezina: 411 kg\\nVrsta spremnika: Bure\\nSadrzaj: Nesto\\nVlastita tezina: 10 kg\\nUkupna tezina: 411 kg\\nVrsta spremnika: Bure\\nSadrzaj: Nesto\\nVlastita tezina: 10 kg\\nUkupna tezina: 410 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Nehbitno\\nVlastita tezina: 20 kg\\nUkupna tezina: 83 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Nehbitno\\nVlastita tezina: 20 kg\\nUkupna tezina: 75 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Nehbitno\\nVlastita tezina: 21 kg\\nUkupna tezina: 71 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Nehbitno\\nVlastita tezina: 20 kg\\nUkupna tezina: 70 kg"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT2 funkcionalnosti klase (bez datoteka), test 2 (od 2)\n     \/\/ovdje testiramo op=, move op=, cctor (copy constructor), mctor (move ctor)\n        Skladiste s1 (10);\n        s1.DodajBure(1, \"Bure 1\", 1);\n        s1.DodajBure(2, \"Bure 2\", 2);\n        s1.DodajSanduk(1, \"Sanduk 1\", 1, 1);\n        s1.DodajSanduk(2, \"Sanduk 2\", 2, 2);\n        s1.DodajBure(3, \"Bure 3\", 3);\n        s1.DodajBure(4, \"Bure 4\", 4);\n        s1.DodajSanduk(3, \"Sanduk 3\", 3, 3);\n        s1.DodajBure(5, \"Bure 5\", 5);\n        std::cout << \"s1:\" << std::endl << std::endl;\n        s1.IzlistajSkladiste();\n        Skladiste s2 (s1);\n        {\n            Skladiste s3 = s1; \/\/cctor\n            s1.DodajBure (1, \"Dodano bure 1\", 1);\n            s3.DodajSanduk (1, \"Dodani sanduk 1\", 10, 1);\n            Skladiste s4 (1);\n            s4 = s1; \/\/op=\n            s4.DodajSanduk (2, \"Dodani sanduk 2\", 20, 2);\n            std::cout << \"s1:\" << std::endl << std::endl;\n            s1.IzlistajSkladiste();\n            std::cout << \"s3:\" << std::endl << std::endl;\n            s3.IzlistajSkladiste();\n            std::cout << \"s4:\" << std::endl << std::endl;\n            s4.IzlistajSkladiste();\n        }\n        Skladiste s5 (s1);\n        std::cout << \"s1:\" << std::endl << std::endl;\n        s1.IzlistajSkladiste();\n        s2.DodajBure (1, \"Dodano bure 1\", 1);\n        s1.DodajSanduk (1, \"Dodani sanduk 1\", 1, 1);\n        {\n            Skladiste s3 = std::move (s1);\n            Skladiste s4 (1);\n            s4 = std::move (s2);\n            std::cout << \"s3:\" << std::endl << std::endl;\n            s3.IzlistajSkladiste();\n            std::cout << \"s4:\" << std::endl << std::endl;\n            s4.IzlistajSkladiste();\n        }\n        \/\/destruktivna samododjela:\n        std::cout << \"s5:\" << std::endl << std::endl;\n        (s5 = s5).IzlistajSkladiste();\n        \/\/move destruktivna samododjela:\n        s5 = std::move (s5);\n        std::cout << \"s5:\" << std::endl << std::endl;\n        s5.IzlistajSkladiste();\n    }",
+            "global_above_main": "#include <stdexcept>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "s1:\\n\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 3\\nVlastita tezina: 3 kg\\nUkupna tezina: 12 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 5\\nVlastita tezina: 5 kg\\nUkupna tezina: 10 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 4\\nVlastita tezina: 4 kg\\nUkupna tezina: 8 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 6 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 3\\nVlastita tezina: 3 kg\\nUkupna tezina: 6 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 4 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\ns1:\\n\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 3\\nVlastita tezina: 3 kg\\nUkupna tezina: 12 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 5\\nVlastita tezina: 5 kg\\nUkupna tezina: 10 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 4\\nVlastita tezina: 4 kg\\nUkupna tezina: 8 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 6 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 3\\nVlastita tezina: 3 kg\\nUkupna tezina: 6 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 4 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\nVrsta spremnika: Bure\\nSadrzaj: Dodano bure 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\ns3:\\n\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 3\\nVlastita tezina: 3 kg\\nUkupna tezina: 12 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Dodani sanduk 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 11 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 5\\nVlastita tezina: 5 kg\\nUkupna tezina: 10 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 4\\nVlastita tezina: 4 kg\\nUkupna tezina: 8 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 6 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 3\\nVlastita tezina: 3 kg\\nUkupna tezina: 6 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 4 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\ns4:\\n\\nVrsta spremnika: Sanduk\\nSadrzaj: Dodani sanduk 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 42 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 3\\nVlastita tezina: 3 kg\\nUkupna tezina: 12 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 5\\nVlastita tezina: 5 kg\\nUkupna tezina: 10 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 4\\nVlastita tezina: 4 kg\\nUkupna tezina: 8 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 6 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 3\\nVlastita tezina: 3 kg\\nUkupna tezina: 6 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 4 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\nVrsta spremnika: Bure\\nSadrzaj: Dodano bure 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\ns1:\\n\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 3\\nVlastita tezina: 3 kg\\nUkupna tezina: 12 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 5\\nVlastita tezina: 5 kg\\nUkupna tezina: 10 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 4\\nVlastita tezina: 4 kg\\nUkupna tezina: 8 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 6 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 3\\nVlastita tezina: 3 kg\\nUkupna tezina: 6 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 4 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\nVrsta spremnika: Bure\\nSadrzaj: Dodano bure 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\ns3:\\n\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 3\\nVlastita tezina: 3 kg\\nUkupna tezina: 12 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 5\\nVlastita tezina: 5 kg\\nUkupna tezina: 10 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 4\\nVlastita tezina: 4 kg\\nUkupna tezina: 8 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 6 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 3\\nVlastita tezina: 3 kg\\nUkupna tezina: 6 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 4 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\nVrsta spremnika: Bure\\nSadrzaj: Dodano bure 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Dodani sanduk 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\ns4:\\n\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 3\\nVlastita tezina: 3 kg\\nUkupna tezina: 12 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 5\\nVlastita tezina: 5 kg\\nUkupna tezina: 10 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 4\\nVlastita tezina: 4 kg\\nUkupna tezina: 8 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 6 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 3\\nVlastita tezina: 3 kg\\nUkupna tezina: 6 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 4 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\nVrsta spremnika: Bure\\nSadrzaj: Dodano bure 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\ns5:\\n\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 3\\nVlastita tezina: 3 kg\\nUkupna tezina: 12 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 5\\nVlastita tezina: 5 kg\\nUkupna tezina: 10 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 4\\nVlastita tezina: 4 kg\\nUkupna tezina: 8 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 6 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 3\\nVlastita tezina: 3 kg\\nUkupna tezina: 6 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 4 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\nVrsta spremnika: Bure\\nSadrzaj: Dodano bure 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\ns5:\\n\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 3\\nVlastita tezina: 3 kg\\nUkupna tezina: 12 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 5\\nVlastita tezina: 5 kg\\nUkupna tezina: 10 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 4\\nVlastita tezina: 4 kg\\nUkupna tezina: 8 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 6 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 3\\nVlastita tezina: 3 kg\\nUkupna tezina: 6 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 2\\nVlastita tezina: 2 kg\\nUkupna tezina: 4 kg\\nVrsta spremnika: Bure\\nSadrzaj: Bure 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Sanduk 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\nVrsta spremnika: Bure\\nSadrzaj: Dodano bure 1\\nVlastita tezina: 1 kg\\nUkupna tezina: 2 kg\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT4: ucitaj iz datoteke, a skladiste vec ima objekata (trebaju se pobrisati)\n        std::ofstream f (\"ABC.TXT\");\n        f << \"S Burgije\" << std::endl\n          << \"80 24995 0.1\" << std::endl\n          << \"S Nesto\" << std::endl\n          << \"1000 2 400.5\" << std::endl\n          << \"B Motorno ulje\" << std::endl\n          << \"50 500\" << std::endl\n          << \"B Benzin\" << std::endl\n          << \"2 30\";\n        f.close();\n        Skladiste s (10);\n        s.DodajBure(50, \"Kiselina\", 400);\n        s.DodajSanduk(100, \"Sarafi\", 450000, 0.05);\n        s.UcitajIzDatoteke(\"ABC.TXT\");\n        const Skladiste &cs = s;\n        cs.IzlistajSkladiste();\n    }",
+            "global_above_main": "#include <stdexcept>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vrsta spremnika: Sanduk\\nSadrzaj: Burgije\\nVlastita tezina: 80 kg\\nUkupna tezina: 2579.5 kg\\nVrsta spremnika: Sanduk\\nSadrzaj: Nesto\\nVlastita tezina: 1000 kg\\nUkupna tezina: 1801 kg\\nVrsta spremnika: Bure\\nSadrzaj: Motorno ulje\\nVlastita tezina: 50 kg\\nUkupna tezina: 550 kg\\nVrsta spremnika: Bure\\nSadrzaj: Benzin\\nVlastita tezina: 2 kg\\nUkupna tezina: 32 kg\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT5: datotek ne postoji + neispravni podaci\n        Skladiste s (10);\n        try {s.UcitajIzDatoteke(\"Nepostojeca-datoteka.ini\"); std::cout << \"LOL, not ok! :o\";}\n        catch (const std::logic_error &e) {std::cout << \"GRESKA: \" << e.what() << std::endl;}\n        std::ofstream f (\"ABC.TXT\");\n        f << \"S Burgije\" << std::endl\n          << \"80 24995 slovo\" << std::endl \/\/neispravno!\n          << \"S Nesto\" << std::endl\n          << \"1000 2 400.5\";\n        f.close();\n        try {s.UcitajIzDatoteke(\"ABC.TXT\"); std::cout << \":O LOL, not ok!\";}\n        catch (const std::logic_error &e) {std::cout << \"GRESKA: \" << e.what() << std::endl;}\n        std::ofstream g (\"DEF.TXT\");\n        g << \"S Burgije\" << std::endl\n          << \"80 24995 123\" << std::endl \/\/sad je ovo OK\n          << \"K Nesto\" << std::endl \/\/sta je sad \"K\"? Nije ni Sanduk ni Bure... greska\n          << \"1000 2 400.5\";\n        g.close();\n        try {s.UcitajIzDatoteke(\"DEF.TXT\"); std::cout << \"Ahhh LOL, not ok!\";}\n        catch (const std::logic_error &e) {std::cout << \"GRESKA: \" << e.what();}\n    }",
+            "global_above_main": "#include <stdexcept>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "GRESKA: Trazena datoteka ne postoji\\nGRESKA: Problemi pri citanju datoteke\\nGRESKA: Datoteka sadrzi besmislene podatke",
+                "GRESKA: Trazena datoteka ne postoji\\nGRESKA: Datoteka sadrzi besmislene podatke\\nGRESKA: Datoteka sadrzi besmislene podatke"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    \/\/#include <string>\n    {\/\/AT6: samo jedan podtak u datoteci\n        Skladiste s (10);\n        std::ofstream g (\"DEF.TXT\");\n        g << \"S Burgije\" << std::endl\n          << \"80 24995 1\" << std::endl;\n        g.close();\n        s.UcitajIzDatoteke(\"DEF.TXT\");\n        s.IzlistajSkladiste();\n        std::cout << \"---------------------\" << std::endl;\n        \/\/radi vaseg testiranja, sta ako je datoteka prazna?\n        \/\/necemo nastimati da pada AT zbog toga, ali je jako korisno\n        \/\/da imate i takav AT. Ocekivano je da Skladiste bude PRAZNO\n        \/\/ali ce biti priznavano i ako se prijavi greska\n        \/\/ipak, krahiranje programa **ne dolazi u obzir**\n        std::ofstream f (\"ABC.TXT\");\n        f.close();\n        std::string p;\n        try {s.UcitajIzDatoteke(\"ABC.TXT\"); s.IzlistajSkladiste();}\n        catch (const std::logic_error &e) {p = e.what();}\n        if (p == \"Datoteka sadrzi besmislene podatke\" || p == \"Problemi pri citanju datoteke\")\n            std::cout << \"Alternativni izlaz: i ovo je OK!\";\n    }",
+            "global_above_main": "#include <string>\n#include <stdexcept>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vrsta spremnika: Sanduk\\nSadrzaj: Burgije\\nVlastita tezina: 80 kg\\nUkupna tezina: 25075 kg\\n---------------------\\n\\n",
+                "Vrsta spremnika: Sanduk\\nSadrzaj: Burgije\\nVlastita tezina: 80 kg\\nUkupna tezina: 25075 kg\\n---------------------\\nAlternativni izlaz: i ovo je OK!"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,13 @@
+/rhome/a/amulalic1/workspace/TP/Ispit4/Z1/main.cpp: In function ‘int main()’:
+/rhome/a/amulalic1/workspace/TP/Ispit4/Z1/main.cpp:184:24: error: passing ‘const Duz’ as ‘this’ argument discards qualifiers [-fpermissive]
+         k.operator==(k2);
+                        ^
+/rhome/a/amulalic1/workspace/TP/Ispit4/Z1/main.cpp:104:10: note:   in call to ‘bool Duz::operator==(Duz)’
+     bool operator==(Duz d)  {
+          ^~~~~~~~
+/rhome/a/amulalic1/workspace/TP/Ispit4/Z1/main.cpp:185:24: error: passing ‘const Duz’ as ‘this’ argument discards qualifiers [-fpermissive]
+         k.operator!=(k2);
+                        ^
+/rhome/a/amulalic1/workspace/TP/Ispit4/Z1/main.cpp:108:10: note:   in call to ‘bool Duz::operator!=(Duz)’
+     bool operator!=(Duz d)  {
+          ^~~~~~~~

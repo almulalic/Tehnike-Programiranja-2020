@@ -1,0 +1,166 @@
+{
+    "id": 5528,
+    "name": "Tehnike programiranja (2017\/2018), Tutorijal 14, zadatak 1",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT1: primjer iz postavke\n \/\/POMOC: koristite http:\/\/diffchecker.com da provjerite razlike\n            #define INNAME \"TEMPERATURE.TXT\"\n            #define OUTNAME \"IZVJESTAJ.TXT\"\n            \/\/izbrisimo fajl ako postoji...\n            std::remove (INNAME);\n            \/\/kreirajmo novi i popunimo ga podacima...\n            std::ofstream f (INNAME);\n            f << \"23\/5\/2016\" << std::endl\n              << \"Meteoroloska stanica Bjelave\" << std::endl\n              << \"7,12,16,20,18,13,6\" << std::endl\n              << \"9\/11\/2014\" << std::endl\n              << \"Mobilno mjerno mjesto Aerodrom, stanica II\" << std::endl\n              << \"-1,3,6,10,8\" << std::endl\n              << \"9\/11\/2014\" << std::endl\n              << \"Meteoroloska opservatorija Bjelasnica\" << std::endl\n              << \"-5,-2,0,3,1,2,-1,-4\"; \/\/nema endl na kraju fajla!\n            f.close();\n            \/\/pozovimo korisnicki main...\n            _main();\n            \/\/ispisimo fajl na izlaz (izvjestaj)\n            std::ifstream g (OUTNAME);\n            std::cout << g.rdbuf(); \/\/ispis fajla u jednoj liniji koda!\n            g.close();\n}",
+            "global_above_main": "#include <cstdlib>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Meteoroloska opservatorija Bjelasnica\\n-------------------------------------\\nDatum mjerenja: 9\/11\/2014\\nMinimalna temperatura: -5\\nMaksimalna temperatura: 3\\nProsjecna temperatura: -0.75\\n\\nMobilno mjerno mjesto Aerodrom, stanica II\\n------------------------------------------\\nDatum mjerenja: 9\/11\/2014\\nMinimalna temperatura: -1\\nMaksimalna temperatura: 10\\nProsjecna temperatura: 5.20\\n\\nMeteoroloska stanica Bjelave\\n----------------------------\\nDatum mjerenja: 23\/5\/2016\\nMinimalna temperatura: 6\\nMaksimalna temperatura: 20\\nProsjecna temperatura: 13.14\\n\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "        {\/\/AT2\n            ___Mjerenje ms[] = {\n                {\"Prenj 1\", 10, 10, 2016, {1, -1, 2, 0, -1, -2, -3, -1, 8, 6}},\n                {\"Prenj 2\", 10, 11, 2016, {-1, -1, -2, -4, -1, 2, -3, -1, 0, -1}},\n                {\"Prenj 3\", 10, 10, 2016, {1, -1, 3, 0, -1, -4, -3, -1, 6, 8}},\n                {\"Prenj 4\", 9, 5, 2016, {10, 2, 3, 6, 7, 21, 13, 16, 6, 18}},\n                {\"Prenj 5\", 9, 10, 2016, {5, 7, 3, -2}}\n            };\n            std::ofstream f (INNAME);\n            for (const auto &m : ms)\n                m.Ispisi (f);\n            f.close();\n            _main();\n            std::ifstream g (OUTNAME);\n            std::cout << g.rdbuf();\n        }",
+            "global_above_main": "#define INNAME \"TEMPERATURE.TXT\"\n#define OUTNAME \"IZVJESTAJ.TXT\"\n#include <vector>\n#include <string>\nclass ___Mjerenje\n    {\n        int d, m, g;\n        std::string mjesto;\n        std::vector<int> mjerenja;\n    public:\n        ___Mjerenje (const std::string &naziv, const int d, const int m, const int g, const std::vector<int> &vek)\n            : mjesto (naziv), d (d), m (m), g (g), mjerenja (vek) {}\n        void Ispisi (std::ostream &o = std::cout) const\n            {\n                o << d << \"\/\" << m << \"\/\" << g << std::endl << mjesto << std::endl;\n                if (mjerenja.empty()) return;\n                for (int i = 0; i < (int)mjerenja.size() - 1; ++i)\n                    o << mjerenja.at(i) << \",\";\n                o << mjerenja.at (mjerenja.size() - 1);\n                o << std::endl;\n            }\n        friend std::ostream &operator << (std::ostream &o, const ___Mjerenje &m)\n            {\n                o << m.mjesto << std::endl;\n                o << std::string (m.mjesto.size(), '-') << std::endl;\n                o << \"Datum mjerenja: \" << m.d << \"\/\" << m.m << \"\/\" << m.g << std::endl;\n                o << \"Minimalna temperatura: \" << m.DajMinMax() << std::endl;\n                o << \"Maksimalna temperatura: \" << m.DajMinMax(false) << std::endl;\n                o << \"Prosjecna temperatura: \"; o.precision (2); o << std::fixed << m.DajProsjecnu();\n                return o << std::endl << std::endl;\n            }\n        double DajProsjecnu () const\n            {\n                double s = 0;\n                for (const auto &c : mjerenja)\n                    s += c;\n                return mjerenja.empty() ? 0 : s \/ mjerenja.size();\n            }\n        int DajMinMax (const bool Min = true) const\n            {\n                if (mjerenja.empty())\n                    throw \"Nema mjerenja\";\n                int m = mjerenja.at (0);\n                for (const auto &c : mjerenja)\n                    if (Min && c < m || !Min && c > m)\n                        m = c;\n                return m;\n            }\n        \/\/za sortiranje\n        friend bool operator < (const ___Mjerenje &a, const ___Mjerenje &b)\n            {\n                if (a.g == b.g && a.m == b.m && a.d == b.d)\n                    return a.DajProsjecnu() < b.DajProsjecnu();\n                return a.g < b.g || a.m < b.m || a.d < b.d;\n            }\n    };",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prenj 4\\n-------\\nDatum mjerenja: 9\/5\/2016\\nMinimalna temperatura: 2\\nMaksimalna temperatura: 21\\nProsjecna temperatura: 10.20\\n\\nPrenj 5\\n-------\\nDatum mjerenja: 9\/10\/2016\\nMinimalna temperatura: -2\\nMaksimalna temperatura: 7\\nProsjecna temperatura: 3.25\\n\\nPrenj 3\\n-------\\nDatum mjerenja: 10\/10\/2016\\nMinimalna temperatura: -4\\nMaksimalna temperatura: 8\\nProsjecna temperatura: 0.80\\n\\nPrenj 1\\n-------\\nDatum mjerenja: 10\/10\/2016\\nMinimalna temperatura: -3\\nMaksimalna temperatura: 8\\nProsjecna temperatura: 0.90\\n\\nPrenj 2\\n-------\\nDatum mjerenja: 10\/11\/2016\\nMinimalna temperatura: -4\\nMaksimalna temperatura: 2\\nProsjecna temperatura: -1.20\\n\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT3: samo jedno mjerno mjesto\n        std::ofstream f (INNAME);\n        ___Mjerenje (\"Neka opservaciona stanica, paralelni svemir #1337\", 5, 5, 3000,\n                     {-273, -273, -273, -273, -273, -272, -273}).Ispisi (f);\n        f.close();\n        _main();\n        std::ifstream g (OUTNAME);\n        std::cout << g.rdbuf();\n        g.close();\n    }",
+            "global_above_main": "#define INNAME \"TEMPERATURE.TXT\"\n#define OUTNAME \"IZVJESTAJ.TXT\"\n#include <vector>\n#include <string>\nclass ___Mjerenje\n    {\n        int d, m, g;\n        std::string mjesto;\n        std::vector<int> mjerenja;\n    public:\n        ___Mjerenje (const std::string &naziv, const int d, const int m, const int g, const std::vector<int> &vek)\n            : mjesto (naziv), d (d), m (m), g (g), mjerenja (vek) {}\n        void Ispisi (std::ostream &o = std::cout) const\n            {\n                o << d << \"\/\" << m << \"\/\" << g << std::endl << mjesto << std::endl;\n                if (mjerenja.empty()) return;\n                for (int i = 0; i < (int)mjerenja.size() - 1; ++i)\n                    o << mjerenja.at(i) << \",\";\n                o << mjerenja.at (mjerenja.size() - 1);\n                o << std::endl;\n            }\n        friend std::ostream &operator << (std::ostream &o, const ___Mjerenje &m)\n            {\n                o << m.mjesto << std::endl;\n                o << std::string (m.mjesto.size(), '-') << std::endl;\n                o << \"Datum mjerenja: \" << m.d << \"\/\" << m.m << \"\/\" << m.g << std::endl;\n                o << \"Minimalna temperatura: \" << m.DajMinMax() << std::endl;\n                o << \"Maksimalna temperatura: \" << m.DajMinMax(false) << std::endl;\n                o << \"Prosjecna temperatura: \"; o.precision (2); o << std::fixed << m.DajProsjecnu();\n                return o << std::endl << std::endl;\n            }\n        double DajProsjecnu () const\n            {\n                double s = 0;\n                for (const auto &c : mjerenja)\n                    s += c;\n                return mjerenja.empty() ? 0 : s \/ mjerenja.size();\n            }\n        int DajMinMax (const bool Min = true) const\n            {\n                if (mjerenja.empty())\n                    throw \"Nema mjerenja\";\n                int m = mjerenja.at (0);\n                for (const auto &c : mjerenja)\n                    if (Min && c < m || !Min && c > m)\n                        m = c;\n                return m;\n            }\n        \/\/za sortiranje\n        friend bool operator < (const ___Mjerenje &a, const ___Mjerenje &b)\n            {\n                if (a.g == b.g && a.m == b.m && a.d == b.d)\n                    return a.DajProsjecnu() < b.DajProsjecnu();\n                return a.g < b.g || a.m < b.m || a.d < b.d;\n            }\n    };",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Neka opservaciona stanica, paralelni svemir #1337\\n-------------------------------------------------\\nDatum mjerenja: 5\/5\/3000\\nMinimalna temperatura: -273\\nMaksimalna temperatura: -272\\nProsjecna temperatura: -272.86\\n\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT4: prosjecna temperatura je cijel broj, ispis na dvije decimale mora sa std::fixed\n        ___Mjerenje ms[] = {\n                {\"1\", 10, 10, 2016, {1, -1, 2, 0, -1, -2, -3, -1, 8, 6}},\n                {\"___2___\", 10, 11, 2016, {-1, -1, -2, -4, -1, 2, -3, -1, 0, -1}},\n                {\"Stanica X\", 9, 5, 2016, {10, 2, 3, 6, 7, 21, -13, 16, 6, 18}},\n                {\"Prenj\", 10, 10, 2016, {1, -1, 3, 0, 1, -4, -3, -1, 6, 8}},\n            };\n        std::ofstream f (INNAME);\n        for (const auto &m : ms)\n            m.Ispisi (f);\n        f.close();\n        _main();\n        std::ifstream g (OUTNAME);\n        std::cout << g.rdbuf();\n\n    }",
+            "global_above_main": "#define INNAME \"TEMPERATURE.TXT\"\n#define OUTNAME \"IZVJESTAJ.TXT\"\n#include <vector>\n#include <string>\nclass ___Mjerenje\n    {\n        int d, m, g;\n        std::string mjesto;\n        std::vector<int> mjerenja;\n    public:\n        ___Mjerenje (const std::string &naziv, const int d, const int m, const int g, const std::vector<int> &vek)\n            : mjesto (naziv), d (d), m (m), g (g), mjerenja (vek) {}\n        void Ispisi (std::ostream &o = std::cout) const\n            {\n                o << d << \"\/\" << m << \"\/\" << g << std::endl << mjesto << std::endl;\n                if (mjerenja.empty()) return;\n                for (int i = 0; i < (int)mjerenja.size() - 1; ++i)\n                    o << mjerenja.at(i) << \",\";\n                o << mjerenja.at (mjerenja.size() - 1);\n                o << std::endl;\n            }\n        friend std::ostream &operator << (std::ostream &o, const ___Mjerenje &m)\n            {\n                o << m.mjesto << std::endl;\n                o << std::string (m.mjesto.size(), '-') << std::endl;\n                o << \"Datum mjerenja: \" << m.d << \"\/\" << m.m << \"\/\" << m.g << std::endl;\n                o << \"Minimalna temperatura: \" << m.DajMinMax() << std::endl;\n                o << \"Maksimalna temperatura: \" << m.DajMinMax(false) << std::endl;\n                o << \"Prosjecna temperatura: \"; o.precision (2); o << std::fixed << m.DajProsjecnu();\n                return o << std::endl << std::endl;\n            }\n        double DajProsjecnu () const\n            {\n                double s = 0;\n                for (const auto &c : mjerenja)\n                    s += c;\n                return mjerenja.empty() ? 0 : s \/ mjerenja.size();\n            }\n        int DajMinMax (const bool Min = true) const\n            {\n                if (mjerenja.empty())\n                    throw \"Nema mjerenja\";\n                int m = mjerenja.at (0);\n                for (const auto &c : mjerenja)\n                    if (Min && c < m || !Min && c > m)\n                        m = c;\n                return m;\n            }\n        \/\/za sortiranje\n        friend bool operator < (const ___Mjerenje &a, const ___Mjerenje &b)\n            {\n                if (a.g == b.g && a.m == b.m && a.d == b.d)\n                    return a.DajProsjecnu() < b.DajProsjecnu();\n                return a.g < b.g || a.m < b.m || a.d < b.d;\n            }\n    };",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Stanica X\\n---------\\nDatum mjerenja: 9\/5\/2016\\nMinimalna temperatura: -13\\nMaksimalna temperatura: 21\\nProsjecna temperatura: 7.60\\n\\n1\\n-\\nDatum mjerenja: 10\/10\/2016\\nMinimalna temperatura: -3\\nMaksimalna temperatura: 8\\nProsjecna temperatura: 0.90\\n\\nPrenj\\n-----\\nDatum mjerenja: 10\/10\/2016\\nMinimalna temperatura: -4\\nMaksimalna temperatura: 8\\nProsjecna temperatura: 1.00\\n\\n___2___\\n-------\\nDatum mjerenja: 10\/11\/2016\\nMinimalna temperatura: -4\\nMaksimalna temperatura: 2\\nProsjecna temperatura: -1.20\\n\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT5: ime stanice pocinje sa razmacima (i zavrsava)\n        ___Mjerenje ms[] = {\n                {\"1\", 10, 10, 2016, {1, -1, 2, 0, -1, -2, -3, -1, 8, 6}},\n                {\"     2      \", 10, 11, 2016, {-1, -1, -2, -4, -1, 2, -3, -1, 0, -1}},\n                {\"Stanica X\", 9, 5, 2016, {0, 0, 0, 1, 0, 0, 0}},\n                {\"Prenj\", 10, 10, 2016, {1, -1, 3, 0, 10, -4, -3, -1, 6, 8}},\n            };\n        std::ofstream f (INNAME);\n        for (const auto &m : ms)\n            m.Ispisi (f);\n        f.close();\n        _main();\n        std::ifstream g (OUTNAME);\n        std::string s;\n        while (g)\n            std::getline (g, s), std::cout << \"|\" << s << \"|\" << std::endl;\n        g.close();\n}",
+            "global_above_main": "#define INNAME \"TEMPERATURE.TXT\"\n#define OUTNAME \"IZVJESTAJ.TXT\"\n#include <vector>\n#include <string>\nclass ___Mjerenje\n    {\n        int d, m, g;\n        std::string mjesto;\n        std::vector<int> mjerenja;\n    public:\n        ___Mjerenje (const std::string &naziv, const int d, const int m, const int g, const std::vector<int> &vek)\n            : mjesto (naziv), d (d), m (m), g (g), mjerenja (vek) {}\n        void Ispisi (std::ostream &o = std::cout) const\n            {\n                o << d << \"\/\" << m << \"\/\" << g << std::endl << mjesto << std::endl;\n                if (mjerenja.empty()) return;\n                for (int i = 0; i < (int)mjerenja.size() - 1; ++i)\n                    o << mjerenja.at(i) << \",\";\n                o << mjerenja.at (mjerenja.size() - 1);\n                o << std::endl;\n            }\n        friend std::ostream &operator << (std::ostream &o, const ___Mjerenje &m)\n            {\n                o << m.mjesto << std::endl;\n                o << std::string (m.mjesto.size(), '-') << std::endl;\n                o << \"Datum mjerenja: \" << m.d << \"\/\" << m.m << \"\/\" << m.g << std::endl;\n                o << \"Minimalna temperatura: \" << m.DajMinMax() << std::endl;\n                o << \"Maksimalna temperatura: \" << m.DajMinMax(false) << std::endl;\n                o << \"Prosjecna temperatura: \"; o.precision (2); o << std::fixed << m.DajProsjecnu();\n                return o << std::endl << std::endl;\n            }\n        double DajProsjecnu () const\n            {\n                double s = 0;\n                for (const auto &c : mjerenja)\n                    s += c;\n                return mjerenja.empty() ? 0 : s \/ mjerenja.size();\n            }\n        int DajMinMax (const bool Min = true) const\n            {\n                if (mjerenja.empty())\n                    throw \"Nema mjerenja\";\n                int m = mjerenja.at (0);\n                for (const auto &c : mjerenja)\n                    if (Min && c < m || !Min && c > m)\n                        m = c;\n                return m;\n            }\n        \/\/za sortiranje\n        friend bool operator < (const ___Mjerenje &a, const ___Mjerenje &b)\n            {\n                if (a.g == b.g && a.m == b.m && a.d == b.d)\n                    return a.DajProsjecnu() < b.DajProsjecnu();\n                return a.g < b.g || a.m < b.m || a.d < b.d;\n            }\n    };",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "|Stanica X|\\n|---------|\\n|Datum mjerenja: 9\/5\/2016|\\n|Minimalna temperatura: 0|\\n|Maksimalna temperatura: 1|\\n|Prosjecna temperatura: 0.14|\\n||\\n|1|\\n|-|\\n|Datum mjerenja: 10\/10\/2016|\\n|Minimalna temperatura: -3|\\n|Maksimalna temperatura: 8|\\n|Prosjecna temperatura: 0.90|\\n||\\n|Prenj|\\n|-----|\\n|Datum mjerenja: 10\/10\/2016|\\n|Minimalna temperatura: -4|\\n|Maksimalna temperatura: 10|\\n|Prosjecna temperatura: 1.90|\\n||\\n|     2      |\\n|------------|\\n|Datum mjerenja: 10\/11\/2016|\\n|Minimalna temperatura: -4|\\n|Maksimalna temperatura: 2|\\n|Prosjecna temperatura: -1.20|\\n||\\n||",
+                "|Stanica X|\\n|---------|\\n|Datum mjerenja: 9\/5\/2016|\\n|Minimalna temperatura: 0|\\n|Maksimalna temperatura: 1|\\n|Prosjecna temperatura: 0.14|\\n||\\n|1|\\n|-|\\n|Datum mjerenja: 10\/10\/2016|\\n|Minimalna temperatura: -3|\\n|Maksimalna temperatura: 8|\\n|Prosjecna temperatura: 0.90|\\n||\\n|Prenj|\\n|-----|\\n|Datum mjerenja: 10\/10\/2016|\\n|Minimalna temperatura: -4|\\n|Maksimalna temperatura: 10|\\n|Prosjecna temperatura: 1.90|\\n||\\n|     2      |\\n|------------|\\n|Datum mjerenja: 10\/11\/2016|\\n|Minimalna temperatura: -4|\\n|Maksimalna temperatura: 2|\\n|Prosjecna temperatura: -1.20|"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT6: mjerenje je vr\u0161eno samo jednom dnevno (ovdje cemo priznati i 100.00 i 100)\n        ___Mjerenje ms[] = {\n                {\"1\", 10, 10, 2016, {1, -1, 2, 0, -1, -2, -3, -1, 8, 6}},\n                {\"-----2-----\", 10, 11, 2016, {-1, -1, -2, -4, -1, 2, -3, -1, 0, -1}},\n                {\"Stanica X\", 9, 5, 2016, {0, 0, 0, 1, 0, 0, 0}},\n                {\"____3_____\", 10, 11, 2016, {-100}}, \/\/samo jednom\n                {\"Prenj\", 10, 10, 2016, {1, -1, 3, 0, 10, -4, -3, -1, 6, 8}},\n            };\n        std::ofstream f (INNAME);\n        for (const auto &m : ms)\n            m.Ispisi (f);\n        f.close();\n        _main();\n        std::ifstream g (OUTNAME);\n        std::cout << g.rdbuf();\n    }",
+            "global_above_main": "#define INNAME \"TEMPERATURE.TXT\"\n#define OUTNAME \"IZVJESTAJ.TXT\"\n#include <vector>\n#include <string>\nclass ___Mjerenje\n    {\n        int d, m, g;\n        std::string mjesto;\n        std::vector<int> mjerenja;\n    public:\n        ___Mjerenje (const std::string &naziv, const int d, const int m, const int g, const std::vector<int> &vek)\n            : mjesto (naziv), d (d), m (m), g (g), mjerenja (vek) {}\n        void Ispisi (std::ostream &o = std::cout) const\n            {\n                o << d << \"\/\" << m << \"\/\" << g << std::endl << mjesto << std::endl;\n                if (mjerenja.empty()) {o << std::endl; return;}\n                for (int i = 0; i < (int)mjerenja.size() - 1; ++i)\n                    o << mjerenja.at(i) << \",\";\n                o << mjerenja.at (mjerenja.size() - 1);\n                o << std::endl;\n            }\n        friend std::ostream &operator << (std::ostream &o, const ___Mjerenje &m)\n            {\n                o << m.mjesto << std::endl;\n                o << std::string (m.mjesto.size(), '-') << std::endl;\n                o << \"Datum mjerenja: \" << m.d << \"\/\" << m.m << \"\/\" << m.g << std::endl;\n                o << \"Minimalna temperatura: \" << m.DajMinMax() << std::endl;\n                o << \"Maksimalna temperatura: \" << m.DajMinMax(false) << std::endl;\n                o << \"Prosjecna temperatura: \"; o.precision (2); o << std::fixed << m.DajProsjecnu();\n                return o << std::endl << std::endl;\n            }\n        double DajProsjecnu () const\n            {\n                double s = 0;\n                for (const auto &c : mjerenja)\n                    s += c;\n                return mjerenja.empty() ? 0 : s \/ mjerenja.size();\n            }\n        int DajMinMax (const bool Min = true) const\n            {\n                if (mjerenja.empty())\n                    throw \"Nema mjerenja\";\n                int m = mjerenja.at (0);\n                for (const auto &c : mjerenja)\n                    if (Min && c < m || !Min && c > m)\n                        m = c;\n                return m;\n            }\n        \/\/za sortiranje\n        friend bool operator < (const ___Mjerenje &a, const ___Mjerenje &b)\n            {\n                if (a.g == b.g && a.m == b.m && a.d == b.d)\n                    return a.DajProsjecnu() < b.DajProsjecnu();\n                return a.g < b.g || a.m < b.m || a.d < b.d;\n            }\n    };",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Stanica X\\n---------\\nDatum mjerenja: 9\/5\/2016\\nMinimalna temperatura: 0\\nMaksimalna temperatura: 1\\nProsjecna temperatura: 0.14\\n\\n1\\n-\\nDatum mjerenja: 10\/10\/2016\\nMinimalna temperatura: -3\\nMaksimalna temperatura: 8\\nProsjecna temperatura: 0.90\\n\\nPrenj\\n-----\\nDatum mjerenja: 10\/10\/2016\\nMinimalna temperatura: -4\\nMaksimalna temperatura: 10\\nProsjecna temperatura: 1.90\\n\\n____3_____\\n----------\\nDatum mjerenja: 10\/11\/2016\\nMinimalna temperatura: -100\\nMaksimalna temperatura: -100\\nProsjecna temperatura: -100.00\\n\\n-----2-----\\n-----------\\nDatum mjerenja: 10\/11\/2016\\nMinimalna temperatura: -4\\nMaksimalna temperatura: 2\\nProsjecna temperatura: -1.20\\n\\n",
+                "Stanica X\\n---------\\nDatum mjerenja: 9\/5\/2016\\nMinimalna temperatura: 0\\nMaksimalna temperatura: 1\\nProsjecna temperatura: 0.14\\n\\n1\\n-\\nDatum mjerenja: 10\/10\/2016\\nMinimalna temperatura: -3\\nMaksimalna temperatura: 8\\nProsjecna temperatura: 0.90\\n\\nPrenj\\n-----\\nDatum mjerenja: 10\/10\/2016\\nMinimalna temperatura: -4\\nMaksimalna temperatura: 10\\nProsjecna temperatura: 1.90\\n\\n____3_____\\n----------\\nDatum mjerenja: 10\/11\/2016\\nMinimalna temperatura: -100\\nMaksimalna temperatura: -100\\nProsjecna temperatura: -100\\n\\n-----2-----\\n-----------\\nDatum mjerenja: 10\/11\/2016\\nMinimalna temperatura: -4\\nMaksimalna temperatura: 2\\nProsjecna temperatura: -1.20\\n\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "    {\/\/AT7: greske sa datotekom...\n        std::remove (INNAME);\n        std::cout << \"Da vidimo.... 1: '\";\n        _main(); \/\/nema datoteke\n\n        std::ofstream f (INNAME);\n        f << \"10\/10\/2015\" << std::endl \/\/ok\n          << \"Neka stanica 1\" << std::endl \/\/ok\n          << \"1,2,-3,4,0\" << std::endl \/\/ok\n          << \"5\/3\/2016\" << std::endl \/\/ok\n          << \"Neka stanica 2\" << std::endl \/\/ok\n          << \"1,2,e,4,0\" << std::endl \/\/nije ok, 'e' kao broj\n          << \"10\/10\/2014\" << std::endl \/\/ok, ali nije vazno\n          << \"Neka stanica 3\" << std::endl \/\/isti komentar\n          << \"1,2,-3,4,0,5,3\"; \/\/isti komentar\n        f.close();\n        std::cout << \"'\" << std::endl << \"Da vidimo.... 2: '\";\n        _main(); \/\/greska\n        std::cout << \"'OK\";\n    }",
+            "global_above_main": "#define INNAME \"TEMPERATURE.TXT\"\n#define OUTNAME \"IZVJESTAJ.TXT\"\n#include <cstdlib>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Da vidimo.... 1: 'Datoteka TEMPERATURE.TXT ne postoji!\\n'\\nDa vidimo.... 2: 'Problemi pri citanju datoteke TEMPERATURE.TXT\\n'OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

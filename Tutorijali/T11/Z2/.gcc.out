@@ -1,0 +1,69 @@
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:10:5: error: ‘test’ has not been declared
+ int test::count = 0;
+     ^~~~
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp: In constructor ‘StedniRacun::StedniRacun()’:
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:17:20: error: ‘brojKreiranih’ was not declared in this scope
+   StedniRacun() { *brojKreiranih++; }
+                    ^~~~~~~~~~~~~
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:17:20: note: suggested alternative: ‘DajBrojKreiranih’
+   StedniRacun() { *brojKreiranih++; }
+                    ^~~~~~~~~~~~~
+                    DajBrojKreiranih
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp: In constructor ‘StedniRacun::StedniRacun(double)’:
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:18:141: error: ‘brojKreiranih’ was not declared in this scope
+   StedniRacun(double novoStanje = 0) {if(novoStanje < 0) throw std::logic_error("Nedozvoljeno pocetno stanje"); stanjeRacuna = novoStanje;  brojKreiranih = new int (1);}
+                                                                                                                                             ^~~~~~~~~~~~~
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:18:141: note: suggested alternative: ‘DajBrojKreiranih’
+   StedniRacun(double novoStanje = 0) {if(novoStanje < 0) throw std::logic_error("Nedozvoljeno pocetno stanje"); stanjeRacuna = novoStanje;  brojKreiranih = new int (1);}
+                                                                                                                                             ^~~~~~~~~~~~~
+                                                                                                                                             DajBrojKreiranih
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp: In member function ‘int StedniRacun::DajBrojKreiranih()’:
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:23:36: error: ‘brojKreiranih’ was not declared in this scope
+   int DajBrojKreiranih() { return *brojKreiranih; }
+                                    ^~~~~~~~~~~~~
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:23:36: note: suggested alternative: ‘DajBrojKreiranih’
+   int DajBrojKreiranih() { return *brojKreiranih; }
+                                    ^~~~~~~~~~~~~
+                                    DajBrojKreiranih
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp: In destructor ‘StedniRacun::~StedniRacun()’:
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:24:26: error: ‘brojKreiranih’ was not declared in this scope
+   ~StedniRacun() {if(--(*brojKreiranih) == 0) { brojKreiranih = nullptr; delete brojKreiranih;  }  }
+                          ^~~~~~~~~~~~~
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:24:26: note: suggested alternative: ‘DajBrojKreiranih’
+   ~StedniRacun() {if(--(*brojKreiranih) == 0) { brojKreiranih = nullptr; delete brojKreiranih;  }  }
+                          ^~~~~~~~~~~~~
+                          DajBrojKreiranih
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:24:81: error: type ‘<type error>’ argument given to ‘delete’, expected pointer
+   ~StedniRacun() {if(--(*brojKreiranih) == 0) { brojKreiranih = nullptr; delete brojKreiranih;  }  }
+                                                                                 ^~~~~~~~~~~~~
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp: In function ‘int main()’:
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:70:23: error: call of overloaded ‘StedniRacun()’ is ambiguous
+  StedniRacun s1(100), s2, s3(200), s4, s5;
+                       ^~
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:18:3: note: candidate: StedniRacun::StedniRacun(double)
+   StedniRacun(double novoStanje = 0) {if(novoStanje < 0) throw std::logic_error("Nedozvoljeno pocetno stanje"); stanjeRacuna = novoStanje;  brojKreiranih = new int (1);}
+   ^~~~~~~~~~~
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:17:3: note: candidate: StedniRacun::StedniRacun()
+   StedniRacun() { *brojKreiranih++; }
+   ^~~~~~~~~~~
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:70:36: error: call of overloaded ‘StedniRacun()’ is ambiguous
+  StedniRacun s1(100), s2, s3(200), s4, s5;
+                                    ^~
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:18:3: note: candidate: StedniRacun::StedniRacun(double)
+   StedniRacun(double novoStanje = 0) {if(novoStanje < 0) throw std::logic_error("Nedozvoljeno pocetno stanje"); stanjeRacuna = novoStanje;  brojKreiranih = new int (1);}
+   ^~~~~~~~~~~
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:17:3: note: candidate: StedniRacun::StedniRacun()
+   StedniRacun() { *brojKreiranih++; }
+   ^~~~~~~~~~~
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:70:40: error: call of overloaded ‘StedniRacun()’ is ambiguous
+  StedniRacun s1(100), s2, s3(200), s4, s5;
+                                        ^~
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:18:3: note: candidate: StedniRacun::StedniRacun(double)
+   StedniRacun(double novoStanje = 0) {if(novoStanje < 0) throw std::logic_error("Nedozvoljeno pocetno stanje"); stanjeRacuna = novoStanje;  brojKreiranih = new int (1);}
+   ^~~~~~~~~~~
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:17:3: note: candidate: StedniRacun::StedniRacun()
+   StedniRacun() { *brojKreiranih++; }
+   ^~~~~~~~~~~
+/rhome/a/amulalic1/workspace/TP/T11/Z2/main.cpp:91:66: error: cannot call member function ‘int StedniRacun::DajBrojKreiranih()’ without object
+ std::cout << "Broj kreiranih: " << StedniRacun::DajBrojKreiranih() << std::endl;
+                                                                  ^

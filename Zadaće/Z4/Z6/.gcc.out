@@ -1,0 +1,7 @@
+/rhome/a/amulalic1/workspace/TP/Z4/Z6/main.cpp: In function ‘int main()’:
+/rhome/a/amulalic1/workspace/TP/Z4/Z6/main.cpp:279:63: warning: ‘clanskiBroj’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+             Korisnik k = biblioteka.NadjiKorisnika(clanskiBroj);
+                                                               ^
+/rhome/a/amulalic1/workspace/TP/Z4/Z6/main.cpp:287:69: warning: ‘evidencijskiBrojKnjige’ may be used uninitialized in this function [-Wmaybe-uninitialized]
+             Knjiga k = biblioteka.NadjiKnjigu(evidencijskiBrojKnjige);
+                                                                     ^

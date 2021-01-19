@@ -1,0 +1,83 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘bool DaLiSuPodudarni(const Pravougaonik&, const Pravougaonik&)’:\nmain.cpp:166:56: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());\n                                                        ^\nmain.cpp:166:100: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());\n                                                                                                    ^\nmain.cpp:166:148: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());\n                                                                                                                                                    ^\nmain.cpp:166:194: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]\n     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());\n                                                                                                                                                                                                  ^",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "166",
+                "col": "56",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2341/main.cpp:166:56: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());                                                        ^",
+                "code": "return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "166",
+                "col": "100",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2341/main.cpp:166:100: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());                                                                                                    ^",
+                "code": "return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "166",
+                "col": "148",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2341/main.cpp:166:148: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());                                                                                                                                                    ^",
+                "code": "return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "166",
+                "col": "194",
+                "message": "comparing floating point with == or != is unsafe",
+                "output": "/tmp/buildservice/bs_2341/main.cpp:166:194: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());                                                                                                                                                                                                  ^",
+                "code": "return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite n: Unesite 1. tjeme pravougaonika 1: Unesite 2. tjeme pravougaonika 1: Unesite 1. tjeme pravougaonika 2: Unesite 2. tjeme pravougaonika 2: Unesite 1. tjeme pravougaonika 3: Unesite 2. tjeme pravougaonika 3: Unesite 1. tjeme pravougaonika 4: Unesite 2. tjeme pravougaonika 4: Unesite podatke za transliranje (dx dy): Pravougaonici, nakon transformacija: \n{{0,10},{5,0}}\n{{1,3},{5,1}}\n{{1,5},{3,1}}\n{{5,7},{7,5}}\nPravougaonik s najvecom povrsinom: {{0,10},{5,0}}",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "/tmp/ccXI0HQ2.o: In function `main':\nbs_test_2.cpp:258: undefined reference to `Pravougaonik::Presjek(Pravougaonik const&, Pravougaonik const&)'\nbs_test_2.cpp:270: undefined reference to `Pravougaonik::Presjek(Pravougaonik const&, Pravougaonik const&)'\ncollect2: error: ld returned 1 exit status"
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1591118328
+}

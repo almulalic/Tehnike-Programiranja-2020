@@ -1,0 +1,167 @@
+{
+    "buildhost_description": {
+        "id": "lab002c26",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "main.cpp: In function ‘int main()’:\nmain.cpp:276:17: warning: ‘clanskiBroj’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n             int clanskiBroj;\n                 ^~~~~~~~~~~\nmain.cpp:284:17: warning: ‘evidencijskiBrojKnjige’ may be used uninitialized in this function [-Wmaybe-uninitialized]\n             int evidencijskiBrojKnjige;\n                 ^~~~~~~~~~~~~~~~~~~~~~",
+        "parsed_output": [
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "276",
+                "col": "17",
+                "message": "'clanskiBroj' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_5079/main.cpp:276:17: warning: ‘clanskiBroj’ may be used uninitialized in this function [-Wmaybe-uninitialized]             int clanskiBroj;                 ^~~~~~~~~~~",
+                "code": "int clanskiBroj;"
+            },
+            {
+                "type": "warning",
+                "file": "main.cpp",
+                "line": "284",
+                "col": "17",
+                "message": "'evidencijskiBrojKnjige' may be used uninitialized in this function",
+                "output": "/tmp/buildservice/bs_5079/main.cpp:284:17: warning: ‘evidencijskiBrojKnjige’ may be used uninitialized in this function [-Wmaybe-uninitialized]             int evidencijskiBrojKnjige;                 ^~~~~~~~~~~~~~~~~~~~~~",
+                "code": "int evidencijskiBrojKnjige;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 1,
+            "run_result": {
+                "output": "Niko Nikic Zmaja od Bosne bb 123 456",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 1,
+            "run_result": {
+                "output": "Vlak u snijegu Mato Lovrak Roman 1931\nKnjiga je slobodna",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3": {
+            "status": 1,
+            "run_result": {
+                "output": "Knjiga je zaduzena\nKnjiga je slobodna",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4": {
+            "status": 1,
+            "run_result": {
+                "output": "Nije zaduzena\n0\nKnjigu je zaduzio Meho\n1\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "5": {
+            "status": 1,
+            "run_result": {
+                "output": "Vlak u snijegu",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "6": {
+            "status": 1,
+            "run_result": {
+                "output": "Niko",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "7": {
+            "status": 1,
+            "run_result": {
+                "output": "Clanski broj: 1234\nIme i prezime: Petar Petrovic\nAdresa: Zmaja od Bosne 30\nBroj telefona: 032/444-555\n\nClanski broj: 3124\nIme i prezime: Mehmed Mehmedovic\nAdresa: Studenata 3b\nBroj telefona: 037/654-321\n\nClanski broj: 4312\nIme i prezime: Hasan Hasanovic\nAdresa: Trg neznalica 111\nBroj telefona: 030/111-222\n\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "8": {
+            "status": 1,
+            "run_result": {
+                "output": "Evidencijski broj: 136\nNaslov: Kameni spavac\nPisac: Mak Dizdar\nZanr: Poezija\nGodina izdavanja: 1960\n\nEvidencijski broj: 231\nNaslov: Prokleta avlija\nPisac: Ivo Andric\nZanr: Roman\nGodina izdavanja: 1955\n\nEvidencijski broj: 555\nNaslov: Grimove Bajke\nPisac: Braca Grim\nZanr: Bajke\nGodina izdavanja: 1927\n\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "9": {
+            "status": 1,
+            "run_result": {
+                "output": "Evidencijski broj: 1\nNaslov: Vlak u snijegu2\nPisac: Mato Lovrak2\nZanr: Roman2\nGodina izdavanja: 1941\n\nEvidencijski broj: 2\nNaslov: Vlak u snijegu\nPisac: Mato Lovrak\nZanr: Roman\nGodina izdavanja: 1931\nZaduzena kod korisnika: Niko Nikic\n\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 1,
+    "time": 1591128053
+}

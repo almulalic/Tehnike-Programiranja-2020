@@ -1,0 +1,103 @@
+{
+    "id": 5698,
+    "name": "Tehnike programiranja (2019\/2020), Ispit 2, Zadatak 5",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 13,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "35214 728 111423 79923 1232 16\n"
+            },
+            "expected": [
+                "Unesite 5 brojeva: Unesite dozvoljenu sumu cifara: Preostali brojevi:\\n35214 \\n111423\\n1232\\n",
+                "Unesite 5 brojeva: Unesite dozvoljenu sumu cifara: Preostali brojevi:\\n35214\\n111423\\n1232"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 14,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "35214 728 111423 79923 1232 2\n"
+            },
+            "expected": [
+                "Unesite 5 brojeva: Unesite dozvoljenu sumu cifara: Preostali brojevi:\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 15,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "35214 728 111423 79923 1232 50\n"
+            },
+            "expected": [
+                "Unesite 5 brojeva: Unesite dozvoljenu sumu cifara: Preostali brojevi: \\n35214\\n728\\n111423\\n79923\\n1232\\n",
+                "Unesite 5 brojeva: Unesite dozvoljenu sumu cifara: Preostali brojevi: \\n35214\\n728\\n111423\\n79923\\n1232"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        },
+        {
+            "id": 16,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT4\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "35214 728 111423 79923 1232 18\n"
+            },
+            "expected": [
+                "35214\\n728\\n111423\\n1232\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "true"
+        }
+    ]
+}

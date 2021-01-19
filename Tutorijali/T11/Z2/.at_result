@@ -1,0 +1,183 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3699": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3699.cpp: In function ‘int main()’:\nbs_test_3699.cpp:103:66: error: cannot call member function ‘int StedniRacun::DajBrojKreiranih()’ without object\n std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;\n                                                                  ^\nbs_test_3699.cpp:104:64: error: cannot call member function ‘int StedniRacun::DajBrojAktivnih()’ without object\n std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;\n                                                                ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 21,
+                        "col": "66",
+                        "message": "cannot call member function 'int StedniRacun::DajBrojKreiranih()' without object",
+                        "output": "/tmp/buildservice/bs_5004/bs_test_3699.cpp:103:66: error: cannot call member function ‘int StedniRacun::DajBrojKreiranih()’ without object std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;                                                                  ^",
+                        "code": "std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 22,
+                        "col": "64",
+                        "message": "cannot call member function 'int StedniRacun::DajBrojAktivnih()' without object",
+                        "output": "/tmp/buildservice/bs_5004/bs_test_3699.cpp:104:64: error: cannot call member function ‘int StedniRacun::DajBrojAktivnih()’ without object std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;                                                                ^",
+                        "code": "std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;"
+                    }
+                ]
+            }
+        },
+        "3701": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3701.cpp: In function ‘int main()’:\nbs_test_3701.cpp:88:67: error: cannot call member function ‘int StedniRacun::DajBrojKreiranih()’ without object\n  std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;\n                                                                   ^\nbs_test_3701.cpp:89:65: error: cannot call member function ‘int StedniRacun::DajBrojAktivnih()’ without object\n  std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;\n                                                                 ^\nbs_test_3701.cpp:115:66: error: cannot call member function ‘int StedniRacun::DajBrojKreiranih()’ without object\n std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;\n                                                                  ^\nbs_test_3701.cpp:116:64: error: cannot call member function ‘int StedniRacun::DajBrojAktivnih()’ without object\n std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;\n                                                                ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 6,
+                        "col": "67",
+                        "message": "cannot call member function 'int StedniRacun::DajBrojKreiranih()' without object",
+                        "output": "/tmp/buildservice/bs_5004/bs_test_3701.cpp:88:67: error: cannot call member function ‘int StedniRacun::DajBrojKreiranih()’ without object  std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;                                                                   ^",
+                        "code": "std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "65",
+                        "message": "cannot call member function 'int StedniRacun::DajBrojAktivnih()' without object",
+                        "output": "/tmp/buildservice/bs_5004/bs_test_3701.cpp:89:65: error: cannot call member function ‘int StedniRacun::DajBrojAktivnih()’ without object  std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;                                                                 ^",
+                        "code": "std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 33,
+                        "col": "66",
+                        "message": "cannot call member function 'int StedniRacun::DajBrojKreiranih()' without object",
+                        "output": "/tmp/buildservice/bs_5004/bs_test_3701.cpp:115:66: error: cannot call member function ‘int StedniRacun::DajBrojKreiranih()’ without object std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;                                                                  ^",
+                        "code": "std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 34,
+                        "col": "64",
+                        "message": "cannot call member function 'int StedniRacun::DajBrojAktivnih()' without object",
+                        "output": "/tmp/buildservice/bs_5004/bs_test_3701.cpp:116:64: error: cannot call member function ‘int StedniRacun::DajBrojAktivnih()’ without object std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;                                                                ^",
+                        "code": "std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;"
+                    }
+                ]
+            }
+        },
+        "3702": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3702.cpp: In function ‘int main()’:\nbs_test_3702.cpp:84:66: error: cannot call member function ‘int StedniRacun::DajBrojKreiranih()’ without object\n std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;\n                                                                  ^\nbs_test_3702.cpp:85:64: error: cannot call member function ‘int StedniRacun::DajBrojAktivnih()’ without object\n std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;\n                                                                ^\nbs_test_3702.cpp:89:66: error: cannot call member function ‘int StedniRacun::DajBrojKreiranih()’ without object\n std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;\n                                                                  ^\nbs_test_3702.cpp:90:64: error: cannot call member function ‘int StedniRacun::DajBrojAktivnih()’ without object\n std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;\n                                                                ^\nbs_test_3702.cpp:102:66: error: cannot call member function ‘int StedniRacun::DajBrojKreiranih()’ without object\n std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;\n                                                                  ^\nbs_test_3702.cpp:103:64: error: cannot call member function ‘int StedniRacun::DajBrojAktivnih()’ without object\n std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;\n                                                                ^\nbs_test_3702.cpp:107:66: error: cannot call member function ‘int StedniRacun::DajBrojKreiranih()’ without object\n std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;\n                                                                  ^\nbs_test_3702.cpp:108:64: error: cannot call member function ‘int StedniRacun::DajBrojAktivnih()’ without object\n std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;\n                                                                ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "66",
+                        "message": "cannot call member function 'int StedniRacun::DajBrojKreiranih()' without object",
+                        "output": "/tmp/buildservice/bs_5004/bs_test_3702.cpp:84:66: error: cannot call member function ‘int StedniRacun::DajBrojKreiranih()’ without object std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;                                                                  ^",
+                        "code": "std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "64",
+                        "message": "cannot call member function 'int StedniRacun::DajBrojAktivnih()' without object",
+                        "output": "/tmp/buildservice/bs_5004/bs_test_3702.cpp:85:64: error: cannot call member function ‘int StedniRacun::DajBrojAktivnih()’ without object std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;                                                                ^",
+                        "code": "std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 7,
+                        "col": "66",
+                        "message": "cannot call member function 'int StedniRacun::DajBrojKreiranih()' without object",
+                        "output": "/tmp/buildservice/bs_5004/bs_test_3702.cpp:89:66: error: cannot call member function ‘int StedniRacun::DajBrojKreiranih()’ without object std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;                                                                  ^",
+                        "code": "std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 8,
+                        "col": "64",
+                        "message": "cannot call member function 'int StedniRacun::DajBrojAktivnih()' without object",
+                        "output": "/tmp/buildservice/bs_5004/bs_test_3702.cpp:90:64: error: cannot call member function ‘int StedniRacun::DajBrojAktivnih()’ without object std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;                                                                ^",
+                        "code": "std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 20,
+                        "col": "66",
+                        "message": "cannot call member function 'int StedniRacun::DajBrojKreiranih()' without object",
+                        "output": "/tmp/buildservice/bs_5004/bs_test_3702.cpp:102:66: error: cannot call member function ‘int StedniRacun::DajBrojKreiranih()’ without object std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;                                                                  ^",
+                        "code": "std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 21,
+                        "col": "64",
+                        "message": "cannot call member function 'int StedniRacun::DajBrojAktivnih()' without object",
+                        "output": "/tmp/buildservice/bs_5004/bs_test_3702.cpp:103:64: error: cannot call member function ‘int StedniRacun::DajBrojAktivnih()’ without object std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;                                                                ^",
+                        "code": "std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 25,
+                        "col": "66",
+                        "message": "cannot call member function 'int StedniRacun::DajBrojKreiranih()' without object",
+                        "output": "/tmp/buildservice/bs_5004/bs_test_3702.cpp:107:66: error: cannot call member function ‘int StedniRacun::DajBrojKreiranih()’ without object std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;                                                                  ^",
+                        "code": "std::cout << \"Broj kreiranih: \" << StedniRacun::DajBrojKreiranih() << std::endl;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 26,
+                        "col": "64",
+                        "message": "cannot call member function 'int StedniRacun::DajBrojAktivnih()' without object",
+                        "output": "/tmp/buildservice/bs_5004/bs_test_3702.cpp:108:64: error: cannot call member function ‘int StedniRacun::DajBrojAktivnih()’ without object std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;                                                                ^",
+                        "code": "std::cout << \"Broj aktivnih: \" << StedniRacun::DajBrojAktivnih() << std::endl;"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 1,
+    "time": 1589879338
+}

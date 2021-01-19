@@ -1,0 +1,4 @@
+/rhome/a/amulalic1/workspace/TP/Z2/Z1/main.cpp: In function ‘void Unos(Polja&, int)’:
+/rhome/a/amulalic1/workspace/TP/Z2/Z1/main.cpp:236:52: error: no match for ‘operator*’ (operand types are ‘__gnu_cxx::__alloc_traits<std::allocator<std::vector<char> > >::value_type {aka std::vector<char>}’ and ‘int’)
+     int preostaloPolja = trenutnaPolja.at(0).at(0) * 2;
+                          ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~

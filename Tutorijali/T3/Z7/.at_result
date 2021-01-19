@@ -1,0 +1,105 @@
+{
+    "buildhost_description": {
+        "id": "c9.etf.unsa.ba",
+        "os": "Linux 4.15.0-62-generic x86_64\nUbuntu 18.04.4 LTS\n",
+        "compiler_version": "g++ (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0",
+        "debugger_version": "GNU gdb (Ubuntu 8.1-0ubuntu3.2) 8.1.0.20180409-git",
+        "profiler_version": "valgrind-3.13.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": "cc1plus: warning: ‘-Werror=’ argument ‘-Werror=implicit-function-declaration’ is not valid for C++"
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3203": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite broj redova:  1\n 1 1\n 1 1 1\n 1 1 1 1\n 1 1 1 1 1\n 1 1 1 1 1 1\n 1 1 1 1 1 1 1\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3204": {
+            "status": 1,
+            "run_result": {
+                "output": "0\nBroj redova ne smije biti negativan\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3205": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite broj redova:  1\n 1 1\n 1 1 1\n 1 1 1 1\n 1 1 1 1 1\n 1 1 1 1 1 1\n 1 1 1 1 1 1 1\n 1 1 1 1 1 1 1 1\n 1 1 1 1 1 1 1 1 1\n 1 1 1 1 1 1 1 1 1 1\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3206": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite broj redova:  1\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3207": {
+            "status": 1,
+            "run_result": {
+                "output": "1\n22\n333\n4444\n55555\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3208": {
+            "status": 1,
+            "run_result": {
+                "output": "1\n22\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1584791021
+}

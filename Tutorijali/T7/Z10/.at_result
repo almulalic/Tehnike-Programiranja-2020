@@ -1,0 +1,102 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3492": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3492.cpp: In function ‘void Test()’:\nbs_test_3492.cpp:22:64: error: ‘IteriranaFunkcija’ was not declared in this scope\n   std::cout << IteriranaFunkcija([](int x) { return x * x; }, 2)(3) << std::endl;\n                                                                ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE_GLOBAL_ABOVE",
+                        "line": 3,
+                        "col": "64",
+                        "message": "'IteriranaFunkcija' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1687/bs_test_3492.cpp:22:64: error: ‘IteriranaFunkcija’ was not declared in this scope   std::cout << IteriranaFunkcija([](int x) { return x * x; }, 2)(3) << std::endl;                                                                ^",
+                        "code": "std::cout << IteriranaFunkcija([](int x) { return x * x; }, 2)(3) << std::endl;"
+                    }
+                ]
+            }
+        },
+        "3493": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3493.cpp: In function ‘void Test1()’:\nbs_test_3493.cpp:22:2: error: ‘function’ is not a member of ‘std’\n  std::function<double(double)> g{IteriranaFunkcija([](int x) { return x + 3; }, 5)};\n  ^~~\nbs_test_3493.cpp:22:16: error: expected primary-expression before ‘double’\n  std::function<double(double)> g{IteriranaFunkcija([](int x) { return x + 3; }, 5)};\n                ^~~~~~\nbs_test_3493.cpp:23:18: error: ‘g’ was not declared in this scope\n  std::cout << g(7) << std::endl;\n                  ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE_GLOBAL_ABOVE",
+                        "line": 3,
+                        "col": "2",
+                        "message": "'function' is not a member of 'std'",
+                        "output": "/tmp/buildservice/bs_1687/bs_test_3493.cpp:22:2: error: ‘function’ is not a member of ‘std’  std::function<double(double)> g{IteriranaFunkcija([](int x) { return x + 3; }, 5)};  ^~~",
+                        "code": "std::function<double(double)> g{IteriranaFunkcija([](int x) { return x + 3; }, 5)};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE_GLOBAL_ABOVE",
+                        "line": 3,
+                        "col": "16",
+                        "message": "expected primary-expression before 'double'",
+                        "output": "/tmp/buildservice/bs_1687/bs_test_3493.cpp:22:16: error: expected primary-expression before ‘double’  std::function<double(double)> g{IteriranaFunkcija([](int x) { return x + 3; }, 5)};                ^~~~~~",
+                        "code": "std::function<double(double)> g{IteriranaFunkcija([](int x) { return x + 3; }, 5)};"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE_GLOBAL_ABOVE",
+                        "line": 4,
+                        "col": "18",
+                        "message": "'g' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1687/bs_test_3493.cpp:23:18: error: ‘g’ was not declared in this scope  std::cout << g(7) << std::endl;                  ^",
+                        "code": "std::cout << g(7) << std::endl;"
+                    }
+                ]
+            }
+        },
+        "3494": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3494.cpp: In function ‘void Test2()’:\nbs_test_3494.cpp:27:40: error: ‘IteriranaFunkcija’ was not declared in this scope\n   std::cout << IteriranaFunkcija(fun, 1)(5) << std::endl;\n                                        ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE_GLOBAL_ABOVE",
+                        "line": 8,
+                        "col": "40",
+                        "message": "'IteriranaFunkcija' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1687/bs_test_3494.cpp:27:40: error: ‘IteriranaFunkcija’ was not declared in this scope   std::cout << IteriranaFunkcija(fun, 1)(5) << std::endl;                                        ^",
+                        "code": "std::cout << IteriranaFunkcija(fun, 1)(5) << std::endl;"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1586768282
+}

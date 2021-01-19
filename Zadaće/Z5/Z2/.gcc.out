@@ -1,0 +1,19 @@
+/rhome/a/amulalic1/workspace/TP/Z5/Z2/main.cpp: In member function ‘Padavine Padavine::operator-(const Padavine&)’:
+/rhome/a/amulalic1/workspace/TP/Z5/Z2/main.cpp:72:125: error: no matching function for call to ‘std::minus<int>::minus(int)’
+         return std::for_each(padavine.begin(),padavine.end(),std::bind2nd(std::minus<int> (p.DajMaksimalnuKolicinuPadavina())));
+                                                                                                                             ^
+In file included from /usr/include/c++/7/string:48:0,
+                 from /usr/include/c++/7/bits/locale_classes.h:40,
+                 from /usr/include/c++/7/bits/ios_base.h:41,
+                 from /usr/include/c++/7/ios:42,
+                 from /usr/include/c++/7/ostream:38,
+                 from /usr/include/c++/7/iostream:39,
+                 from /rhome/a/amulalic1/workspace/TP/Z5/Z2/main.cpp:2:
+/usr/include/c++/7/bits/stl_function.h:177:12: note: candidate: constexpr std::minus<int>::minus()
+     struct minus : public binary_function<_Tp, _Tp, _Tp>
+            ^~~~~
+/usr/include/c++/7/bits/stl_function.h:177:12: note:   candidate expects 0 arguments, 1 provided
+/usr/include/c++/7/bits/stl_function.h:177:12: note: candidate: constexpr std::minus<int>::minus(const std::minus<int>&)
+/usr/include/c++/7/bits/stl_function.h:177:12: note:   no known conversion for argument 1 from ‘int’ to ‘const std::minus<int>&’
+/usr/include/c++/7/bits/stl_function.h:177:12: note: candidate: constexpr std::minus<int>::minus(std::minus<int>&&)
+/usr/include/c++/7/bits/stl_function.h:177:12: note:   no known conversion for argument 1 from ‘int’ to ‘std::minus<int>&&’

@@ -1,0 +1,5 @@
+/rhome/a/amulalic1/workspace/TP/Z5/Z5/main.cpp: In instantiation of ‘void Matrica<TipEl>::ObnoviIzBinarneDatoteke(std::__cxx11::string) const [with TipEl = double; std::__cxx11::string = std::__cxx11::basic_string<char>]’:
+/rhome/a/amulalic1/workspace/TP/Z5/Z5/main.cpp:532:40:   required from here
+/rhome/a/amulalic1/workspace/TP/Z5/Z5/main.cpp:394:8: warning: unused variable ‘broj’ [-Wunused-variable]
+  TipEl broj;
+        ^~~~

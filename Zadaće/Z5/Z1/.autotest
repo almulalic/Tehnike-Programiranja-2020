@@ -1,0 +1,143 @@
+{
+    "id": 5713,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 5, Zadatak 1",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT1 (javni)\n \n    SimetricnaMatrica<int> sm({{4}, {1, 4}});\n    std::cout << std::setw(3) << sm;\n}",
+            "global_above_main": "",
+            "global_top": "#include <iomanip>",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                " 4 1\\n 1 4"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n{\/\/op+ i op-, trivijalan\n    SimetricnaMatrica<int> m1 ({{1}, {3, 4}});\n    SimetricnaMatrica<int> m2 ({{8}, {6, 5}});\n    std::cout << std::setw(3) << m1 + m2;\n    std::cout << std::setw(3) << m1 - m2;\n}",
+            "global_above_main": "#include <iomanip>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "9 9\\n 9 9\\n -7 -3\\n -3 -1\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/Test standardnog ulaza\n    SimetricnaMatrica<double> m (2), k (1);\n    std::cin >> m;\n    std::cout << m.DajDimenziju() << std::endl;\n    std::cout << std::setw(5) << m;\n    std::cin >> k;\n    std::cout << k.DajDimenziju() << std::endl;\n    std::cout << std::setw(5) << k;\n}",
+            "global_above_main": "#include <iomanip>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "1.1\n2.2\n3.3\n7.7\n"
+            },
+            "expected": [
+                "2\\n 1.1 2.2\\n 2.2 3.3\\n1\\n 7.7"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT2 (javni): produkt dvije matrice\n        std::initializer_list<std::initializer_list<int>> l = {{1}, {0, 7}, {0, 0, -1}, {0, 0, 0, 17}};\n        std::vector<std::vector<int>> v = {{17}, {0, -3}, {0, 0, -7}, {0, 0, 0, 12}};\n        SimetricnaMatrica<int> A {l};\n        SimetricnaMatrica<int> B (v);\n        auto AB = A * B, BA = B * A;\n        std::cout << \"AB:\" << std::endl << std::setw(10) << AB << std::endl\n                  << std::endl << \"BA:\" << std::endl << std::left << std::setw (12) << BA;\n    }",
+            "global_above_main": "#include <iomanip>",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "AB:\\n 17 0 0 0\\n 0 -21 0 0\\n 0 0 7 0\\n 0 0 0 204\\n\\n\\nBA:\\n17 0 0 0\\n0 -21 0 0\\n0 0 7 0\\n0 0 0 204\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "{\/\/AT3 (javni): produkt dvije simetricne matrice NIJE simetricna matrica\n         \/\/NAPOMENA! NAPOMENA! NAPOMENA! NAPOMENA! NAPOMENA! NAPOMENA!\n         \/\/VRLOOOOOO VAZNO! VAZNOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO!\n         \/\/Ovaj autotest se smatra DODEFINICIJOM postavke zadace! U ovom autotestu\n         \/\/je prikazan tip i tekst izuzetka u slucaju da mnozenje dvije metrice\n         \/\/ne rezultira simetricnom maricom. Autotest je postavljen kao javan\n         \/\/7 dana pred kraj roka i validan je. (Ni ispravka postavke ne bi ranije\n         \/\/bila uradjena).\n         \n         \/\/primjedbe tipa \"ja nisam vidio\/la\", \"ne pise u postavci\" i sl. se NECE\n         \/\/uzimati u obzir\n\n         std::cout << \"Ovaj autotest je ***DODEFINICIJA*** postavke zadatka!\" << std::endl;\n         std::cout << \"Procitajte KOMENTAR za ovaj autotest.\" << std::endl << std::endl;\n         SimetricnaMatrica<int> A ({{1}, {2, 3}, {4, 5, 6}});\n         SimetricnaMatrica<int> B {{0}, {1, 2}, {3, 17, 5}};\n         try {std::cout << A * B; std::cout << \"Ne smije se ispisati [1] (AB)!\" << std::endl;}\n         catch (std::logic_error e) {std::cout << e.what() << std::endl;}\n\n         try {std::cout << B * A; std::cout << \"Ne smije se ispisati [2] (BA)!\" << std::endl;}\n         catch (std::logic_error e) {std::cout << e.what();}\n        }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Ovaj autotest je ***DODEFINICIJA*** postavke zadatka!\\nProcitajte KOMENTAR za ovaj autotest.\\n\\nRezultat nije simetricna matrica\\nRezultat nije simetricna matrica"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\t\n  {\/\/AT4 (javni): matrica stringova? sto da ne\n\n         \/\/takodjer, ovdje je definisan operator * za stringove\n         \/\/tacnije za \"string\" i \"int\" (\"abc\" * 3 = \"abc abc abc\")\n         \/\/kako biste ispravili eventualne greske prilikom dedukcije tipa\n\n         \/\/@ljudovi koji nisu pazili na dedukciju: nema na cemu :)\n\n         \/\/takodjer, testira se o operator []\n\n        SimetricnaMatrica<std::string> A {{\"Ja\"}, {\"\", \"Volim\"}, {\"\", \"\", \"TP\"}};\n        SimetricnaMatrica<int> B {{3}, {0, 5}, {0, 0, 15}};\n        std::cout << \"Prvi Ispis (operator <<)\\n\\n\" << A * B;\n        std::cout << \"\\n\\n\\nDrugi ispis, red po red\\n\\n\";\n        auto C = A * B;\n        for (unsigned int i = 0; i < C.DajDimenziju(); ++i)\n            {\n                std::cout << \"'\";\n                for (unsigned j = 0; j < C.DajDimenziju(); ++j)\n                    std::cout << C[i][j];\n                std::cout << \"'\" << std::endl;\n            }\n        }",
+            "global_above_main": "#include <iomanip>\n#include <string>\nstd::string operator * (const std::string &s, const int i)\n    {\n        if (i < 1 || s.empty()) return \" \";\n        std::string ret;\n        for (int o = 1; o < i; ++o)\n            ret += s + \" \";\n        return ret + s;\n    }\n\/\/za one koji ne citaju: odobrit cemo namjerno op + za string i int\n\/\/i nek skontaju kakve posljedice ovo ima :)\nstd::string operator + (const std::string &s, int i) {return s;}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Prvi Ispis (operator <<)\\nJa Ja Ja\\n Volim Volim Volim Volim Volim\\n TP TP TP TP TP TP TP TP TP TP TP TP TP TP TP\\nDrugi ispis, red po red\\n'Ja Ja Ja '\\n' Volim Volim Volim Volim Volim '\\n' TP TP TP TP TP TP TP TP TP TP TP TP TP TP TP'"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "true",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

@@ -1,0 +1,156 @@
+{
+    "buildhost_description": {
+        "id": "lab002c03",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3311": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite recenicu: vrh brda vrba mrda..._",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3312": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite recenicu: ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3313": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite recenicu: _K",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": {
+                "output": "==31240== Memcheck, a memory error detector\n==31240== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.\n==31240== Using Valgrind-3.12.0 and LibVEX; rerun with -h for copyright info\n==31240== Command: bs_test_3313\n==31240== Parent PID: 31239\n==31240== \n==31240== Conditional jump or move depends on uninitialised value(s)\n==31240==    at 0x400AEF: _main() (bs_test_3313.cpp:34)\n==31240==    by 0x400B5A: main (bs_test_3313.cpp:53)\n==31240== \n==31240== Conditional jump or move depends on uninitialised value(s)\n==31240==    at 0x400B06: _main() (bs_test_3313.cpp:38)\n==31240==    by 0x400B5A: main (bs_test_3313.cpp:53)\n==31240== \n==31240== Conditional jump or move depends on uninitialised value(s)\n==31240==    at 0x400B18: _main() (bs_test_3313.cpp:40)\n==31240==    by 0x400B5A: main (bs_test_3313.cpp:53)\n==31240== \n==31240== Syscall param write(buf) points to uninitialised byte(s)\n==31240==    at 0x37154DB850: __write_nocancel (in /lib64/libc-2.12.so)\n==31240==    by 0x37154719B2: _IO_file_write@@GLIBC_2.2.5 (in /lib64/libc-2.12.so)\n==31240==    by 0x3715472F64: _IO_do_write@@GLIBC_2.2.5 (in /lib64/libc-2.12.so)\n==31240==    by 0x3715472167: _IO_file_sync@@GLIBC_2.2.5 (in /lib64/libc-2.12.so)\n==31240==    by 0x3715466879: fflush (in /lib64/libc-2.12.so)\n==31240==    by 0x4D2CC2D: pubsync (streambuf:271)\n==31240==    by 0x4D2CC2D: std::ostream::flush() (ostream.tcc:219)\n==31240==    by 0x4CB531B: std::ios_base::Init::~Init() (ios_init.cc:134)\n==31240==    by 0x3715435A01: exit (in /lib64/libc-2.12.so)\n==31240==    by 0x371541ED26: (below main) (in /lib64/libc-2.12.so)\n==31240==  Address 0x4fa5000 is in a rw- anonymous segment\n==31240== \n==31240== \n==31240== HEAP SUMMARY:\n==31240==     in use at exit: 0 bytes in 0 blocks\n==31240==   total heap usage: 1 allocs, 1 frees, 72,704 bytes allocated\n==31240== \n==31240== All heap blocks were freed -- no leaks are possible\n==31240== \n==31240== For counts of detected and suppressed errors, rerun with: -v\n==31240== Use --track-origins=yes to see where uninitialised values come from\n==31240== ERROR SUMMARY: 49 errors from 4 contexts (suppressed: 4 from 4)\n",
+                "status": 3,
+                "parsed_output": [
+                    {
+                        "type": 3,
+                        "output": " Conditional jump or move depends on uninitialised value(s)\n    at 0x400AEF: _main() (bs_test_3313.cpp:34)\n    by 0x400B5A: main (bs_test_3313.cpp:53)\n",
+                        "file": "main.cpp",
+                        "line": 27
+                    },
+                    {
+                        "type": 3,
+                        "output": " Conditional jump or move depends on uninitialised value(s)\n    at 0x400B06: _main() (bs_test_3313.cpp:38)\n    by 0x400B5A: main (bs_test_3313.cpp:53)\n",
+                        "file": "main.cpp",
+                        "line": 31
+                    },
+                    {
+                        "type": 3,
+                        "output": " Conditional jump or move depends on uninitialised value(s)\n    at 0x400B18: _main() (bs_test_3313.cpp:40)\n    by 0x400B5A: main (bs_test_3313.cpp:53)\n",
+                        "file": "main.cpp",
+                        "line": 33
+                    }
+                ]
+            },
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3314": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite recenicu: Na vrh brda vrba mrda...",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3315": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite recenicu: Rijec",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3316": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite recenicu: Rijec ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3317": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite recenicu: recenica je jako duga, i koristi samo u svrhu testiranja unosa dugih recenica te stoga nema nikakvog drugog smisla.",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "3318": {
+            "status": 6,
+            "run_result": {
+                "output": "Unesite recenicu: Rijec   ",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 15,
+    "time": 1585573497
+}

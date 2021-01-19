@@ -1,0 +1,206 @@
+{
+    "id": 5710,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 4, Zadatak 6",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1 (c9): testira da li je Korisnik struktura\n\nKorisnik k1 { \"Niko\", \"Nikic\", \"Zmaja od Bosne bb\", \"123 456\"};\nstd::cout << k1.ime << \" \" << k1.prezime << \" \" << k1.adresa << \" \" << k1.telefon;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niko Nikic Zmaja od Bosne bb 123 456"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2 (c9): testira konstruktor klase Knjiga i metodu DaLiJeZaduzena\n\nKnjiga knj1(\"Vlak u snijegu\", \"Mato Lovrak\", \"Roman\", 1931);\nstd::cout << knj1.DajNaslov() << \" \" << knj1.DajAutora() << \" \" << knj1.DajZanr() << \" \" << knj1.DajGodinuIzdavanja();\nif(!knj1.DaLiJeZaduzena()) std::cout << \"\\nKnjiga je slobodna\";\nelse std::cout << \"\\nKnjiga je zaduzena\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vlak u snijegu Mato Lovrak Roman 1931\\nKnjiga je slobodna"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3 (c9): testira zaduzivanje i razduzivanje\n\nKorisnik k2 { \"Niko\", \"Nikic\", \"Zmaja od Bosne bb\", \"123 456\"};\nKnjiga knj2(\"Vlak u snijegu\", \"Mato Lovrak\", \"Roman\", 1931);\nknj2.ZaduziKnjigu(k2);\nif(!knj2.DaLiJeZaduzena()) std::cout << \"Knjiga je slobodna\";\nelse std::cout << \"Knjiga je zaduzena\";\nknj2.RazduziKnjigu();\nif(!knj2.DaLiJeZaduzena()) std::cout << \"\\nKnjiga je slobodna\";\nelse std::cout << \"\\nKnjiga je zaduzena\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Knjiga je zaduzena\\nKnjiga je slobodna"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT4 (c9): testira DajKodKogaJe metodu\n\nKorisnik kor{\"Meho\", \"Mehic\", \"Dobojska 15\", \"033\/123-456\"};\nKnjiga knj(\"Tvrdjava\", \"Mesa Selimovic\", \"Roman\", 1965);\nif(knj.DajKodKogaJe() == nullptr) std::cout << \"Nije zaduzena\\n\";\nstd::cout << knj.DaLiJeZaduzena() << std::endl;\nknj.ZaduziKnjigu(kor);\nstd::cout << \"Knjigu je zaduzio \" << knj.DajKodKogaJe()->ime << std::endl;\nstd::cout << knj.DaLiJeZaduzena() << std::endl;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Nije zaduzena\\n0\\nKnjigu je zaduzio Meho\\n1"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT5 (c9): testira metodu NadjiKnjigu\n\nBiblioteka bib5;\nbib5.RegistrirajNovogKorisnika(1, \"Niko\", \"Nikic\", \"Zmaja od Bosne bb\", \"123 456\");\nbib5.RegistrirajNovuKnjigu(2, \"Vlak u snijegu\", \"Mato Lovrak\", \"Roman\", 1931);\nstd::cout << bib5.NadjiKnjigu(2).DajNaslov();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Vlak u snijegu"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT6 (c9): testira metodu NadjiKorisnika\n\nBiblioteka bib6;\nbib6.RegistrirajNovogKorisnika(1, \"Niko\", \"Nikic\", \"Zmaja od Bosne bb\", \"123 456\");\nbib6.RegistrirajNovuKnjigu(2, \"Vlak u snijegu\", \"Mato Lovrak\", \"Roman\", 1931);\nstd::cout << bib6.NadjiKorisnika(1).ime;",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Niko"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT7 (c9): testira metodu IzlistajKorisnike\n\nBiblioteka b;\nb.RegistrirajNovogKorisnika(1234, \"Petar\", \"Petrovic\",\n\"Zmaja od Bosne 30\", \"032\/444-555\");\nb.RegistrirajNovogKorisnika(4312, \"Hasan\", \"Hasanovic\",\n\"Trg neznalica 111\", \"030\/111-222\");\nb.RegistrirajNovogKorisnika(3124, \"Mehmed\", \"Mehmedovic\",\n\"Studenata 3b\", \"037\/654-321\");\nb.RegistrirajNovuKnjigu(231, \"Prokleta avlija\", \"Ivo Andric\", \"Roman\", 1955);\nb.RegistrirajNovuKnjigu(555, \"Grimove Bajke\", \"Braca Grim\", \"Bajke\", 1927);\nb.RegistrirajNovuKnjigu(136, \"Kameni spavac\", \"Mak Dizdar\", \"Poezija\", 1960);\nb.IzlistajKorisnike();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Clanski broj: 1234\\nIme i prezime: Petar Petrovic\\nAdresa: Zmaja od Bosne 30\\nBroj telefona: 032\/444-555\\n\\nClanski broj: 3124\\nIme i prezime: Mehmed Mehmedovic\\nAdresa: Studenata 3b\\nBroj telefona: 037\/654-321\\n\\nClanski broj: 4312\\nIme i prezime: Hasan Hasanovic\\nAdresa: Trg neznalica 111\\nBroj telefona: 030\/111-222"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 8,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT8 (c9): testira metodu IzlistajKorisnike\n\nBiblioteka b;\nb.RegistrirajNovogKorisnika(1234, \"Petar\", \"Petrovic\",\n\"Zmaja od Bosne 30\", \"032\/444-555\");\nb.RegistrirajNovogKorisnika(4312, \"Hasan\", \"Hasanovic\",\n\"Trg neznalica 111\", \"030\/111-222\");\nb.RegistrirajNovogKorisnika(3124, \"Mehmed\", \"Mehmedovic\",\n\"Studenata 3b\", \"037\/654-321\");\nb.RegistrirajNovuKnjigu(231, \"Prokleta avlija\", \"Ivo Andric\", \"Roman\", 1955);\nb.RegistrirajNovuKnjigu(555, \"Grimove Bajke\", \"Braca Grim\", \"Bajke\", 1927);\nb.RegistrirajNovuKnjigu(136, \"Kameni spavac\", \"Mak Dizdar\", \"Poezija\", 1960);\nb.IzlistajKnjige();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Evidencijski broj: 136\\nNaslov: Kameni spavac\\nPisac: Mak Dizdar\\nZanr: Poezija\\nGodina izdavanja: 1960\\n\\nEvidencijski broj: 231\\nNaslov: Prokleta avlija\\nPisac: Ivo Andric\\nZanr: Roman\\nGodina izdavanja: 1955\\n\\nEvidencijski broj: 555\\nNaslov: Grimove Bajke\\nPisac: Braca Grim\\nZanr: Bajke\\nGodina izdavanja: 1927"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 9,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT9 (c9): testira IzlistajKnjige sa zaduzenim knjigama\n\nBiblioteka bib8;\nbib8.RegistrirajNovogKorisnika(1, \"Niko\", \"Nikic\", \"Zmaja od Bosne bb\", \"123 456\");\nbib8.RegistrirajNovuKnjigu(1, \"Vlak u snijegu2\", \"Mato Lovrak2\", \"Roman2\", 1941);\nbib8.RegistrirajNovuKnjigu(2, \"Vlak u snijegu\", \"Mato Lovrak\", \"Roman\", 1931);\nbib8.ZaduziKnjigu(2, 1);\nbib8.IzlistajKnjige();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Evidencijski broj: 1\\nNaslov: Vlak u snijegu2\\nPisac: Mato Lovrak2\\nZanr: Roman2\\nGodina izdavanja: 1941\\n\\nEvidencijski broj: 2\\nNaslov: Vlak u snijegu\\nPisac: Mato Lovrak\\nZanr: Roman\\nGodina izdavanja: 1931\\nZaduzena kod korisnika: Niko Nikic"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

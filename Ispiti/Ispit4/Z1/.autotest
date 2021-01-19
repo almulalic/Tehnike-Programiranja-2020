@@ -1,0 +1,122 @@
+{
+    "id": 5726,
+    "name": "Tehnike programiranja (2019\/2020), Ispit 4, Zadatak 1",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::cout<<\"----- AT 1 -----\"<<std::endl;\n\n    \/\/ AT 1: Testiranje konstruktora, metoda DajX, DajY i DajBoju klase Tacka bez navedene boje\n    {\n        Tacka t(1,2);\n        std::cout<<t.DajX()<<\" \"<<t.DajY()<<\" \"<<(int)t.DajBoju();\n    }\n\n    std::cout<<std::endl<<\"----- AT 2 -----\"<<std::endl;\n\n    \/\/ AT 2: Testiranje konstruktora, metoda DajX, DajY i DajBoju klase Tacka sa navedenom bojom\n    {\n        Tacka t1(2,3,Boja::Ljubicasta);\n        std::cout<<t1.DajX()<<\" \"<<t1.DajY()<<\" \"<<(int)t1.DajBoju();\n    }\n\n    std::cout<<std::endl<<\"----- AT 3 -----\"<<std::endl;\n\n    \/\/ AT 3: Testiranje metoda za postavljanje klase Tacka\n    {\n        Tacka t(1,2);\n        t.PostaviX(3);\n        t.PostaviY(4);\n        t.PostaviBoju(Boja::Zelena);\n\n        std::cout<<t.DajX()<<\" \"<<t.DajY()<<\" \"<<(int)t.DajBoju();\n    }\n\n    std::cout<<std::endl<<\"----- AT 4 -----\"<<std::endl;\n\n    \/\/ AT 4: Testiranje kaskadnog vezivanja metoda za postavljanje klase Tacka\n    {\n        Tacka t(1,2);\n        t.PostaviX(3).PostaviY(4).PostaviBoju(Boja::Zelena);\n\n        std::cout<<t.DajX()<<\" \"<<t.DajY()<<\" \"<<(int)t.DajBoju();;\n    }\n\n    std::cout<<std::endl<<\"----- AT 5 -----\"<<std::endl;\n\n    \/\/ AT 5: Testiranje operatora == i != klase Tacka\n    {\n        Tacka t1(1,2);\n        Tacka t3(3,4);\n        Tacka t2(t1);\n        \/\/ Boja se ignorira\n        t2.PostaviBoju(Boja::Zelena);\n\n        std::cout<<std::boolalpha<< (t1 == t2) << \" \" << (t1 != t2) << \" \" << (t1 == t3) << \" \" << (t1 != t3);\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "----- AT 1 -----\\n1 2 0\\n----- AT 2 -----\\n2 3 6\\n----- AT 3 -----\\n3 4 2\\n----- AT 4 -----\\n3 4 2\\n----- AT 5 -----\\ntrue false false true"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::cout<<\"----- AT 6 -----\"<<std::endl;\n    \n    \/\/ AT 6: Testiranje operatora *\n    {\n        \/\/ Operator mora biti realiziran kao obicna funkcija\n        Tacka t(3,4);\n        std::cout<<operator*(t);\n    }\n\n    std::cout<<std::endl<<\"----- AT 7 -----\"<<std::endl;\n    \n    \/\/ AT 7: Testiranje unarnog operatora !\n    {\n        Tacka t1(0,0);\n        Tacka t2(1,1);\n\n        \/\/ Operator mora biti realiziran kao funkcija clanica\n        std::cout<<std::boolalpha<<t1.operator!()<<\" \"<<t2.operator!();\n    }\n\n    std::cout<<std::endl<<\"----- AT 8 -----\"<<std::endl;\n    \n    \/\/ AT 8: Prefiksna verzija operatora ++\n    {\n        Tacka t(1,1,Boja::Plava);\n\n        \/\/ Operator mora biti izveden kao obicna funkcija\n        std::cout<<(int)operator++(t).DajBoju()<<std::endl;\n\n        \/\/ Test prelaska sa Bijele na Crnu boji\n        t.PostaviBoju(Boja::Bijela);\n        std::cout<<(int)t.DajBoju()<<\" \";\n        std::cout<<(int)operator++(t).DajBoju();\n    }\n\n    std::cout<<std::endl<<\"----- AT 9 -----\"<<std::endl;\n    \n    \/\/ AT 9: Postfiksna verzija operatora ++\n    {\n        Tacka t(1,1,Boja::Plava);\n\n        \/\/ Operator mora biti izveden kao obicna funkcija\n        std::cout<<(int)operator++(t,0).DajBoju();  \/\/ Plava = 3\n        std::cout<<\" \"<<(int)t.DajBoju()<<std::endl;  \/\/ Zuta = 4\n\n        \/\/ Test prelaska sa Bijele na Crnu boji\n        t.PostaviBoju(Boja::Bijela);\n        std::cout<<(int)t.DajBoju()<<\" \";  \/\/ Bijela = 7\n        std::cout<<(int)operator++(t,0).DajBoju()<<\" \";  \/\/ Bijela = 7\n        std::cout<<(int)t.DajBoju();  \/\/ Crna = 0\n    }\n\n    std::cout<<std::endl<<\"----- AT 10 -----\"<<std::endl;\n    \n    \/\/ AT 10: Testiranje operatora << za ispis klase Tacka\n    {\n        Tacka t1(1,2);\n        std::cout<<t1;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "----- AT 6 -----\\n5\\n----- AT 7 -----\\ntrue false\\n----- AT 8 -----\\n4\\n7 0\\n----- AT 9 -----\\n3 4\\n7 7 0\\n----- AT 10 -----\\n(1,2)"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::cout<<\"----- AT 11 -----\"<<std::endl;\n    \n    \/\/ AT 11: Testiranje da li su odgovarajuce metode inspektori klase Tacka\n    {\n        Tacka t1(-5,5);\n        const Tacka t2(t1);\n\n        std::cout<<\"Inspektori: \"<<t2.DajX()<<\" \"<<t2.DajY()<<\" \"<<(int)t2.DajBoju();\n    }\n\n    std::cout<<std::endl<<\"----- AT 12 -----\"<<std::endl;\n    \n    \/\/ AT 12: Test da li su elementi klase Tacka isti prema postavci\n    {\n        std::cout<<sizeof(Tacka);  \/\/ Mora biti 24!\n    }\n\n    std::cout<<std::endl<<\"----- AT 13 -----\"<<std::endl;\n    \n    \/\/ AT 13: Test da li su elementi klase Duz isti prema postavci\n    {\n        std::cout<<sizeof(Duz);  \/\/ Mora biti 48!\n    }\n\n    std::cout<<std::endl<<\"----- AT 14 -----\"<<std::endl;\n    \n    \/\/ AT 14: Testiranje prvog konstruktora i metode klase Duz - dvije tacke\n    {\n        Tacka t1(1,2);\n        Tacka t2(3,4);\n        Duz k(t1,t2);\n\n        std::cout<<\"Konstruktor: \"<<k.DajLijeviKraj()<<\" \"<<k.DajDesniKraj()<<\" \"<<(int)k.DajBoju()<<std::endl;\n\n        t1.PostaviX(5).PostaviY(6);\n        t2.PostaviX(7).PostaviY(8);\n        k.Postavi(t1,t2);\n\n        std::cout<<\"Metoda Postavi: \"<<k.DajLijeviKraj()<<\" \"<<k.DajDesniKraj()<<\" \"<<(int)k.DajBoju();\n    }\n\n    std::cout<<std::endl<<\"----- AT 15 -----\"<<std::endl;\n    \n    \/\/ AT 15: Testiranje izuzetka prvog konstruktora i metode Postavi klase Krug - Tacka i r\n    {\n        Tacka t1(1,2,Boja::Crvena);\n        Tacka t2(3,4);\n        try\n        {\n            Duz k(t1,t2);\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what()<<std::endl;\n        }\n        catch(...)\n        {\n            std::cout<<\"Nije bacen ispravan izuzetak!\";\n        }\n\n        try\n        {\n            t1.PostaviBoju(Boja::Crna);\n            Duz k(t1,t2);  \/\/ Ispravno postavljanje\n            t1.PostaviBoju(Boja::Crvena);\n            k.Postavi(t1,t2);\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Nije bacen ispravan izuzetak!\";\n        }\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "----- AT 11 -----\\nInspektori: -5 5 0\\n----- AT 12 -----\\n24\\n----- AT 13 -----\\n48\\n----- AT 14 -----\\nKonstruktor: (1,2) (3,4) 0\\nMetoda Postavi: (5,6) (7,8) 0\\n----- AT 15 -----\\nNesaglasne boje krajeva\\nNesaglasne boje krajeva"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::cout<<\"----- AT 16 -----\"<<std::endl;\n    \n    \/\/ AT 16: Testiranje drugog konstruktora i metode klase Duz - pet parametara\n    {\n        Tacka t1(1,2);\n        Tacka t2(3,4);\n        Duz k(1,2,3,4,Boja::Zelena);\n\n        std::cout<<\"Konstruktor: \"<<k.DajLijeviKraj()<<\" \"<<k.DajDesniKraj()<<\" \"<<(int)k.DajBoju()<<std::endl;\n\n        t1.PostaviX(5).PostaviY(6);\n        t2.PostaviX(7).PostaviY(8);\n        k.Postavi(5,6,7,8,Boja::Plava);\n\n        std::cout<<\"Metoda Postavi: \"<<k.DajLijeviKraj()<<\" \"<<k.DajDesniKraj()<<\" \"<<(int)k.DajBoju();\n    }\n\n    std::cout<<std::endl<<\"----- AT 17 -----\"<<std::endl;\n    \n    \/\/ AT 17: Testiranje metode DajLijeviKraj\n    {\n        Duz k(1,2,3,4,Boja::Zelena);\n        std::cout<<k.DajLijeviKraj()<<\" \";\n\n        \/\/ Test da li je ispravna raspodjela lijevog i desnog kraja\n        k.Postavi(3,4,1,2,Boja::Zelena);\n        std::cout<<k.DajLijeviKraj()<<\" \";\n\n        \/\/ Test u slucaju da su tacke jedna ispod druge\n        k.Postavi(1,2,1,4,Boja::Zelena);\n        std::cout<<k.DajLijeviKraj();\n    }\n\n    std::cout<<std::endl<<\"----- AT 18 -----\"<<std::endl;\n    \n    \/\/ AT 18: Testiranje metode DajDesniKraj\n    {\n        Duz k(1,2,3,4,Boja::Zelena);\n        std::cout<<k.DajDesniKraj()<<\" \";\n\n        \/\/ Test da li je ispravna raspodjela lijevog i desnog kraja\n        k.Postavi(3,4,1,2,Boja::Zelena);\n        std::cout<<k.DajDesniKraj()<<\" \";\n\n        \/\/ Test u slucaju da su tacke jedna ispod druge\n        k.Postavi(1,2,1,4,Boja::Zelena);\n        std::cout<<k.DajDesniKraj();\n    }\n\n    std::cout<<std::endl<<\"----- AT 19 -----\"<<std::endl;\n    \n    \/\/ AT 19: Test operatora == i !=\n    {\n        Duz k1 (1,2,3,4, Boja::Bijela);\n        Duz k2 (k1);\n        Duz k3 (5,6,3,4, Boja::Crvena);\n\n        \/\/ Operatori moraju biti izvedeni kao funkcije clanice\n        std::cout<<std::boolalpha<<k1.operator==(k2)<<\" \"<<k1.operator!=(k2)<<\" \"<<k1.operator==(k3)<<\" \"<<k1.operator!=(k3);\n    }\n\n    std::cout<<std::endl<<\"----- AT 20 -----\"<<std::endl;\n    \n    \/\/ AT 20: Test operatora -\n    {\n        Tacka t1(1,2,Boja::Crvena);\n        Tacka t2(3,4,Boja::Crvena);\n\n        \/\/ Operator mora biti implementiran kao obicna funkcija\n        std::cout<<operator-(t1,t2)<<std::endl;\n\n        \/\/ Mora se uzeti u obzir izuzetak koji moze nastati\n        t2.PostaviBoju(Boja::Zelena);\n        try\n        {\n            std::cout<<operator-(t1,t2);\n            std::cout<<\"Nije bacen izuzetak!\";\n        }\n        catch(std::domain_error e)\n        {\n            std::cout<<e.what();\n        }\n        catch(...)\n        {\n            std::cout<<\"Nije bacen ispravan izuzetak!\";\n        }\n\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "----- AT 16 -----\\nKonstruktor: (1,2) (3,4) 2\\nMetoda Postavi: (5,6) (7,8) 3\\n----- AT 17 -----\\n(1,2) (1,2) (1,2)\\n----- AT 18 -----\\n(3,4) (3,4) (1,4)\\n----- AT 19 -----\\ntrue false false true\\n----- AT 20 -----\\n(1,2)-(3,4)\\nNesaglasne boje krajeva"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "std::cout<<\"----- AT 21 -----\"<<std::endl;\n\n    \/\/ AT 21: Test unarnog operatora !\n    {\n        \/\/ Operator mora biti izveden kao funkcija clanica\n        Tacka t1(1,2);\n        Tacka t2(3,4);\n        Tacka t3(t1);\n\n        Duz k1(t1,t2);\n        Duz k2(t1,t3);\n\n        std::cout<<std::boolalpha<<k1.operator!()<<\" \"<<k2.operator!();\n    }\n\n    std::cout<<std::endl<<\"----- AT 22 -----\"<<std::endl;\n\n    \/\/ AT 22: Test operatora <<\n    {\n        Tacka t1(1,2);\n        Tacka t2(3,4);\n\n        Duz k(t1,t2);\n        std::cout<<k;\n    }\n\n    std::cout<<std::endl<<\"----- AT 23 -----\"<<std::endl;\n\n    \/\/ AT 23: Dodatni Test operatora << i ispravnosti metoda DajLijeviKraj i DajDesniKraj\n    {\n        Tacka t1(1,2);\n        Tacka t2(-1,4);\n\n        Duz k(t1,t2);\n        std::cout<<k<<\" \";\n\n        k.Postavi(1,2,1,4,Boja::Zelena);\n        std::cout<<k<<\" \";\n    }\n\n    std::cout<<std::endl<<\"----- AT 24 -----\"<<std::endl;\n\n    \/\/ AT 24: Test da li su inspektori zapravo implementirani kao inspektori\n    {\n        \/\/ Nece se testirati ispis, bitno je da se kod kompajlira kako bi se provjerila ispravnost\n        Duz k1(1,2,3,4,Boja::Smedja);\n        const Duz k(k1);\n        const Duz k2(k1);\n        k.DajLijeviKraj();\n        k.DajDesniKraj();\n        k.DajBoju();\n\n        k.operator==(k2);\n        k.operator!=(k2);\n\n        std::cout<<\"OK\";\n    }\n\n    std::cout<<std::endl<<\"----- AT 25 -----\"<<std::endl;\n\n    \/\/ AT 25: Test ispravnosti rada klasa i vecine operatora\n    {\n        Tacka t(5, 3, Boja::Zelena);\n        std::cout << t.DajX() << \" \" << t.DajY() << \" \" << int(t.DajBoju()) << std::endl;\n        Tacka t2 = t, t3(1, 1);\n        std::cout << (t2 == t) << \" \" << (t3 == t) << std::endl;\n        std::cout << *t << \" \" << !t << std::endl;\n        t2++;\n        ++t3;\n        std::cout << t2.DajX() << \" \" << t2.DajY() << \" \" << int(t2.DajBoju()) << std::endl;\n        std::cout << t3.DajX() << \" \" << t3.DajY() << \" \" << int(t3.DajBoju()) << std::endl;\n        t.PostaviBoju(Boja::Smedja);\n        t2.PostaviBoju(Boja::Smedja);\n        Duz d(t, t2);\n        Duz d2(4, 3, 2, 1, Boja::Crvena);\n        std::cout << d << \" \" << d2 << std::endl;\n        std::cout << d2.DajLijeviKraj() << \" \" << d2.DajDesniKraj()\n                  << \" \" << int(d2.DajBoju()) << std::endl;\n        std::cout << (d == d) << \" \" << (d == d2)  << std::endl;\n        std::cout << !d << \" \" << !d2 << std::endl;\n        std::cout << t - t2 << std::endl;\n    }",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "----- AT 21 -----\\nfalse true\\n----- AT 22 -----\\n(1,2)-(3,4)\\n----- AT 23 -----\\n(-1,4)-(1,2) (1,2)-(1,4)\\n----- AT 24 -----\\nOK\\n----- AT 25 -----\\n5 3 2\\ntrue false\\n5.83095 false\\n5 3 3\\n1 1 1\\n(5,3)-(5,3) (2,1)-(4,3)\\n(2,1) (4,3) 1\\ntrue false\\ntrue false\\n(5,3)-(5,3)\\n"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

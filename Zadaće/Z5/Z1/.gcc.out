@@ -1,0 +1,57 @@
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:28:105: error: expected primary-expression before ‘auto’
+     friend auto operator+(const SimetricnaMatrica<Tp1>& a, const SimetricnaMatrica<Tp2>& b) -> decltype(auto c = a.elementi.at(0) + b.elementi.at(0));
+                                                                                                         ^~~~
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:28:105: error: expected ‘)’ before ‘auto’
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:28:105: error: expected primary-expression before ‘auto’
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:28:105: error: expected primary-expression before ‘auto’
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:28:96: error: expected type-specifier before ‘decltype’
+     friend auto operator+(const SimetricnaMatrica<Tp1>& a, const SimetricnaMatrica<Tp2>& b) -> decltype(auto c = a.elementi.at(0) + b.elementi.at(0));
+                                                                                                ^~~~~~~~
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:28:96: error: expected initializer before ‘decltype’
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:31:91: error: ‘operator-’ function uses ‘auto’ type specifier without trailing return type
+     friend auto operator-(const SimetricnaMatrica<Tp1>& a, const SimetricnaMatrica<Tp2>& b);
+                                                                                           ^
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:31:91: note: deduced return type only available with -std=c++14 or -std=gnu++14
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:34:91: error: ‘operator*’ function uses ‘auto’ type specifier without trailing return type
+     friend auto operator*(const SimetricnaMatrica<Tp1>& a, const SimetricnaMatrica<Tp2>& b);
+                                                                                           ^
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:34:91: note: deduced return type only available with -std=c++14 or -std=gnu++14
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp: In function ‘decltype ((a.at(0).at(0) + b.at(0).at(0))) operator+(const SimetricnaMatrica<Tp1>&, const SimetricnaMatrica<Tp2>&)’:
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:167:23: error: ‘Tr’ was not declared in this scope
+     SimetricnaMatrica<Tr> c(a.elementi.size());
+                       ^~
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:167:25: error: template argument 1 is invalid
+     SimetricnaMatrica<Tr> c(a.elementi.size());
+                         ^
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:171:15: error: request for member ‘elementi’ in ‘c’, which is of non-class type ‘int’
+             c.elementi.at(i).at(j) = a.elementi.at(i).at(j) + b.elementi.at(i).at(j);
+               ^~~~~~~~
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp: In function ‘decltype ((a.at(0).at(0) + b.at(0).at(0))) operator-(const SimetricnaMatrica<Tp1>&, const SimetricnaMatrica<Tp2>&)’:
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:183:23: error: ‘Tr’ was not declared in this scope
+     SimetricnaMatrica<Tr> c(a.elementi.size());
+                       ^~
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:183:25: error: template argument 1 is invalid
+     SimetricnaMatrica<Tr> c(a.elementi.size());
+                         ^
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:187:15: error: request for member ‘elementi’ in ‘c’, which is of non-class type ‘int’
+             c.elementi.at(i).at(j) = a.elementi.at(i).at(j) - b.elementi.at(i).at(j);
+               ^~~~~~~~
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp: In function ‘int main()’:
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:271:37: error: no match for ‘operator+’ (operand types are ‘SimetricnaMatrica<int>’ and ‘SimetricnaMatrica<int>’)
+     std::cout << std::setw(3) << m1 + m2;
+                                  ~~~^~~~
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:163:6: note: candidate: template<class Tp1, class Tp2> decltype ((a.at(0).at(0) + b.at(0).at(0))) operator+(const SimetricnaMatrica<Tp1>&, const SimetricnaMatrica<Tp2>&)
+ auto operator+(const SimetricnaMatrica<Tp1>& a, const SimetricnaMatrica<Tp2>& b) -> decltype(a.at(0).at(0) + b.at(0).at(0)) {
+      ^~~~~~~~
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:163:6: note:   template argument deduction/substitution failed:
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp: In substitution of ‘template<class Tp1, class Tp2> decltype ((a.at(0).at(0) + b.at(0).at(0))) operator+(const SimetricnaMatrica<Tp1>&, const SimetricnaMatrica<Tp2>&) [with Tp1 = int; Tp2 = int]’:
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:271:39:   required from here
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:163:96: error: ‘const class SimetricnaMatrica<int>’ has no member named ‘at’
+ auto operator+(const SimetricnaMatrica<Tp1>& a, const SimetricnaMatrica<Tp2>& b) -> decltype(a.at(0).at(0) + b.at(0).at(0)) {
+                                                                                              ~~^~
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:163:112: error: ‘const class SimetricnaMatrica<int>’ has no member named ‘at’
+ auto operator+(const SimetricnaMatrica<Tp1>& a, const SimetricnaMatrica<Tp2>& b) -> decltype(a.at(0).at(0) + b.at(0).at(0)) {
+                                                                                                              ~~^~
+/rhome/a/amulalic1/workspace/TP/Z5/Z1/main.cpp:272:39: error: use of ‘auto operator-(const SimetricnaMatrica<Tp1>&, const SimetricnaMatrica<Tp2>&) [with Tp1 = int; Tp2 = int; T = int]’ before deduction of ‘auto’
+     std::cout << std::setw(3) << m1 - m2;
+                                       ^~

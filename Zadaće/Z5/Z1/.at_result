@@ -1,0 +1,169 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "1": {
+            "status": 1,
+            "run_result": {
+                "output": "  4  1\n  1  4\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "2": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_2.cpp: In function ‘int main()’:\nbs_test_2.cpp:310:37: error: no match for ‘operator+’ (operand types are ‘SimetricnaMatrica<int>’ and ‘SimetricnaMatrica<int>’)\n     std::cout << std::setw(3) << m1 + m2;\n                                  ~~~^~~~\nbs_test_2.cpp:169:23: note: candidate: template<class Tr, class Tp1, class Tp2> SimetricnaMatrica<Tr> operator+(const SimetricnaMatrica<Tp1>&, const SimetricnaMatrica<Tp2>&)\n SimetricnaMatrica<Tr> operator+(const SimetricnaMatrica<Tp1>& a, const SimetricnaMatrica<Tp2>& b) {\n                       ^~~~~~~~\nbs_test_2.cpp:169:23: note:   template argument deduction/substitution failed:\nbs_test_2.cpp:310:39: note:   couldn't deduce template parameter ‘Tr’\n     std::cout << std::setw(3) << m1 + m2;\n                                       ^~\nbs_test_2.cpp:311:37: error: no match for ‘operator-’ (operand types are ‘SimetricnaMatrica<int>’ and ‘SimetricnaMatrica<int>’)\n     std::cout << std::setw(3) << m1 - m2;\n                                  ~~~^~~~\nbs_test_2.cpp:185:23: note: candidate: template<class Tr, class Tp1, class Tp2> SimetricnaMatrica<Tr> operator-(const SimetricnaMatrica<Tp1>&, const SimetricnaMatrica<Tp2>&)\n SimetricnaMatrica<Tr> operator-(const SimetricnaMatrica<Tp1>& a, const SimetricnaMatrica<Tp2>& b) {\n                       ^~~~~~~~\nbs_test_2.cpp:185:23: note:   template argument deduction/substitution failed:\nbs_test_2.cpp:311:39: note:   couldn't deduce template parameter ‘Tr’\n     std::cout << std::setw(3) << m1 - m2;\n                                       ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "37",
+                        "message": "no match for 'operator+' (operand types are 'SimetricnaMatrica<int>' and 'SimetricnaMatrica<int>')",
+                        "output": "/tmp/buildservice/bs_3764/bs_test_2.cpp:310:37: error: no match for ‘operator+’ (operand types are ‘SimetricnaMatrica<int>’ and ‘SimetricnaMatrica<int>’)     std::cout << std::setw(3) << m1 + m2;                                  ~~~^~~~",
+                        "code": "std::cout << std::setw(3) << m1 + m2;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "37",
+                        "message": "no match for 'operator-' (operand types are 'SimetricnaMatrica<int>' and 'SimetricnaMatrica<int>')",
+                        "output": "/tmp/buildservice/bs_3764/bs_test_2.cpp:311:37: error: no match for ‘operator-’ (operand types are ‘SimetricnaMatrica<int>’ and ‘SimetricnaMatrica<int>’)     std::cout << std::setw(3) << m1 - m2;                                  ~~~^~~~",
+                        "code": "std::cout << std::setw(3) << m1 - m2;"
+                    }
+                ]
+            }
+        },
+        "3": {
+            "status": 1,
+            "run_result": {
+                "output": "2\n  1.1  2.2\n  2.2  3.3\n1\n  7.7\n",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        },
+        "4": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_4.cpp: In function ‘int main()’:\nbs_test_4.cpp:311:21: error: no match for ‘operator*’ (operand types are ‘SimetricnaMatrica<int>’ and ‘SimetricnaMatrica<int>’)\n         auto AB = A * B, BA = B * A;\n                   ~~^~~\nbs_test_4.cpp:201:23: note: candidate: template<class Tr, class Tp1, class Tp2> SimetricnaMatrica<Tr> operator*(const SimetricnaMatrica<Tp1>&, const SimetricnaMatrica<Tp2>&)\n SimetricnaMatrica<Tr> operator*(const SimetricnaMatrica<Tp1>& a, const SimetricnaMatrica<Tp2>& b) {\n                       ^~~~~~~~\nbs_test_4.cpp:201:23: note:   template argument deduction/substitution failed:\nbs_test_4.cpp:311:23: note:   couldn't deduce template parameter ‘Tr’\n         auto AB = A * B, BA = B * A;\n                       ^\nbs_test_4.cpp:313:88: error: ‘BA’ was not declared in this scope\n                   << std::endl << \"BA:\" << std::endl << std::left << std::setw (12) << BA;\n                                                                                        ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "21",
+                        "message": "no match for 'operator*' (operand types are 'SimetricnaMatrica<int>' and 'SimetricnaMatrica<int>')",
+                        "output": "/tmp/buildservice/bs_3764/bs_test_4.cpp:311:21: error: no match for ‘operator*’ (operand types are ‘SimetricnaMatrica<int>’ and ‘SimetricnaMatrica<int>’)         auto AB = A * B, BA = B * A;                   ~~^~~",
+                        "code": "auto AB = A * B, BA = B * A;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 5,
+                        "col": "88",
+                        "message": "'BA' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_3764/bs_test_4.cpp:313:88: error: ‘BA’ was not declared in this scope                   << std::endl << \"BA:\" << std::endl << std::left << std::setw (12) << BA;                                                                                        ^~",
+                        "code": "<< std::endl << \"BA:\" << std::endl << std::left << std::setw (12) << BA;"
+                    }
+                ]
+            }
+        },
+        "5": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_5.cpp: In function ‘int main()’:\nbs_test_5.cpp:322:30: error: no match for ‘operator*’ (operand types are ‘SimetricnaMatrica<int>’ and ‘SimetricnaMatrica<int>’)\n          try {std::cout << A * B; std::cout << \"Ne smije se ispisati [1] (AB)!\" << std::endl;}\n                            ~~^~~\nbs_test_5.cpp:201:23: note: candidate: template<class Tr, class Tp1, class Tp2> SimetricnaMatrica<Tr> operator*(const SimetricnaMatrica<Tp1>&, const SimetricnaMatrica<Tp2>&)\n SimetricnaMatrica<Tr> operator*(const SimetricnaMatrica<Tp1>& a, const SimetricnaMatrica<Tp2>& b) {\n                       ^~~~~~~~\nbs_test_5.cpp:201:23: note:   template argument deduction/substitution failed:\nbs_test_5.cpp:322:32: note:   couldn't deduce template parameter ‘Tr’\n          try {std::cout << A * B; std::cout << \"Ne smije se ispisati [1] (AB)!\" << std::endl;}\n                                ^\nbs_test_5.cpp:325:30: error: no match for ‘operator*’ (operand types are ‘SimetricnaMatrica<int>’ and ‘SimetricnaMatrica<int>’)\n          try {std::cout << B * A; std::cout << \"Ne smije se ispisati [2] (BA)!\" << std::endl;}\n                            ~~^~~\nbs_test_5.cpp:201:23: note: candidate: template<class Tr, class Tp1, class Tp2> SimetricnaMatrica<Tr> operator*(const SimetricnaMatrica<Tp1>&, const SimetricnaMatrica<Tp2>&)\n SimetricnaMatrica<Tr> operator*(const SimetricnaMatrica<Tp1>& a, const SimetricnaMatrica<Tp2>& b) {\n                       ^~~~~~~~\nbs_test_5.cpp:201:23: note:   template argument deduction/substitution failed:\nbs_test_5.cpp:325:32: note:   couldn't deduce template parameter ‘Tr’\n          try {std::cout << B * A; std::cout << \"Ne smije se ispisati [2] (BA)!\" << std::endl;}\n                                ^",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 14,
+                        "col": "30",
+                        "message": "no match for 'operator*' (operand types are 'SimetricnaMatrica<int>' and 'SimetricnaMatrica<int>')",
+                        "output": "/tmp/buildservice/bs_3764/bs_test_5.cpp:322:30: error: no match for ‘operator*’ (operand types are ‘SimetricnaMatrica<int>’ and ‘SimetricnaMatrica<int>’)          try {std::cout << A * B; std::cout << \"Ne smije se ispisati [1] (AB)!\" << std::endl;}                            ~~^~~",
+                        "code": "try {std::cout << A * B; std::cout << \"Ne smije se ispisati [1] (AB)!\" << std::endl;}"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 17,
+                        "col": "30",
+                        "message": "no match for 'operator*' (operand types are 'SimetricnaMatrica<int>' and 'SimetricnaMatrica<int>')",
+                        "output": "/tmp/buildservice/bs_3764/bs_test_5.cpp:325:30: error: no match for ‘operator*’ (operand types are ‘SimetricnaMatrica<int>’ and ‘SimetricnaMatrica<int>’)          try {std::cout << B * A; std::cout << \"Ne smije se ispisati [2] (BA)!\" << std::endl;}                            ~~^~~",
+                        "code": "try {std::cout << B * A; std::cout << \"Ne smije se ispisati [2] (BA)!\" << std::endl;}"
+                    }
+                ]
+            }
+        },
+        "6": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_6.cpp: In function ‘int main()’:\nbs_test_6.cpp:331:58: error: no match for ‘operator*’ (operand types are ‘SimetricnaMatrica<std::__cxx11::basic_string<char> >’ and ‘SimetricnaMatrica<int>’)\n         std::cout << \"Prvi Ispis (operator <<)\\n\\n\" << A * B;\n                                                        ~~^~~\nbs_test_6.cpp:201:23: note: candidate: template<class Tr, class Tp1, class Tp2> SimetricnaMatrica<Tr> operator*(const SimetricnaMatrica<Tp1>&, const SimetricnaMatrica<Tp2>&)\n SimetricnaMatrica<Tr> operator*(const SimetricnaMatrica<Tp1>& a, const SimetricnaMatrica<Tp2>& b) {\n                       ^~~~~~~~\nbs_test_6.cpp:201:23: note:   template argument deduction/substitution failed:\nbs_test_6.cpp:331:60: note:   couldn't deduce template parameter ‘Tr’\n         std::cout << \"Prvi Ispis (operator <<)\\n\\n\" << A * B;\n                                                            ^\nbs_test_6.cpp:304:13: note: candidate: std::__cxx11::string operator*(const string&, int)\n std::string operator * (const std::string &s, const int i)\n             ^~~~~~~~\nbs_test_6.cpp:304:13: note:   no known conversion for argument 1 from ‘SimetricnaMatrica<std::__cxx11::basic_string<char> >’ to ‘const string& {aka const std::__cxx11::basic_string<char>&}’\nbs_test_6.cpp:333:20: error: no match for ‘operator*’ (operand types are ‘SimetricnaMatrica<std::__cxx11::basic_string<char> >’ and ‘SimetricnaMatrica<int>’)\n         auto C = A * B;\n                  ~~^~~\nbs_test_6.cpp:201:23: note: candidate: template<class Tr, class Tp1, class Tp2> SimetricnaMatrica<Tr> operator*(const SimetricnaMatrica<Tp1>&, const SimetricnaMatrica<Tp2>&)\n SimetricnaMatrica<Tr> operator*(const SimetricnaMatrica<Tp1>& a, const SimetricnaMatrica<Tp2>& b) {\n                       ^~~~~~~~\nbs_test_6.cpp:201:23: note:   template argument deduction/substitution failed:\nbs_test_6.cpp:333:22: note:   couldn't deduce template parameter ‘Tr’\n         auto C = A * B;\n                      ^\nbs_test_6.cpp:304:13: note: candidate: std::__cxx11::string operator*(const string&, int)\n std::string operator * (const std::string &s, const int i)\n             ^~~~~~~~\nbs_test_6.cpp:304:13: note:   no known conversion for argument 1 from ‘SimetricnaMatrica<std::__cxx11::basic_string<char> >’ to ‘const string& {aka const std::__cxx11::basic_string<char>&}’",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 11,
+                        "col": "58",
+                        "message": "no match for 'operator*' (operand types are 'SimetricnaMatrica<std::__cxx11::basic_string<char> >' and 'SimetricnaMatrica<int>')",
+                        "output": "/tmp/buildservice/bs_3764/bs_test_6.cpp:331:58: error: no match for ‘operator*’ (operand types are ‘SimetricnaMatrica<std::__cxx11::basic_string<char> >’ and ‘SimetricnaMatrica<int>’)         std::cout << \"Prvi Ispis (operator <<)\\n\\n\" << A * B;                                                        ~~^~~",
+                        "code": "std::cout << \"Prvi Ispis (operator <<)\\n\\n\" << A * B;"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 13,
+                        "col": "20",
+                        "message": "no match for 'operator*' (operand types are 'SimetricnaMatrica<std::__cxx11::basic_string<char> >' and 'SimetricnaMatrica<int>')",
+                        "output": "/tmp/buildservice/bs_3764/bs_test_6.cpp:333:20: error: no match for ‘operator*’ (operand types are ‘SimetricnaMatrica<std::__cxx11::basic_string<char> >’ and ‘SimetricnaMatrica<int>’)         auto C = A * B;                  ~~^~~",
+                        "code": "auto C = A * B;"
+                    }
+                ]
+            }
+        }
+    },
+    "queue_items": 0,
+    "time": 1592490013
+}

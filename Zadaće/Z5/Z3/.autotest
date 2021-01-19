@@ -1,0 +1,126 @@
+{
+    "id": 5715,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 5, Zadatak 3",
+    "language": "C++",
+    "preferred_compiler": "g++",
+    "required_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "profile": "true",
+    "debug": "true",
+    "test": "true",
+    "compile": "true",
+    "run": "false",
+    "test_specifications": [
+        {
+            "id": 1,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1 - javni: klasa narudzbe, konstruktor i metode ispisa\nNarudzba n(\"Janjetina\", 12.5, \"Ivona Ivkovic\");\nstd::cout << n.DajNarucioca() << \": \" << n.DajNazivObroka() << \", \" << n.DajCijenuObroka() <<\"KM.\";",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Ivona Ivkovic: Janjetina, 12.5KM.",
+                "Ivona Ivkovic: Janjetina, 12.50KM."
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 2,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2 - skriveni - metoda ispisi()\nNarudzba n(\"Janjetina\", 12.5, \"Ivona Ivkovic\");\nn.Ispisi();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Obrok: Janjetina\\nCijena: 12.50 KM\\nNarucilac: Ivona Ivkovic",
+                "Obrok: Janjetina\\nCijena: 12.5 KM\\nNarucilac: Ivona Ivkovic"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 3,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  \/\/AT4 - javni - klasa NarudzbaSaPicem, konstruktor i metoda ispisi\nNarudzbaSaPicem n(\"Janjetina\", 12.5, \"Ivona Ivkovic\", \"brusnica\", 2);\nn.Ispisi();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Obrok: Janjetina\\nPice: brusnica\\nCijena: 12.5 KM\\nCijena pica: 2 KM\\nUkupna cijena: 14.5 KM\\nNarucilac: Ivona Ivkovic",
+                "Obrok: Janjetina\\nPice: brusnica\\nCijena: 12.50 KM\\nCijena pica: 2.00 KM\\nUkupna cijena: 14.50 KM\\nNarucilac: Ivona Ivkovic"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 4,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "  \/\/AT6 - javni - klasa Narudzbe\nNarudzbe narudzbe;\nnarudzbe.NaruciObrok(\"Teletina\", 10, \"Ivona Ivkovic\");\nnarudzbe.ObradiNarudzbu();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Obrok: Teletina\\nCijena: 10 KM\\nNarucilac: Ivona Ivkovic",
+                "Obrok: Teletina\\nCijena: 10.00 KM\\nNarucilac: Ivona Ivkovic"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 5,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": " \/\/AT 18 - javni - ucitavanje iz datoteke  \n    kreirajDatotetkeIvona();\n    Narudzbe n;\n    n.UcitajIzDatoteka(\"narudzbe.txt\", \"cijene.txt\");\n    if(n.DaLiImaNarudzbi()) std::cout << \"OK\";",
+            "global_above_main": "void kreirajDatotetkeIvona()\n{\n    std::string ime = \"narudzbe.txt\";\nstd::ofstream dat(ime);\ndat << \"Saban Saulic\\nCevapi u kajmaku\\nJogurt\\nZdravko Colic\\nKrompirusa\\n\\n\";\ndat << \"Rambo Sulejmanovic\\nBegova corba\\nGusti sok\\nZdravko Colic\\ncizburger\\nCoca Cola\";\n\n   ime = \"cijene.txt\";\nstd::ofstream dat2(ime);\ndat2 << \"Burek\\n3\\nSirnica\\n2.5\\nKrompirusa\\n2\\nCevapi\\n5\\nCevapi u kajmaku\\n6\\nBegova corba\\n3\\n\";\ndat2 << \"Jogurt\\n1\\nCoca Cola\\n2.5\\nGusti sok\\n2.5\\ncizburger\\n3\";\ndat.close();\ndat2.close();\n}",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "OK"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

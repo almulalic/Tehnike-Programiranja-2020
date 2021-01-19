@@ -1,0 +1,335 @@
+{
+    "buildhost_description": {
+        "id": "lab002c01",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 4,
+    "compile_result": {
+        "status": 1,
+        "output": ""
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": {
+        "3274": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3274.cpp: In function ‘int main()’:\nbs_test_3274.cpp:23:25: error: ‘Presjek’ was not declared in this scope\n auto v3 = Presjek(v1, v2);\n                         ^\nbs_test_3274.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’\n for(auto x : v3) std::cout << x << \" \";\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "25",
+                        "message": "'Presjek' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3274.cpp:23:25: error: ‘Presjek’ was not declared in this scope auto v3 = Presjek(v1, v2);                         ^",
+                        "code": "auto v3 = Presjek(v1, v2);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "14",
+                        "message": "unable to deduce 'auto&&' from 'v3'",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3274.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’ for(auto x : v3) std::cout << x << \" \";              ^~",
+                        "code": "for(auto x : v3) std::cout << x << \" \";"
+                    }
+                ]
+            }
+        },
+        "3275": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3275.cpp: In function ‘int main()’:\nbs_test_3275.cpp:23:25: error: ‘Presjek’ was not declared in this scope\n auto v3 = Presjek(v1, v2);\n                         ^\nbs_test_3275.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’\n for(auto x : v3) std::cout << x << \" \";\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "25",
+                        "message": "'Presjek' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3275.cpp:23:25: error: ‘Presjek’ was not declared in this scope auto v3 = Presjek(v1, v2);                         ^",
+                        "code": "auto v3 = Presjek(v1, v2);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "14",
+                        "message": "unable to deduce 'auto&&' from 'v3'",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3275.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’ for(auto x : v3) std::cout << x << \" \";              ^~",
+                        "code": "for(auto x : v3) std::cout << x << \" \";"
+                    }
+                ]
+            }
+        },
+        "3276": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3276.cpp: In function ‘int main()’:\nbs_test_3276.cpp:23:25: error: ‘Presjek’ was not declared in this scope\n auto v3 = Presjek(v1, v2);\n                         ^\nbs_test_3276.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’\n for(auto x : v3) std::cout << x << \" \";\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "25",
+                        "message": "'Presjek' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3276.cpp:23:25: error: ‘Presjek’ was not declared in this scope auto v3 = Presjek(v1, v2);                         ^",
+                        "code": "auto v3 = Presjek(v1, v2);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "14",
+                        "message": "unable to deduce 'auto&&' from 'v3'",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3276.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’ for(auto x : v3) std::cout << x << \" \";              ^~",
+                        "code": "for(auto x : v3) std::cout << x << \" \";"
+                    }
+                ]
+            }
+        },
+        "3277": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3277.cpp: In function ‘int main()’:\nbs_test_3277.cpp:23:25: error: ‘Presjek’ was not declared in this scope\n auto v3 = Presjek(v1, v2);\n                         ^\nbs_test_3277.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’\n for(auto x : v3) std::cout << x << \" \";\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "25",
+                        "message": "'Presjek' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3277.cpp:23:25: error: ‘Presjek’ was not declared in this scope auto v3 = Presjek(v1, v2);                         ^",
+                        "code": "auto v3 = Presjek(v1, v2);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "14",
+                        "message": "unable to deduce 'auto&&' from 'v3'",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3277.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’ for(auto x : v3) std::cout << x << \" \";              ^~",
+                        "code": "for(auto x : v3) std::cout << x << \" \";"
+                    }
+                ]
+            }
+        },
+        "3278": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3278.cpp: In function ‘int main()’:\nbs_test_3278.cpp:23:25: error: ‘Presjek’ was not declared in this scope\n auto v3 = Presjek(v1, v2);\n                         ^\nbs_test_3278.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’\n for(auto x : v3) std::cout << x << \" \";\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "25",
+                        "message": "'Presjek' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3278.cpp:23:25: error: ‘Presjek’ was not declared in this scope auto v3 = Presjek(v1, v2);                         ^",
+                        "code": "auto v3 = Presjek(v1, v2);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "14",
+                        "message": "unable to deduce 'auto&&' from 'v3'",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3278.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’ for(auto x : v3) std::cout << x << \" \";              ^~",
+                        "code": "for(auto x : v3) std::cout << x << \" \";"
+                    }
+                ]
+            }
+        },
+        "3279": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3279.cpp: In function ‘int main()’:\nbs_test_3279.cpp:23:25: error: ‘Presjek’ was not declared in this scope\n auto v3 = Presjek(v1, v2);\n                         ^\nbs_test_3279.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’\n for(auto x : v3) std::cout << x << \" \";\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "25",
+                        "message": "'Presjek' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3279.cpp:23:25: error: ‘Presjek’ was not declared in this scope auto v3 = Presjek(v1, v2);                         ^",
+                        "code": "auto v3 = Presjek(v1, v2);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "14",
+                        "message": "unable to deduce 'auto&&' from 'v3'",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3279.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’ for(auto x : v3) std::cout << x << \" \";              ^~",
+                        "code": "for(auto x : v3) std::cout << x << \" \";"
+                    }
+                ]
+            }
+        },
+        "3280": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3280.cpp: In function ‘int main()’:\nbs_test_3280.cpp:23:25: error: ‘Presjek’ was not declared in this scope\n auto v3 = Presjek(v1, v2);\n                         ^\nbs_test_3280.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’\n for(auto x : v3) std::cout << x << \" \";\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "25",
+                        "message": "'Presjek' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3280.cpp:23:25: error: ‘Presjek’ was not declared in this scope auto v3 = Presjek(v1, v2);                         ^",
+                        "code": "auto v3 = Presjek(v1, v2);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "14",
+                        "message": "unable to deduce 'auto&&' from 'v3'",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3280.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’ for(auto x : v3) std::cout << x << \" \";              ^~",
+                        "code": "for(auto x : v3) std::cout << x << \" \";"
+                    }
+                ]
+            }
+        },
+        "3281": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3281.cpp: In function ‘int main()’:\nbs_test_3281.cpp:23:25: error: ‘Presjek’ was not declared in this scope\n auto v3 = Presjek(v1, v2);\n                         ^\nbs_test_3281.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’\n for(auto x : v3) std::cout << x << \" \";\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "25",
+                        "message": "'Presjek' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3281.cpp:23:25: error: ‘Presjek’ was not declared in this scope auto v3 = Presjek(v1, v2);                         ^",
+                        "code": "auto v3 = Presjek(v1, v2);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "14",
+                        "message": "unable to deduce 'auto&&' from 'v3'",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3281.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’ for(auto x : v3) std::cout << x << \" \";              ^~",
+                        "code": "for(auto x : v3) std::cout << x << \" \";"
+                    }
+                ]
+            }
+        },
+        "3282": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3282.cpp: In function ‘int main()’:\nbs_test_3282.cpp:23:25: error: ‘Presjek’ was not declared in this scope\n auto v3 = Presjek(v1, v2);\n                         ^\nbs_test_3282.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’\n for(auto x : v3) std::cout << x << \" \";\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "25",
+                        "message": "'Presjek' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3282.cpp:23:25: error: ‘Presjek’ was not declared in this scope auto v3 = Presjek(v1, v2);                         ^",
+                        "code": "auto v3 = Presjek(v1, v2);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "14",
+                        "message": "unable to deduce 'auto&&' from 'v3'",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3282.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’ for(auto x : v3) std::cout << x << \" \";              ^~",
+                        "code": "for(auto x : v3) std::cout << x << \" \";"
+                    }
+                ]
+            }
+        },
+        "3283": {
+            "status": 3,
+            "run_result": [],
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 2,
+                "output": "bs_test_3283.cpp: In function ‘int main()’:\nbs_test_3283.cpp:23:25: error: ‘Presjek’ was not declared in this scope\n auto v3 = Presjek(v1, v2);\n                         ^\nbs_test_3283.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’\n for(auto x : v3) std::cout << x << \" \";\n              ^~",
+                "parsed_output": [
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 2,
+                        "col": "25",
+                        "message": "'Presjek' was not declared in this scope",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3283.cpp:23:25: error: ‘Presjek’ was not declared in this scope auto v3 = Presjek(v1, v2);                         ^",
+                        "code": "auto v3 = Presjek(v1, v2);"
+                    },
+                    {
+                        "type": "error",
+                        "file": "TEST_CODE",
+                        "line": 3,
+                        "col": "14",
+                        "message": "unable to deduce 'auto&&' from 'v3'",
+                        "output": "/tmp/buildservice/bs_1268/bs_test_3283.cpp:24:14: error: unable to deduce ‘auto&&’ from ‘v3’ for(auto x : v3) std::cout << x << \" \";              ^~",
+                        "code": "for(auto x : v3) std::cout << x << \" \";"
+                    }
+                ]
+            }
+        },
+        "3300": {
+            "status": 6,
+            "run_result": {
+                "output": "",
+                "duration": 0,
+                "status": 1
+            },
+            "debug_result": [],
+            "profile_result": [],
+            "compile_result": {
+                "status": 1,
+                "output": ""
+            }
+        }
+    },
+    "queue_items": 2,
+    "time": 1584970136
+}

@@ -1,0 +1,122 @@
+{
+    "id": 56184,
+    "name": "Tehnike programiranja (2019\/2020), Zada\u0107a 1, zadatak 4",
+    "language": "C++",
+    "required_compiler": "g++",
+    "preferred_compiler": "g++",
+    "compiler_features": [],
+    "compiler_options": "-std=c++11 -O1 -Wall -Wuninitialized -Winit-self -Wfloat-equal -Wno-sign-compare -Werror=implicit-function-declaration -Werror=vla -pedantic -lm -pass-exit-codes",
+    "compiler_options_debug": "-std=c++11 -ggdb -lm -pass-exit-codes",
+    "compile": "true",
+    "run": "false",
+    "test": "true",
+    "debug": "true",
+    "profile": "true",
+    "test_specifications": [
+        {
+            "id": 6,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT1 - definicija maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "Akihito je posjetio Yokohamu u srijedu\n"
+            },
+            "expected": [
+                "Unesite recenicu (ENTER za kraj): Recenica sa istaknutim savrseno ritmicnim rijecima glasi:\\n(Akihito) (je) posjetio (Yokohamu) u srijedu"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 7,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT2 - definicija maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "meho"
+            },
+            "expected": [
+                "Unesite recenicu (ENTER za kraj): Recenica sa istaknutim savrseno ritmicnim rijecima glasi:                                       \\n(meho)   "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 8,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT3 - definicija maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "   Akihito je posjetio Yokohamu u srijedu   "
+            },
+            "expected": [
+                "Unesite recenicu (ENTER za kraj): Recenica sa istaknutim savrseno ritmicnim rijecima glasi:\\n   (Akihito) (je) posjetio (Yokohamu) u srijedu   "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 9,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT4 - definicija maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": ""
+            },
+            "expected": [
+                "Unesite recenicu (ENTER za kraj): Recenica sa istaknutim savrseno ritmicnim rijecima glasi:"
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        },
+        {
+            "id": 10,
+            "require_symbols": [],
+            "replace_symbols": [],
+            "code": "\/\/AT5 - definicija maina\n\n_main();",
+            "global_above_main": "",
+            "global_top": "",
+            "running_params": {
+                "timeout": "10",
+                "vmem": "1000000",
+                "stdin": "  zuz xuxx yay  yaz zyaa aaya aya "
+            },
+            "expected": [
+                "Unesite recenicu (ENTER za kraj): Recenica sa istaknutim savrseno ritmicnim rijecima glasi:\\n  (zuz) xuxx (yay)  (yaz) zyaa aaya (aya) "
+            ],
+            "expected_exception": "false",
+            "expected_crash": "false",
+            "ignore_whitespace": "false",
+            "regex": "false",
+            "substring": "false"
+        }
+    ]
+}

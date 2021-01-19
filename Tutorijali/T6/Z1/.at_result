@@ -1,0 +1,31 @@
+{
+    "buildhost_description": {
+        "id": "lab002c05",
+        "os": "Linux 2.6.32-754.2.1.el6.x86_64 x86_64\n\"CentOS release 6.10 (Final)\"\n",
+        "compiler_version": "g++ (GCC) 6.2.0",
+        "debugger_version": "GNU gdb (GDB) 7.12",
+        "profiler_version": "valgrind-3.12.0"
+    },
+    "status": 3,
+    "compile_result": {
+        "status": 2,
+        "output": "main.cpp: In function ‘TipElemenata* GenerirajStepeneDvojke(int)’:\nmain.cpp:31:2: error: expected ‘,’ or ‘;’ before ‘p’\n  p[0] = 1;\n  ^",
+        "parsed_output": [
+            {
+                "type": "error",
+                "file": "main.cpp",
+                "line": "31",
+                "col": "2",
+                "message": "expected ',' or ';' before 'p'",
+                "output": "/tmp/buildservice/bs_7568/main.cpp:31:2: error: expected ‘,’ or ‘;’ before ‘p’  p[0] = 1;  ^",
+                "code": "p[0] = 1;"
+            }
+        ]
+    },
+    "run_result": [],
+    "debug_result": [],
+    "profile_result": [],
+    "test_results": [],
+    "queue_items": 0,
+    "time": 1586178045
+}

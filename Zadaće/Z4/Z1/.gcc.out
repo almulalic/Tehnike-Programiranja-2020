@@ -1,0 +1,39 @@
+/rhome/a/amulalic1/workspace/TP/Z4/Z1/main.cpp: In constructor ‘Pravougaonik::Pravougaonik(const Tacka&, const Tacka&)’:
+/rhome/a/amulalic1/workspace/TP/Z4/Z1/main.cpp:57:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     } else if(t1.first == t2.first && t1.first != t2.first) {
+                              ^~~~~
+/rhome/a/amulalic1/workspace/TP/Z4/Z1/main.cpp:57:54: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     } else if(t1.first == t2.first && t1.first != t2.first) {
+                                                      ^~~~~
+/rhome/a/amulalic1/workspace/TP/Z4/Z1/main.cpp:62:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     } else if(t1.first != t2.first && t1.first == t2.first) {
+                              ^~~~~
+/rhome/a/amulalic1/workspace/TP/Z4/Z1/main.cpp:62:54: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     } else if(t1.first != t2.first && t1.first == t2.first) {
+                                                      ^~~~~
+/rhome/a/amulalic1/workspace/TP/Z4/Z1/main.cpp: In member function ‘void Pravougaonik::Postavi(const Tacka&, const Tacka&)’:
+/rhome/a/amulalic1/workspace/TP/Z4/Z1/main.cpp:100:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     } else if(t1.first == t2.first && t1.first != t2.first) {
+                              ^~~~~
+/rhome/a/amulalic1/workspace/TP/Z4/Z1/main.cpp:100:54: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     } else if(t1.first == t2.first && t1.first != t2.first) {
+                                                      ^~~~~
+/rhome/a/amulalic1/workspace/TP/Z4/Z1/main.cpp:105:30: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     } else if(t1.first != t2.first && t1.first == t2.first) {
+                              ^~~~~
+/rhome/a/amulalic1/workspace/TP/Z4/Z1/main.cpp:105:54: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     } else if(t1.first != t2.first && t1.first == t2.first) {
+                                                      ^~~~~
+/rhome/a/amulalic1/workspace/TP/Z4/Z1/main.cpp: In function ‘bool DaLiSuPodudarni(const Pravougaonik&, const Pravougaonik&)’:
+/rhome/a/amulalic1/workspace/TP/Z4/Z1/main.cpp:212:56: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());
+                                                        ^
+/rhome/a/amulalic1/workspace/TP/Z4/Z1/main.cpp:212:100: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());
+                                                                                                    ^
+/rhome/a/amulalic1/workspace/TP/Z4/Z1/main.cpp:212:148: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());
+                                                                                                                                                    ^
+/rhome/a/amulalic1/workspace/TP/Z4/Z1/main.cpp:212:194: warning: comparing floating point with == or != is unsafe [-Wfloat-equal]
+     return (p1.DajHorizontalnu() == p2.DajHorizontalnu() && p1.DajVertikalnu() == p2.DajVertikalnu()) || (p1.DajHorizontalnu() == p2.DajVertikalnu() && p1.DajVertikalnu() == p2.DajHorizontalnu());
+                                                                                                                                                                                                  ^
